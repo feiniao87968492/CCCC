@@ -1,0 +1,158 @@
+{
+  "stage": "comp-modeling",
+  "status": "q3_seven_point_revision_before_human_review",
+  "artifacts": [
+    {
+      "path": "anomaly-ledger.csv",
+      "sha256": "4aa4fe6908ce36422dfd7797a7b5e349892cd7e2afee952c89f702df108b3183"
+    },
+    {
+      "path": "ASSUMPTION_LEDGER.md",
+      "sha256": "68c52dadc111826d0f0bfb0b61e0198f7d868c7bf891c41809ee23178b5b5082"
+    },
+    {
+      "path": "cleaning-lineage.json",
+      "sha256": "a0e8d3c6940cb9eb1836fa4ab81890d1f4da540dad6db2b9d2945e61fa709eca"
+    },
+    {
+      "path": "data-contract.json",
+      "sha256": "8159c8ea19835c66a0164c3257e6fa948107fce75f25d6e5f763c30b50d16f2b"
+    },
+    {
+      "path": "decision-domain.json",
+      "sha256": "3d9ebe9698a97c9192812ae644241b6bfe40ba1b3692c986d06cf9c3b5d4d6b0"
+    },
+    {
+      "path": "DECISION_UNCERTAINTY_AUDIT.md",
+      "sha256": "e59e5265a8d33224b6dedec1378ab6923e53435c1fa16427174f478843b99513"
+    },
+    {
+      "path": "event-observability-ledger.md",
+      "sha256": "79855b6643a2d6a0052f7c5426712fa1f9c59c2ad36292db587837f9392ad538"
+    },
+    {
+      "path": "EXTRAPOLATION_CENSORING_LEDGER.csv",
+      "sha256": "3163b16972d948b8475b56b921113cbdf10783ae66627b56a6f7a2dc514b3ffe"
+    },
+    {
+      "path": "FIGURE_EVIDENCE_CONTRACT.md",
+      "sha256": "7445dbac6191f8364693464a9890b0f253cdfcb7d973b3f92c104988e196c18e"
+    },
+    {
+      "path": "FIGURE_MANIFEST.md",
+      "sha256": "dbd7d0d540f921f863681602deea9328d4d45d27920eae540c4d7c28df8522bd"
+    },
+    {
+      "path": "information-time-ledger.csv",
+      "sha256": "883b8049b4e885de30c7190f0f594a6cce58a9d5875e37f03f84d613620bd3df"
+    },
+    {
+      "path": "LEAKAGE_AUDIT.md",
+      "sha256": "918149472991b4d87b6e393d929a5fa02c8e3ca3f1802c973004d290b256785a"
+    },
+    {
+      "path": "LITERATURE_MODEL_NOTES.md",
+      "sha256": "5818122e896123f189e826d418fa7d7954113ef499505116b2c73905f39e9613"
+    },
+    {
+      "path": "model-applicability.json",
+      "sha256": "8a7eeb3c6e1693c76f3b70a68b7d1ab4ce7b98e8bb14abc79ac6dcebeb22829a"
+    },
+    {
+      "path": "model-card-validation.json",
+      "sha256": "6a658c00287704720fd21b9c3857b39d18cd619defc086e524a05b211d7bc84f"
+    },
+    {
+      "path": "MODELING_ACCEPTANCE_NOTES.md",
+      "sha256": "78907276937dcca2eea73595adad515364df54d8a00040dd8df8f55ac19c8a79"
+    },
+    {
+      "path": "MODELING_GOVERNANCE_MATRIX.json",
+      "sha256": "84c1521e362f13dc01425d0808355566406119ddf55808a27853c758dba4a2f4"
+    },
+    {
+      "path": "MODELING_REPORT.md",
+      "sha256": "9ecf36b0ab6c08505c2f4106c885167caba4415b5ad3d5902b580a0a69180830"
+    },
+    {
+      "path": "MODEL_CARD.md",
+      "sha256": "239bd327771e3f734005d85a22b5d21f5cf0d4f06489ef56ba51d6d438f124e7"
+    },
+    {
+      "path": "MODEL_DECISION.json",
+      "sha256": "672370760eaea658cf78bc87cabe350b9e509331efe102d64e5a05cb8f87005c"
+    },
+    {
+      "path": "MODEL_IDEA_REGISTER.md",
+      "sha256": "bd7bf6fc96eee7f043e32171a327026b8c0354e4c234e4ec279af8cd82a9e560"
+    },
+    {
+      "path": "MODEL_RESPONSIBILITY_MATRIX.csv",
+      "sha256": "de66b077cb2a19c39222eef4911d0889fc36d30a0830b7fcc5071e6f8c08d537"
+    },
+    {
+      "path": "MODEL_SELECTION.json",
+      "sha256": "c95a6071522f4fd799f58c0cb6012159ef11cff83228dc941a493fa72fdc462d"
+    },
+    {
+      "path": "NONSTANDARD_CASE_REGISTER.md",
+      "sha256": "df2bc5ef6b43e5960ce11426e4c05e203e19533ee909babdf62d033504c02ed5"
+    },
+    {
+      "path": "OPTIMIZATION_DOMAIN_AUDIT.md",
+      "sha256": "bfff2e46b369f111d2431f8d19b7597dd033cc34a172ab14bd678b338156b29f"
+    },
+    {
+      "path": "parameter-register.csv",
+      "sha256": "20672a3e7e74c03a8ce5daee1b8abc08d36173f527a576254173faeb7a88d4f8"
+    },
+    {
+      "path": "PROBLEM_ANALYSIS.md",
+      "sha256": "1eb1803ff1f6169b834f661c86fbc03e99bef405e77fc28ef342dafdf2f06411"
+    },
+    {
+      "path": "PROBLEM_TRANSLATION.md",
+      "sha256": "aff07678e9fddc8bd114b620343d90c0d69df4fdc6c85c46c1ea8455f3cadfab"
+    },
+    {
+      "path": "Q3_REVISION.md",
+      "sha256": "2b08d5d422200ff583cd0975ec78974879ecf33f6e0d75fb91ebe767b985c3bd"
+    },
+    {
+      "path": "reality-check-matrix.csv",
+      "sha256": "70c6a23e64b6091b20116a80796143512f2c6a17523cc83a2964b80b1b1fb44b"
+    },
+    {
+      "path": "SEMANTIC_DECISIONS.md",
+      "sha256": "b2d787618346c4421d743048be448ab3cb0e3009f05137ace15849c1a4f8159a"
+    },
+    {
+      "path": "SEMANTIC_IDENTITY_LEDGER.md",
+      "sha256": "3de4c592703f5001a105d426059331b503a43e9471d061af5010484bd90b4575"
+    },
+    {
+      "path": "SHARED_MODEL_BACKBONE.md",
+      "sha256": "fd8089d92820093431e861b7ea031d1b57349f6f59880117228806f400bef864"
+    },
+    {
+      "path": "task-profile-Q1.json",
+      "sha256": "c7bb02de271ed2794f4abd9c007c1df8f3850be7f2e6097523f59a1e1af92913"
+    },
+    {
+      "path": "task-profile-Q2.json",
+      "sha256": "d0c775b13c97be6bcdd5f9b69094a44d59d4ea2d7a19f55f151b7df8d3a6e9ea"
+    },
+    {
+      "path": "task-profile-Q3.json",
+      "sha256": "d67910a9c148be19d91409f7eaeeaaa49b3b816bceb3539abd4655ad2c065743"
+    },
+    {
+      "path": "task-profile-Q4.json",
+      "sha256": "c1800a7fa08488b3a515e059d6889bb46c20fc9eb2f12e681b0a6847ed6ba21b"
+    },
+    {
+      "path": "VALIDATION_PLAN.md",
+      "sha256": "ee73cc2f4a7ec04a6aef36a704e219d3d359363cecec66b9d6091ca875a3f029"
+    }
+  ]
+}

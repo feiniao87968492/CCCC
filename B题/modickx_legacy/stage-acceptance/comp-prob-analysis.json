@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "stage_id": "comp-prob-analysis",
+  "status": "ready",
+  "validated_at": "2026-09-10T13:01:19.797851+00:00",
+  "accepted_at": "2026-09-10T13:01:19.797851+00:00",
+  "validator": "validate_modeling_stage_evidence",
+  "source_artifact_ids": [
+    "workspace:PROBLEM_ANALYSIS.md",
+    "workspace:PROBLEM_TRANSLATION.md",
+    "workspace:SEMANTIC_DECISIONS.md",
+    "workspace:data-contract.json",
+    "workspace:task-profile-Q1.json",
+    "workspace:task-profile-Q2.json",
+    "workspace:task-profile-Q3.json",
+    "workspace:task-profile-Q4.json",
+    "workspace:event-observability-ledger.md",
+    "workspace:decision-domain.json"
+  ],
+  "source_sha256": {
+    "workspace:PROBLEM_ANALYSIS.md": "1eb1803ff1f6169b834f661c86fbc03e99bef405e77fc28ef342dafdf2f06411",
+    "workspace:PROBLEM_TRANSLATION.md": "aff07678e9fddc8bd114b620343d90c0d69df4fdc6c85c46c1ea8455f3cadfab",
+    "workspace:SEMANTIC_DECISIONS.md": "b2d787618346c4421d743048be448ab3cb0e3009f05137ace15849c1a4f8159a",
+    "workspace:data-contract.json": "8159c8ea19835c66a0164c3257e6fa948107fce75f25d6e5f763c30b50d16f2b",
+    "workspace:task-profile-Q1.json": "c7bb02de271ed2794f4abd9c007c1df8f3850be7f2e6097523f59a1e1af92913",
+    "workspace:task-profile-Q2.json": "d0c775b13c97be6bcdd5f9b69094a44d59d4ea2d7a19f55f151b7df8d3a6e9ea",
+    "workspace:task-profile-Q3.json": "d67910a9c148be19d91409f7eaeeaaa49b3b816bceb3539abd4655ad2c065743",
+    "workspace:task-profile-Q4.json": "c1800a7fa08488b3a515e059d6889bb46c20fc9eb2f12e681b0a6847ed6ba21b",
+    "workspace:event-observability-ledger.md": "79855b6643a2d6a0052f7c5426712fa1f9c59c2ad36292db587837f9392ad538",
+    "workspace:decision-domain.json": "3d9ebe9698a97c9192812ae644241b6bfe40ba1b3692c986d06cf9c3b5d4d6b0"
+  },
+  "blocking_checks": {
+    "passed": [
+      "sentence_translation_and_task_profiles_are_complete",
+      "raw_data_contract_and_anomaly_traceability",
+      "semantic_identity_and_independent_unit_are_declared",
+      "event_observability_and_right_censor_boundary",
+      "continuous_search_domain_is_declared"
+    ],
+    "failed": [],
+    "skipped": []
+  },
+  "downstream_consumers": [
+    "comp-modeling"
+  ],
+  "notes": "用户在完整审题材料及正式检查点展示后回复：继续。通过当前审题审核，允许进入模型构建；A-D既有确认保留，不授权正式测试。",
+  "review_checkpoint_id": "3eba4ecd95b14d118b0f726076a7d1c4"
+}

@@ -1,0 +1,15 @@
+{
+  "problem": 4,
+  "purpose": "API smoke test, not strategy evaluation",
+  "commands": 6,
+  "virtual_times": [
+    0,
+    5,
+    11,
+    14,
+    19,
+    19
+  ],
+  "exit_reason": "user_exit",
+  "passed": true
+}

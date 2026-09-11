@@ -1,0 +1,1366 @@
+[
+  {
+    "op": "measure",
+    "k": 1,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 5.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 2,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 11.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 3,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 17.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 4,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 23.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 5,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 29.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 6,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 35.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 7,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 41.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 8,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 47.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 9,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 53.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 10,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 59.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 11,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 65.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 12,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 71.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 13,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 77.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 14,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 83.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 15,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 89.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 16,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 95.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 17,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 101.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 18,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 107.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 19,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 113.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 20,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 119.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 2,
+    "result": "no_signal",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 365.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 3,
+    "result": "no_signal",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 371.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 4,
+    "result": "no_signal",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 377.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 5,
+    "result": "no_signal",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 383.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 8,
+    "result": "no_signal",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 389.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 9,
+    "result": "direction",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 395.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 10,
+    "result": "direction",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 401.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 11,
+    "result": "direction",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 407.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 12,
+    "result": "direction",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 413.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 16,
+    "result": "no_signal",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 419.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 17,
+    "result": "direction",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 425.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 20,
+    "result": "no_signal",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 431.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 1,
+    "result": "direction",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 437.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 6,
+    "result": "no_signal",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 443.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 7,
+    "result": "direction",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 449.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 13,
+    "result": "no_signal",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 455.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 14,
+    "result": "direction",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 461.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 15,
+    "result": "direction",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 467.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 18,
+    "result": "direction",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 473.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 19,
+    "result": "no_signal",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 479.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 13,
+    "result": "direction",
+    "x": 1052.297057440084,
+    "y": 26.150349120846723,
+    "T": 515.0,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 7,
+    "result": "direction",
+    "x": 1052.297057440084,
+    "y": 26.150349120846723,
+    "T": 521.0,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 14,
+    "result": "direction",
+    "x": 1052.297057440084,
+    "y": 26.150349120846723,
+    "T": 527.0,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 15,
+    "result": "direction",
+    "x": 1052.297057440084,
+    "y": 26.150349120846723,
+    "T": 533.0,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 2,
+    "result": "no_signal",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 760.892225,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 3,
+    "result": "no_signal",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 766.892225,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 4,
+    "result": "no_signal",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 772.892225,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 5,
+    "result": "no_signal",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 778.892225,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 8,
+    "result": "direction",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 784.892225,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 16,
+    "result": "no_signal",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 790.892225,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 20,
+    "result": "no_signal",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 796.892225,
+    "active": false
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 1,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "measure",
+    "k": 6,
+    "result": "no_signal",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 802.892225,
+    "active": false
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 7,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "measure",
+    "k": 13,
+    "result": "direction",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 808.892225,
+    "active": false
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 14,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "measure",
+    "k": 15,
+    "result": "no_signal",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 814.892225,
+    "active": false
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 18,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "measure",
+    "k": 19,
+    "result": "no_signal",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 820.892225,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 9,
+    "result": "no_signal",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 826.892225,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 10,
+    "result": "no_signal",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 832.892225,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 11,
+    "result": "no_signal",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 838.892225,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 12,
+    "result": "no_signal",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 844.892225,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 17,
+    "result": "direction",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 850.892225,
+    "active": false
+  },
+  {
+    "op": "clear_filtered",
+    "k": 17,
+    "x": 660.0000000000001,
+    "y": 935.3074360871938,
+    "reason": "disjoint_posterior"
+  },
+  {
+    "op": "clear_filtered",
+    "k": 17,
+    "x": 640.0000000000001,
+    "y": 969.9484522385713,
+    "reason": "disjoint_posterior"
+  },
+  {
+    "op": "clear_filtered",
+    "k": 17,
+    "x": 620.0000000000001,
+    "y": 1004.5894683899489,
+    "reason": "disjoint_posterior"
+  },
+  {
+    "op": "certified_visit",
+    "k": 13,
+    "distance": 485.88910094121593
+  },
+  {
+    "op": "clear",
+    "k": 13,
+    "ok": true,
+    "x": 153.28207101641357,
+    "y": 848.098827461505,
+    "T": 953.070045
+  },
+  {
+    "op": "measure",
+    "k": 17,
+    "result": "no_signal",
+    "x": 153.28207101641357,
+    "y": 848.098827461505,
+    "T": 958.070045,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 2,
+    "result": "direction",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1119.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 3,
+    "result": "no_signal",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1125.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 4,
+    "result": "no_signal",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1131.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 5,
+    "result": "no_signal",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1137.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 16,
+    "result": "no_signal",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1143.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 20,
+    "result": "no_signal",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1149.50044,
+    "active": false
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 1,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "measure",
+    "k": 6,
+    "result": "direction",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1155.50044,
+    "active": false
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 7,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 14,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "measure",
+    "k": 15,
+    "result": "no_signal",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1161.50044,
+    "active": false
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 18,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "measure",
+    "k": 19,
+    "result": "no_signal",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1167.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 9,
+    "result": "no_signal",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1173.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 10,
+    "result": "no_signal",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1179.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 11,
+    "result": "no_signal",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1185.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 12,
+    "result": "no_signal",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1191.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 17,
+    "result": "no_signal",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1197.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 8,
+    "result": "no_signal",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 1203.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 3,
+    "result": "no_signal",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1449.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 4,
+    "result": "no_signal",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1455.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 5,
+    "result": "no_signal",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1461.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 16,
+    "result": "no_signal",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1467.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 20,
+    "result": "no_signal",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1473.50044,
+    "active": false
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 1,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 6,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 7,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 14,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "measure",
+    "k": 15,
+    "result": "no_signal",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1479.50044,
+    "active": false
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 18,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "measure",
+    "k": 19,
+    "result": "direction",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1485.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 9,
+    "result": "no_signal",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1491.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 10,
+    "result": "no_signal",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1497.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 11,
+    "result": "no_signal",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1503.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 12,
+    "result": "no_signal",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1509.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 17,
+    "result": "no_signal",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1515.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 8,
+    "result": "no_signal",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1521.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 2,
+    "result": "direction",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1527.50044,
+    "active": false
+  },
+  {
+    "op": "clear_filtered",
+    "k": 19,
+    "x": -1080.0,
+    "y": 1.3226185430791414e-13,
+    "reason": "disjoint_posterior"
+  },
+  {
+    "op": "clear_filtered",
+    "k": 19,
+    "x": -1120.0,
+    "y": 1.3716044150450357e-13,
+    "reason": "disjoint_posterior"
+  },
+  {
+    "op": "clear_filtered",
+    "k": 19,
+    "x": -1160.0,
+    "y": 1.4205902870109297e-13,
+    "reason": "disjoint_posterior"
+  },
+  {
+    "op": "measure",
+    "k": 3,
+    "result": "no_signal",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1773.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 4,
+    "result": "no_signal",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1779.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 5,
+    "result": "no_signal",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1785.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 16,
+    "result": "direction",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1791.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 20,
+    "result": "no_signal",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1797.50044,
+    "active": false
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 1,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 6,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 7,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 14,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "measure",
+    "k": 15,
+    "result": "direction",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1803.50044,
+    "active": false
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 18,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "measure",
+    "k": 19,
+    "result": "direction",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1809.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 9,
+    "result": "no_signal",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1815.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 10,
+    "result": "no_signal",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1821.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 11,
+    "result": "no_signal",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1827.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 12,
+    "result": "no_signal",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1833.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 17,
+    "result": "no_signal",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1839.50044,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 8,
+    "result": "no_signal",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1845.50044,
+    "active": false
+  },
+  {
+    "op": "pending_scan_skipped",
+    "k": 2,
+    "reason": "clear_ready"
+  },
+  {
+    "op": "local_cover_start",
+    "k": 7,
+    "n_points": 2
+  },
+  {
+    "op": "clear",
+    "k": 7,
+    "ok": false,
+    "x": 293.6788646734215,
+    "y": -961.613025698744,
+    "T": 2027.909067
+  },
+  {
+    "op": "clear",
+    "k": 7,
+    "ok": true,
+    "x": 308.0933786063044,
+    "y": -937.7371609655864,
+    "T": 2038.487006
+  },
+  {
+    "op": "local_cover_start",
+    "k": 15,
+    "n_points": 4
+  },
+  {
+    "op": "clear",
+    "k": 15,
+    "ok": true,
+    "x": 328.9209985819458,
+    "y": -954.1627649126855,
+    "T": 2048.792061
+  },
+  {
+    "op": "local_cover_start",
+    "k": 14,
+    "n_points": 3
+  },
+  {
+    "op": "clear",
+    "k": 14,
+    "ok": true,
+    "x": 215.20085218693595,
+    "y": -100.28260923386632,
+    "T": 2226.075965
+  },
+  {
+    "op": "local_cover_start",
+    "k": 19,
+    "n_points": 3
+  },
+  {
+    "op": "clear",
+    "k": 19,
+    "ok": false,
+    "x": -48.93672442908818,
+    "y": -19.050852926767032,
+    "T": 2284.345218
+  },
+  {
+    "op": "clear",
+    "k": 19,
+    "ok": true,
+    "x": -68.74392781154518,
+    "y": -26.86565858762492,
+    "T": 2293.60384
+  },
+  {
+    "op": "local_cover_start",
+    "k": 6,
+    "n_points": 2
+  },
+  {
+    "op": "clear",
+    "k": 6,
+    "ok": true,
+    "x": -367.86420301706283,
+    "y": -126.44637596666557,
+    "T": 2361.655964
+  },
+  {
+    "op": "local_cover_start",
+    "k": 1,
+    "n_points": 2
+  },
+  {
+    "op": "clear",
+    "k": 1,
+    "ok": true,
+    "x": 48.83452652160617,
+    "y": 353.8556399371634,
+    "T": 2493.829524
+  },
+  {
+    "op": "local_cover_start",
+    "k": 18,
+    "n_points": 3
+  },
+  {
+    "op": "clear",
+    "k": 18,
+    "ok": false,
+    "x": 69.60688639926492,
+    "y": 625.9065033661662,
+    "T": 2551.398073
+  },
+  {
+    "op": "clear",
+    "k": 18,
+    "ok": true,
+    "x": 69.56097059759497,
+    "y": 646.4650925193617,
+    "T": 2560.509801
+  },
+  {
+    "op": "local_cover_start",
+    "k": 2,
+    "n_points": 2
+  },
+  {
+    "op": "clear",
+    "k": 2,
+    "ok": true,
+    "x": -1271.2631510887982,
+    "y": 634.8007578916686,
+    "T": 2833.684772
+  },
+  {
+    "op": "measure",
+    "k": 17,
+    "result": "no_signal",
+    "x": -1271.2631510887982,
+    "y": 634.8007578916686,
+    "T": 2839.684772,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 10,
+    "result": "no_signal",
+    "x": -1126.0148206912554,
+    "y": 672.2563651718373,
+    "T": 2875.684772,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 10,
+    "result": "no_signal",
+    "x": -1416.511481486341,
+    "y": 597.3451506114999,
+    "T": 2940.684772,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 16,
+    "result": "no_signal",
+    "x": -1331.2487418534456,
+    "y": 720.7561113495684,
+    "T": 2976.684772,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 16,
+    "result": "no_signal",
+    "x": -1501.7742211192362,
+    "y": 473.93418987343136,
+    "T": 3041.684772,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 8,
+    "result": "no_signal",
+    "x": -1576.1384982951542,
+    "y": 604.2029669464632,
+    "T": 3077.684772,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 8,
+    "result": "no_signal",
+    "x": -1427.4099439433182,
+    "y": 343.66541280039957,
+    "T": 3142.684772,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 12,
+    "result": "no_signal",
+    "x": -1348.7228845729069,
+    "y": 471.3695501164526,
+    "T": 3178.684772,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 12,
+    "result": "no_signal",
+    "x": -1506.0970033137296,
+    "y": 215.9612754843465,
+    "T": 3243.684772,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 9,
+    "result": "no_signal",
+    "x": -1373.5689280921201,
+    "y": 286.2201487891145,
+    "T": 3279.684772,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 9,
+    "result": "no_signal",
+    "x": -1638.625078535339,
+    "y": 145.70240217957848,
+    "T": 3344.684772,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 11,
+    "result": "no_signal",
+    "x": -1500.2544702210723,
+    "y": 203.61245963715487,
+    "T": 3380.684772,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 11,
+    "result": "no_signal",
+    "x": -1776.9956868496058,
+    "y": 87.7923447220021,
+    "T": 3445.684772,
+    "active": true
+  },
+  {
+    "op": "abort_safe",
+    "k": 16,
+    "reason": "centerline",
+    "virtual_time": 3445.684772
+  },
+  {
+    "op": "abort_safe",
+    "k": 8,
+    "reason": "centerline",
+    "virtual_time": 3445.684772
+  },
+  {
+    "op": "abort_safe",
+    "k": 9,
+    "reason": "centerline",
+    "virtual_time": 3445.684772
+  },
+  {
+    "op": "abort_safe",
+    "k": 10,
+    "reason": "centerline",
+    "virtual_time": 3445.684772
+  },
+  {
+    "op": "abort_safe",
+    "k": 11,
+    "reason": "centerline",
+    "virtual_time": 3445.684772
+  },
+  {
+    "op": "abort_safe",
+    "k": 12,
+    "reason": "centerline",
+    "virtual_time": 3445.684772
+  },
+  {
+    "op": "abort_safe",
+    "k": 17,
+    "reason": "centerline",
+    "virtual_time": 3445.684772
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "execution_profile": "legacy",
+  "manuscript_type": "competition",
+  "stage": "comp-modeling",
+  "status": "design_selected_pending_model_mechanism_review",
+  "selection_authority": "agent_design_with_user_confirmed_semantics",
+  "formal_results_available": false,
+  "q2_revision": {"selection_authority":"user","role":"user_directed_refinement","model":"layered robust second-point selection","state":"Z1 joint (g,r) and F1","objective":"J(q)=worst residual covering radius over feasible near/direction/no_signal","reliability_sets":["C_core","F_full_1000","C_guaranteed"],"sector_mec_bound_m":750.114,"search":"A/B/C layers about MEC(F1), not 20-3000m polar grid about s","proof":"MODELING_REPORT.md section3","status":"design_only_pending_revised_review","claim_limit":"candidate-set recommendation; c1 is not q-star; clearance still requires rho<=20 or SAFE"},
+  "q3_revision": {"selection_authority":"user","role":"user_directed_primary","scan_geometry":"origin plus six equiangular points at radius1200m","scan_points":7,"visit_order":"receding-horizon; exact remaining TSP if P empty; Q2 J lexicographic if P nonempty","global_measure_bound":140,"base_travel_m":7200,"base_travel_identity":"undisturbed covering baseline, not realized online path","safe_time_bound_s":32360,"loose_covering_bound_s":33824,"active_safe_time_bound_s":41960,"early_stop":"ever_detected=16 cancels remaining discovery by N<=16","proof":"MODELING_REPORT.md section5","status":"design_only_pending_revised_review","claim_limit":"not minimum point count or realized 7200m path or global optimum"},
+  "dictionary_route": "unavailable; no dictionary invocation claimed",
+  "candidates": [
+    {"id":"GEO","status":"formal_base","evidence_level":"mathematical_design","selected_for_implementation":true,"evidence":"MODELING_REPORT.md sections 2 and 4","validation_increment":"explicit degenerate status and safe radius","rollback":"high precision or numerical_uncertain"},
+    {"id":"SAFE","status":"formal_base","evidence_level":"constructive_proof_pending_execution","selected_for_implementation":true,"evidence":"MODELING_REPORT.md sections 4-7","validation_increment":"unknown N and unknown beam completeness","rollback":"report incomplete if real budget fails"},
+    {"id":"ACTIVE","status":"audit_candidate","selected_for_implementation":true,"evidence_level":"hypothesis_not_benchmarked","baseline":"SAFE","increment":"fewer measurements/clearance actions and smaller T to be tested","promotion":"VALIDATION_PLAN.md hard constraints and paired case evidence","rollback":"SAFE after local budget/stagnation"},
+    {"id":"ORDER","status":"audit_candidate","selected_for_implementation":false,"baseline":"SAFE fixed order","increment":"travel reduction to be tested","rollback":"fixed complete order"},
+    {"id":"POINT_LS","status":"audit_candidate","selected_for_implementation":false,"reason":"point centre alone cannot guarantee bounded-error clearance","rollback":"certified outer enclosure"}
+  ],
+  "rejected_as_primary": [
+    {"id":"CRLB_only","reason":"Gaussian distribution and known geometric quantities do not supply this task's set guarantee"},
+    {"id":"RL_POMDP","reason":"training generator, probability model and real-time budget unsupported; unnecessary for baseline completeness"}
+  ],
+  "claim_limits": ["formal_base labels designate design baselines only, not validated numerical authority", "no global continuous optimality", "no measured clearance ratio or time advantage", "real-time feasibility pending", "formal tests require separate authorization"]
+}

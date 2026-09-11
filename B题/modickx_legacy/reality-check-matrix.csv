@@ -1,0 +1,7 @@
+item,unit,requirement,evidence,status
+source_region,m,radius 1800 applies to sources,user_data/parameters.csv,consistent
+radio_range,m,unknown fixed radius between 1000 and 1500,user_data/parameters.csv,consistent
+angle,degree,bounded error 1 and circular differences,user_data/B题-统一建模口径.md,consistent
+clear,m,distance at most 20 independent of beam,user_data/B题-统一建模口径.md,consistent
+timing,s,travel/5 plus switch and action cost,evidence/data_preparation/observations_clean.csv,smoke only
+performance,s per source,no defined ratio when K=0,evidence/data_preparation/sessions_clean.csv,no performance claim

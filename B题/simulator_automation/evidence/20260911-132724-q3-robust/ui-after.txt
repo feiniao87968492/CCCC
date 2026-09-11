@@ -1,0 +1,4440 @@
+ControlType.Pane||无线电干扰源环境模拟器
+ControlType.Pane||
+ControlType.Pane||无线电干扰源环境模拟器 - Web 内容
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Document|RootWebArea|无线电干扰源环境模拟器
+ControlType.Group||
+ControlType.Group||
+ControlType.Text||环境模拟器
+ControlType.Group||主导航
+ControlType.Text||测试
+ControlType.Button||演练测试
+ControlType.Text||正式测试
+ControlType.Button||问题3正式测试
+ControlType.Button||问题4正式测试
+ControlType.Text||其他
+ControlType.Button||公告
+ControlType.Button||账号
+ControlType.Button||设置
+ControlType.Button||关于
+ControlType.Text||v1.1
+ControlType.Group||
+ControlType.Text||无线电干扰源环境模拟器
+ControlType.Text||2026年9月13日17:30之后无法启动新的演练测试或正式测试
+ControlType.StatusBar||服务器已连接
+ControlType.Text||已连接
+ControlType.Text||队号 202611102016
+ControlType.Button||退出登录
+ControlType.Group||
+ControlType.Text||- 重要提醒：正式测试没有上传完成时，不要退出模拟器！
+- 重要提醒：各参赛队在附录中、支撑材料中提交代码时，注意将参赛队号隐去或使用占位符代替，以免违规。建议不要将参赛队号在程序中写死，而是以命令行参数等方式提供。
+ControlType.Button||关闭公告
+ControlType.Group||
+ControlType.Group||问题3 演练 测试
+ControlType.Text|test-run-title|问题3 演练 测试
+ControlType.StatusBar||
+ControlType.Text||测试已结束
+ControlType.Text||测试案例编码
+ControlType.Text||CMZ3-2WC2-QDP4-XHN9
+ControlType.Text||测试窗口剩余
+ControlType.Text||24:43
+ControlType.Text||机器狗程序剩余
+ControlType.Text||19:45
+ControlType.Text||接口端口
+ControlType.Text||2026
+ControlType.Button||返回演练测试
+ControlType.Group||本次演练测试干扰源数量
+ControlType.Text||本次演练测试干扰源数量
+ControlType.Text||共
+ControlType.Text||10
+ControlType.Text||个， 全向
+ControlType.Text||10
+ControlType.Text||个， 定向
+ControlType.Text||0
+ControlType.Text||个
+ControlType.Group||
+ControlType.Text||行为日志已保存
+ControlType.Text||practice-p3-4398051321061663547-CMZ3-2WC2-QDP4-XHN9.jlog
+ControlType.Text||197.1 KiB
+ControlType.Text||指令与反馈
+ControlType.Text||仅显示最新1000条
+ControlType.Table||
+ControlType.DataItem||
+ControlType.DataItem||接收时间
+ControlType.DataItem||指令
+ControlType.DataItem||位置
+ControlType.DataItem||频道
+ControlType.DataItem||响应摘要
+ControlType.DataItem||虚拟时间
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||进入
+ControlType.DataItem||--
+ControlType.DataItem||--
+ControlType.DataItem||进入成功
+ControlType.DataItem||0.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||1
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||5.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||2
+ControlType.DataItem||示向度 266.04°
+ControlType.DataItem||11.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||3
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||17.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||4
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||23.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||5
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||29.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||35.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||41.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||8
+ControlType.DataItem||示向度 292.33°
+ControlType.DataItem||47.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||9
+ControlType.DataItem||示向度 242.72°
+ControlType.DataItem||53.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||10
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||59.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||11
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||65.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||12
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||71.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||13
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||77.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||83.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||15
+ControlType.DataItem||示向度 241.99°
+ControlType.DataItem||89.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||16
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||95.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||17
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||101.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||18
+ControlType.DataItem||示向度 179.85°
+ControlType.DataItem||107.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||19
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||113.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:25
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||20
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||119.000 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:26
+ControlType.DataItem||测量
+ControlType.DataItem||(599.23, -750.00)
+ControlType.DataItem||2
+ControlType.DataItem||示向度 207.80°
+ControlType.DataItem||316.998 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:26
+ControlType.DataItem||测量
+ControlType.DataItem||(599.23, -750.00)
+ControlType.DataItem||2
+ControlType.DataItem||示向度 207.80°
+ControlType.DataItem||321.998 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:26
+ControlType.DataItem||测量
+ControlType.DataItem||(599.23, -750.00)
+ControlType.DataItem||2
+ControlType.DataItem||示向度 207.80°
+ControlType.DataItem||326.998 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||测量
+ControlType.DataItem||(599.23, -750.00)
+ControlType.DataItem||2
+ControlType.DataItem||示向度 207.80°
+ControlType.DataItem||331.998 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||测量
+ControlType.DataItem||(599.23, -750.00)
+ControlType.DataItem||2
+ControlType.DataItem||示向度 207.80°
+ControlType.DataItem||336.998 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||测量
+ControlType.DataItem||(599.23, -750.00)
+ControlType.DataItem||2
+ControlType.DataItem||示向度 207.80°
+ControlType.DataItem||341.998 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-0.69, -9.98)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||535.528 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-2.07, -29.93)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||542.528 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-101.52, -1466.49)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||833.528 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-102.90, -1486.44)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||840.528 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-20.64, -8.59)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||1139.555 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-121.47, -1465.11)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||1434.555 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-122.85, -1485.06)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||1441.555 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(19.26, -11.36)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||1740.663 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-81.57, -1467.87)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2035.663 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-82.95, -1487.82)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2042.663 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-3.45, -49.88)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2333.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-4.83, -69.83)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2340.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-6.22, -89.79)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2347.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-7.60, -109.74)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2354.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-8.98, -129.69)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2361.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-10.36, -149.64)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2368.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-11.74, -169.59)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2375.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-13.12, -189.55)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2382.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-14.50, -209.50)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2389.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-15.88, -229.45)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2396.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-17.27, -249.40)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2403.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-18.65, -269.36)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2410.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-20.03, -289.31)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2417.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-21.41, -309.26)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2424.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-22.79, -329.21)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2431.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-24.17, -349.16)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2438.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-25.55, -369.12)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2445.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-26.93, -389.07)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2452.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-28.31, -409.02)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2459.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-29.70, -428.97)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2466.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-31.08, -448.93)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2473.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-32.46, -468.88)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2480.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-33.84, -488.83)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2487.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-35.22, -508.78)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2494.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-36.60, -528.73)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2501.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-37.98, -548.69)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2508.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-39.36, -568.64)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2515.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-40.75, -588.59)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2522.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-42.13, -608.54)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2529.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-43.51, -628.50)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2536.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-44.89, -648.45)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2543.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-46.27, -668.40)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2550.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-47.65, -688.35)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2557.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-49.03, -708.30)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2564.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-50.41, -728.26)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2571.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-51.80, -748.21)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2578.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-53.18, -768.16)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2585.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-54.56, -788.11)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2592.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-55.94, -808.07)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2599.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-57.32, -828.02)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2606.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-58.70, -847.97)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2613.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-60.08, -867.92)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2620.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-61.46, -887.88)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2627.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-62.84, -907.83)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2634.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-64.23, -927.78)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2641.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-65.61, -947.73)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2648.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-66.99, -967.68)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2655.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-68.37, -987.64)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2662.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-69.75, -1007.59)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2669.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-71.13, -1027.54)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2676.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-72.51, -1047.49)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2683.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-73.89, -1067.45)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2690.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-75.28, -1087.40)
+ControlType.DataItem||2
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2697.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||清除
+ControlType.DataItem||(-76.66, -1107.35)
+ControlType.DataItem||2
+ControlType.DataItem||清除成功
+ControlType.DataItem||2706.691 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||测量
+ControlType.DataItem||(-35.05, -1012.85)
+ControlType.DataItem||8
+ControlType.DataItem||示向度 338.92°
+ControlType.DataItem||2733.342 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||测量
+ControlType.DataItem||(-35.05, -1012.85)
+ControlType.DataItem||8
+ControlType.DataItem||示向度 338.92°
+ControlType.DataItem||2738.342 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:28
+ControlType.DataItem||测量
+ControlType.DataItem||(-35.05, -1012.85)
+ControlType.DataItem||8
+ControlType.DataItem||示向度 338.92°
+ControlType.DataItem||2743.342 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:29
+ControlType.DataItem||测量
+ControlType.DataItem||(-35.05, -1012.85)
+ControlType.DataItem||8
+ControlType.DataItem||示向度 338.92°
+ControlType.DataItem||2748.342 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:29
+ControlType.DataItem||测量
+ControlType.DataItem||(-35.05, -1012.85)
+ControlType.DataItem||8
+ControlType.DataItem||示向度 338.92°
+ControlType.DataItem||2753.342 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:29
+ControlType.DataItem||测量
+ControlType.DataItem||(-35.05, -1012.85)
+ControlType.DataItem||8
+ControlType.DataItem||示向度 338.92°
+ControlType.DataItem||2758.342 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:29
+ControlType.DataItem||清除
+ControlType.DataItem||(3.80, -9.25)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2962.212 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:29
+ControlType.DataItem||清除
+ControlType.DataItem||(11.40, -27.75)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||2969.212 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:29
+ControlType.DataItem||清除
+ControlType.DataItem||(566.11, -1378.27)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||3264.212 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:29
+ControlType.DataItem||清除
+ControlType.DataItem||(-14.70, -16.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||3563.239 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:29
+ControlType.DataItem||清除
+ControlType.DataItem||(540.01, -1367.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||3858.239 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:29
+ControlType.DataItem||清除
+ControlType.DataItem||(547.61, -1385.87)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||3865.239 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:29
+ControlType.DataItem||清除
+ControlType.DataItem||(22.30, -1.65)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4164.347 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:29
+ControlType.DataItem||清除
+ControlType.DataItem||(577.01, -1352.17)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4459.347 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(584.61, -1370.67)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4466.347 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(19.00, -46.25)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4757.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(26.60, -64.75)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4764.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(34.19, -83.25)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4771.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(41.79, -101.75)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4778.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(49.39, -120.25)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4785.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(56.99, -138.75)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4792.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(64.59, -157.25)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4799.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(72.19, -175.75)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4806.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(79.79, -194.25)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4813.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(87.39, -212.75)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4820.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(94.99, -231.25)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4827.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(102.58, -249.75)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4834.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(110.18, -268.25)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4841.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(117.78, -286.75)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4848.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(125.38, -305.25)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4855.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(132.98, -323.75)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4862.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(140.58, -342.25)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4869.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(148.18, -360.75)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4876.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(155.78, -379.25)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4883.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(163.37, -397.75)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4890.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(170.97, -416.25)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4897.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(178.57, -434.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4904.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(186.17, -453.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4911.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(193.77, -471.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4918.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(201.37, -490.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4925.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(208.97, -508.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4932.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(216.57, -527.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4939.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(224.16, -545.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4946.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(231.76, -564.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4953.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(239.36, -582.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4960.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(246.96, -601.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4967.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(254.56, -619.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4974.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(262.16, -638.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4981.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(269.76, -656.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4988.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(277.36, -675.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||4995.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(284.96, -693.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5002.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(292.55, -712.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5009.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(300.15, -730.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5016.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(307.75, -749.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5023.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(315.35, -767.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5030.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(322.95, -786.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5037.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(330.55, -804.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5044.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(338.15, -823.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5051.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(345.75, -841.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5058.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(353.34, -860.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5065.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(360.94, -878.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5072.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(368.54, -897.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5079.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(376.14, -915.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5086.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(383.74, -934.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5093.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(391.34, -952.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5100.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(398.94, -971.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5107.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(406.54, -989.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5114.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(414.14, -1008.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5121.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(421.73, -1026.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5128.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(429.33, -1045.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5135.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(436.93, -1063.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5142.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(444.53, -1082.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5149.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(452.13, -1100.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5156.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(459.73, -1119.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5163.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(467.33, -1137.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5170.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(474.93, -1156.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5177.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(482.52, -1174.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5184.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(490.12, -1193.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5191.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(497.72, -1211.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5198.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(505.32, -1230.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5205.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(512.92, -1248.76)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5212.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(520.52, -1267.26)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5219.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(528.12, -1285.77)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5226.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(535.72, -1304.27)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5233.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(543.31, -1322.77)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5240.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(550.91, -1341.27)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5247.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(558.51, -1359.77)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5254.375 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(-7.10, -35.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5545.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(0.50, -53.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5552.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(8.10, -72.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5559.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(15.69, -90.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5566.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(23.29, -109.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5573.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(30.89, -127.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5580.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(38.49, -146.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5587.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(46.09, -164.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5594.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(53.69, -183.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5601.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(61.29, -201.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5608.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(68.89, -220.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5615.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(76.48, -238.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5622.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(84.08, -257.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5629.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(91.68, -275.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5636.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(99.28, -294.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5643.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(106.88, -312.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5650.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(114.48, -331.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5657.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(122.08, -349.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5664.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(129.68, -368.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5671.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(137.28, -386.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5678.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(144.87, -405.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5685.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(152.47, -423.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5692.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(160.07, -442.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5699.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(167.67, -460.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5706.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(175.27, -479.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5713.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(182.87, -497.85)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5720.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(190.47, -516.35)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5727.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(198.07, -534.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5734.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(205.66, -553.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5741.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(213.26, -571.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5748.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(220.86, -590.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5755.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(228.46, -608.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5762.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(236.06, -627.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5769.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(243.66, -645.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5776.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(251.26, -664.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5783.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(258.86, -682.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5790.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(266.46, -701.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5797.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(274.05, -719.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5804.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(281.65, -738.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5811.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(289.25, -756.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5818.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(296.85, -775.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5825.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(304.45, -793.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5832.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(312.05, -812.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5839.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(319.65, -830.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5846.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(327.25, -849.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5853.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(334.84, -867.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5860.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(342.44, -886.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5867.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(350.04, -904.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5874.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(357.64, -923.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5881.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(365.24, -941.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5888.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(372.84, -960.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5895.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(380.44, -978.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5902.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(388.04, -997.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5909.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(395.63, -1015.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5916.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(403.23, -1034.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5923.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(410.83, -1052.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5930.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(418.43, -1071.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5937.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(426.03, -1089.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5944.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(433.63, -1108.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5951.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(441.23, -1126.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5958.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(448.83, -1145.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5965.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(456.43, -1163.86)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5972.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(464.02, -1182.36)
+ControlType.DataItem||8
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||5979.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||清除
+ControlType.DataItem||(471.62, -1200.86)
+ControlType.DataItem||8
+ControlType.DataItem||清除成功
+ControlType.DataItem||5988.403 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:30
+ControlType.DataItem||测量
+ControlType.DataItem||(-781.19, -673.90)
+ControlType.DataItem||9
+ControlType.DataItem||示向度 301.37°
+ControlType.DataItem||6266.228 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:31
+ControlType.DataItem||测量
+ControlType.DataItem||(-781.19, -673.90)
+ControlType.DataItem||9
+ControlType.DataItem||示向度 301.37°
+ControlType.DataItem||6271.228 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:31
+ControlType.DataItem||测量
+ControlType.DataItem||(-781.19, -673.90)
+ControlType.DataItem||9
+ControlType.DataItem||示向度 301.37°
+ControlType.DataItem||6276.228 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:31
+ControlType.DataItem||测量
+ControlType.DataItem||(-781.19, -673.90)
+ControlType.DataItem||9
+ControlType.DataItem||示向度 301.37°
+ControlType.DataItem||6281.228 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||测量
+ControlType.DataItem||(-781.19, -673.90)
+ControlType.DataItem||9
+ControlType.DataItem||示向度 301.37°
+ControlType.DataItem||6286.228 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||测量
+ControlType.DataItem||(-781.19, -673.90)
+ControlType.DataItem||9
+ControlType.DataItem||示向度 301.37°
+ControlType.DataItem||6291.228 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-4.58, -8.89)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6498.713 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-13.75, -26.66)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6505.713 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-682.93, -1324.28)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6800.713 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-22.36, 0.28)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7099.740 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-691.53, -1297.34)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7394.740 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-700.70, -1315.11)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7401.740 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(13.19, -18.05)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7700.848 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-655.98, -1315.67)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7995.848 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-665.15, -1333.44)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8002.848 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-22.92, -44.44)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8293.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-32.08, -62.21)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8300.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-41.25, -79.99)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8307.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-50.42, -97.77)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8314.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-59.58, -115.54)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8321.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-68.75, -133.32)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8328.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-77.92, -151.09)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8335.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-87.08, -168.87)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8342.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-96.25, -186.64)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8349.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-105.42, -204.42)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8356.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-114.58, -222.19)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8363.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-123.75, -239.97)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8370.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-132.92, -257.75)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8377.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-142.09, -275.52)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8384.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-151.25, -293.30)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8391.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-160.42, -311.07)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8398.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-169.59, -328.85)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8405.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-178.75, -346.62)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8412.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-187.92, -364.40)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8419.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:32
+ControlType.DataItem||清除
+ControlType.DataItem||(-197.09, -382.17)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8426.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-206.25, -399.95)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8433.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-215.42, -417.73)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8440.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-224.59, -435.50)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8447.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-233.75, -453.28)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8454.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-242.92, -471.05)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8461.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-252.09, -488.83)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8468.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-261.25, -506.60)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8475.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-270.42, -524.38)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8482.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-279.59, -542.15)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8489.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-288.75, -559.93)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8496.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-297.92, -577.71)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8503.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-307.09, -595.48)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8510.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-316.25, -613.26)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8517.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-325.42, -631.03)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8524.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-334.59, -648.81)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8531.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-343.75, -666.58)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8538.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-352.92, -684.36)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8545.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-362.09, -702.13)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8552.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-371.25, -719.91)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8559.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-380.42, -737.69)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8566.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-389.59, -755.46)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8573.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-398.76, -773.24)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8580.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-407.92, -791.01)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8587.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-417.09, -808.79)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8594.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-426.26, -826.56)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8601.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-435.42, -844.34)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8608.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-444.59, -862.11)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8615.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-453.76, -879.89)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8622.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-462.92, -897.67)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8629.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-472.09, -915.44)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8636.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-481.26, -933.22)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8643.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-490.42, -950.99)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8650.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-499.59, -968.77)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8657.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-508.76, -986.54)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8664.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-517.92, -1004.32)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8671.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-527.09, -1022.09)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8678.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-536.26, -1039.87)
+ControlType.DataItem||9
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||8685.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||清除
+ControlType.DataItem||(-545.42, -1057.64)
+ControlType.DataItem||9
+ControlType.DataItem||清除成功
+ControlType.DataItem||8694.876 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||测量
+ControlType.DataItem||(-23.60, -986.58)
+ControlType.DataItem||15
+ControlType.DataItem||示向度 194.44°
+ControlType.DataItem||8806.204 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:33
+ControlType.DataItem||测量
+ControlType.DataItem||(-23.60, -986.58)
+ControlType.DataItem||15
+ControlType.DataItem||示向度 194.44°
+ControlType.DataItem||8811.204 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:34
+ControlType.DataItem||测量
+ControlType.DataItem||(-23.60, -986.58)
+ControlType.DataItem||15
+ControlType.DataItem||示向度 194.44°
+ControlType.DataItem||8816.204 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:34
+ControlType.DataItem||测量
+ControlType.DataItem||(-23.60, -986.58)
+ControlType.DataItem||15
+ControlType.DataItem||示向度 194.44°
+ControlType.DataItem||8821.204 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:34
+ControlType.DataItem||测量
+ControlType.DataItem||(-23.60, -986.58)
+ControlType.DataItem||15
+ControlType.DataItem||示向度 194.44°
+ControlType.DataItem||8826.204 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:34
+ControlType.DataItem||测量
+ControlType.DataItem||(-23.60, -986.58)
+ControlType.DataItem||15
+ControlType.DataItem||示向度 194.44°
+ControlType.DataItem||8831.204 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-4.70, -8.83)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||9029.791 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-14.09, -26.49)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||9036.791 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-699.74, -1315.47)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||9331.791 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-22.35, 0.56)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||9630.818 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-708.01, -1288.42)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||9925.818 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-717.40, -1306.08)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||9932.818 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(12.96, -18.22)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10231.926 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-672.69, -1307.21)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10526.926 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-682.08, -1324.86)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10533.926 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-23.48, -44.14)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10824.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-32.87, -61.80)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10831.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-42.27, -79.46)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10838.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-51.66, -97.12)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10845.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-61.05, -114.77)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10852.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-70.44, -132.43)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10859.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-79.84, -150.09)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10866.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-89.23, -167.74)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10873.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-98.62, -185.40)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10880.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-108.01, -203.06)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10887.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-117.41, -220.72)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10894.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-126.80, -238.37)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10901.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-136.19, -256.03)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10908.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-145.58, -273.69)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10915.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-154.98, -291.35)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10922.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-164.37, -309.00)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10929.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-173.76, -326.66)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10936.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-183.15, -344.32)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10943.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-192.55, -361.97)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10950.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-201.94, -379.63)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10957.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-211.33, -397.29)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10964.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-220.72, -414.95)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10971.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-230.12, -432.60)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10978.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-239.51, -450.26)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10985.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-248.90, -467.92)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10992.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-258.29, -485.58)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||10999.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-267.69, -503.23)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11006.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-277.08, -520.89)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11013.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-286.47, -538.55)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11020.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-295.86, -556.21)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11027.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-305.26, -573.86)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11034.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-314.65, -591.52)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11041.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-324.04, -609.18)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11048.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-333.43, -626.83)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11055.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-342.83, -644.49)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11062.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-352.22, -662.15)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11069.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-361.61, -679.81)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11076.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-371.00, -697.46)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11083.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-380.40, -715.12)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11090.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-389.79, -732.78)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11097.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-399.18, -750.44)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11104.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-408.57, -768.09)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11111.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-417.97, -785.75)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11118.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-427.36, -803.41)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11125.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-436.75, -821.07)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11132.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-446.14, -838.72)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11139.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-455.54, -856.38)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11146.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-464.93, -874.04)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11153.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-474.32, -891.69)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11160.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-483.71, -909.35)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11167.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-493.11, -927.01)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11174.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-502.50, -944.67)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11181.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-511.89, -962.32)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11188.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-521.28, -979.98)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11195.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-530.68, -997.64)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11202.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-540.07, -1015.30)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11209.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-549.46, -1032.95)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11216.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-558.85, -1050.61)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11223.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-568.25, -1068.27)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11230.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-577.64, -1085.92)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11237.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-587.03, -1103.58)
+ControlType.DataItem||15
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11244.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||清除
+ControlType.DataItem||(-596.42, -1121.24)
+ControlType.DataItem||15
+ControlType.DataItem||清除成功
+ControlType.DataItem||11253.954 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||测量
+ControlType.DataItem||(-750.22, 653.69)
+ControlType.DataItem||18
+ControlType.DataItem||示向度 236.63°
+ControlType.DataItem||11616.271 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:35
+ControlType.DataItem||测量
+ControlType.DataItem||(-750.22, 653.69)
+ControlType.DataItem||18
+ControlType.DataItem||示向度 236.63°
+ControlType.DataItem||11621.271 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:36
+ControlType.DataItem||测量
+ControlType.DataItem||(-750.22, 653.69)
+ControlType.DataItem||18
+ControlType.DataItem||示向度 236.63°
+ControlType.DataItem||11626.271 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:36
+ControlType.DataItem||测量
+ControlType.DataItem||(-750.22, 653.69)
+ControlType.DataItem||18
+ControlType.DataItem||示向度 236.63°
+ControlType.DataItem||11631.271 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:36
+ControlType.DataItem||测量
+ControlType.DataItem||(-750.22, 653.69)
+ControlType.DataItem||18
+ControlType.DataItem||示向度 236.63°
+ControlType.DataItem||11636.271 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:36
+ControlType.DataItem||测量
+ControlType.DataItem||(-750.22, 653.69)
+ControlType.DataItem||18
+ControlType.DataItem||示向度 236.63°
+ControlType.DataItem||11641.271 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-10.00, 0.03)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11841.777 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-30.00, 0.08)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||11848.777 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-1489.99, 3.90)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||12143.777 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-9.95, 20.03)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||12442.804 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-1469.94, 23.85)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||12737.804 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-1489.94, 23.90)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||12744.804 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-10.05, -19.97)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13043.912 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-1470.05, -16.15)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13338.912 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-1490.05, -16.10)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13345.912 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-50.00, 0.13)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13636.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-70.00, 0.18)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13643.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-90.00, 0.24)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13650.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-110.00, 0.29)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13657.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-130.00, 0.34)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13664.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-150.00, 0.39)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13671.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-170.00, 0.45)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13678.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-190.00, 0.50)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13685.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-210.00, 0.55)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13692.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-230.00, 0.60)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13699.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-250.00, 0.65)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13706.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-270.00, 0.71)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13713.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-290.00, 0.76)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13720.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-310.00, 0.81)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13727.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-330.00, 0.86)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13734.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-350.00, 0.92)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13741.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-370.00, 0.97)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13748.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-390.00, 1.02)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13755.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-410.00, 1.07)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13762.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-430.00, 1.13)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13769.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-450.00, 1.18)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13776.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-470.00, 1.23)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13783.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-490.00, 1.28)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13790.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-510.00, 1.34)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13797.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-530.00, 1.39)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13804.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-550.00, 1.44)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13811.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-570.00, 1.49)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13818.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-590.00, 1.54)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13825.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-610.00, 1.60)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13832.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-630.00, 1.65)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13839.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-650.00, 1.70)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13846.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-670.00, 1.75)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13853.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-690.00, 1.81)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13860.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-710.00, 1.86)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13867.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-730.00, 1.91)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13874.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-750.00, 1.96)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13881.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-770.00, 2.02)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13888.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-790.00, 2.07)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13895.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-810.00, 2.12)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13902.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-830.00, 2.17)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13909.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-850.00, 2.23)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13916.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-870.00, 2.28)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13923.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-890.00, 2.33)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13930.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-910.00, 2.38)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13937.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-930.00, 2.43)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13944.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-950.00, 2.49)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13951.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-970.00, 2.54)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13958.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-990.00, 2.59)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13965.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-1010.00, 2.64)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13972.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-1030.00, 2.70)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13979.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-1050.00, 2.75)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13986.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-1070.00, 2.80)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||13993.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-1090.00, 2.85)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||14000.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-1110.00, 2.91)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||14007.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-1130.00, 2.96)
+ControlType.DataItem||18
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||14014.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||清除
+ControlType.DataItem||(-1150.00, 3.01)
+ControlType.DataItem||18
+ControlType.DataItem||清除成功
+ControlType.DataItem||14023.940 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||1
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14039.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||3
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14045.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||4
+ControlType.DataItem||示向度 272.89°
+ControlType.DataItem||14051.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||5
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14057.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14063.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14069.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||10
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14075.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||11
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14081.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||12
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14087.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||13
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14093.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14099.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||16
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14105.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||17
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14111.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||19
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14117.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||20
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||14123.959 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:37
+ControlType.DataItem||测量
+ControlType.DataItem||(-464.42, -711.13)
+ControlType.DataItem||4
+ControlType.DataItem||示向度 213.56°
+ControlType.DataItem||14334.584 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:38
+ControlType.DataItem||测量
+ControlType.DataItem||(-464.42, -711.13)
+ControlType.DataItem||4
+ControlType.DataItem||示向度 213.56°
+ControlType.DataItem||14339.584 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:38
+ControlType.DataItem||测量
+ControlType.DataItem||(-464.42, -711.13)
+ControlType.DataItem||4
+ControlType.DataItem||示向度 213.56°
+ControlType.DataItem||14344.584 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:38
+ControlType.DataItem||测量
+ControlType.DataItem||(-464.42, -711.13)
+ControlType.DataItem||4
+ControlType.DataItem||示向度 213.56°
+ControlType.DataItem||14349.584 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:38
+ControlType.DataItem||测量
+ControlType.DataItem||(-464.42, -711.13)
+ControlType.DataItem||4
+ControlType.DataItem||示向度 213.56°
+ControlType.DataItem||14354.584 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-464.42, -711.13)
+ControlType.DataItem||4
+ControlType.DataItem||示向度 213.56°
+ControlType.DataItem||14359.584 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1199.50, -9.99)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||14565.753 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1198.49, -29.96)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||14572.753 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1130.93, -1368.26)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||14843.753 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1129.92, -1388.23)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||14850.753 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1128.91, -1408.21)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||14857.753 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1127.90, -1428.18)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||14864.753 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1219.47, -11.00)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||15151.781 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1151.91, -1349.29)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||15422.781 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1150.90, -1369.27)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||15429.781 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1149.89, -1389.24)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||15436.781 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1148.88, -1409.22)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||15443.781 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1179.52, -8.98)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||15726.896 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1108.94, -1407.20)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16009.896 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1107.93, -1427.17)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16016.896 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1106.92, -1447.15)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16023.896 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1197.48, -49.94)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16306.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1196.47, -69.91)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16313.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1195.46, -89.89)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16320.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1194.45, -109.86)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16327.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1193.45, -129.83)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16334.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1192.44, -149.81)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16341.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1191.43, -169.78)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16348.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1190.42, -189.76)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16355.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1189.41, -209.73)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16362.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1188.40, -229.71)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16369.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1187.40, -249.68)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16376.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1186.39, -269.66)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16383.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1185.38, -289.63)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16390.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1184.37, -309.61)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16397.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1183.36, -329.58)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16404.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1182.35, -349.55)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16411.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1181.35, -369.53)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16418.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1180.34, -389.50)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16425.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1179.33, -409.48)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16432.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1178.32, -429.45)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16439.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1177.31, -449.43)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16446.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1176.30, -469.40)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16453.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1175.29, -489.38)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16460.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1174.29, -509.35)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16467.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1173.28, -529.33)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16474.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1172.27, -549.30)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16481.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1171.26, -569.28)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16488.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1170.25, -589.25)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16495.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1169.24, -609.22)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16502.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1168.24, -629.20)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16509.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1167.23, -649.17)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16516.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1166.22, -669.15)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16523.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1165.21, -689.12)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16530.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1164.20, -709.10)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16537.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1163.19, -729.07)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16544.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1162.19, -749.05)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16551.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1161.18, -769.02)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16558.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1160.17, -789.00)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16565.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1159.16, -808.97)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16572.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1158.15, -828.94)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16579.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1157.14, -848.92)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16586.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1156.14, -868.89)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16593.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1155.13, -888.87)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16600.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1154.12, -908.84)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16607.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1153.11, -928.82)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16614.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1152.10, -948.79)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16621.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1151.09, -968.77)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16628.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1150.09, -988.74)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16635.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1149.08, -1008.72)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16642.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1148.07, -1028.69)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16649.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1147.06, -1048.66)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16656.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1146.05, -1068.64)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16663.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1145.04, -1088.61)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16670.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1144.04, -1108.59)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16677.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1143.03, -1128.56)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16684.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1142.02, -1148.54)
+ControlType.DataItem||4
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||16691.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||清除
+ControlType.DataItem||(-1141.01, -1168.51)
+ControlType.DataItem||4
+ControlType.DataItem||清除成功
+ControlType.DataItem||16700.924 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||1
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||16818.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||3
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||16824.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||5
+ControlType.DataItem||示向度 327.70°
+ControlType.DataItem||16830.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||16836.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||16842.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||10
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||16848.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||11
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||16854.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||12
+ControlType.DataItem||示向度 215.34°
+ControlType.DataItem||16860.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||13
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||16866.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||16872.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||16
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||16878.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||17
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||16884.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||19
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||16890.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||20
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||16896.173 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:39
+ControlType.DataItem||测量
+ControlType.DataItem||(-37.74, -1894.04)
+ControlType.DataItem||5
+ControlType.DataItem||示向度 80.97°
+ControlType.DataItem||17106.803 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||清除
+ControlType.DataItem||(34.05, -1440.36)
+ControlType.DataItem||5
+ControlType.DataItem||清除成功
+ControlType.DataItem||17203.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(-1105.17, -980.36)
+ControlType.DataItem||12
+ControlType.DataItem||示向度 277.47°
+ControlType.DataItem||17455.387 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||清除
+ControlType.DataItem||(-1055.34, -1362.38)
+ControlType.DataItem||12
+ControlType.DataItem||清除成功
+ControlType.DataItem||17537.438 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||1
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||17880.755 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||3
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||17886.755 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||17892.755 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||17898.755 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||10
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||17904.755 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||11
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||17910.755 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||13
+ControlType.DataItem||示向度 329.99°
+ControlType.DataItem||17916.755 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||17922.755 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||16
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||17928.755 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||17
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||17934.755 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||19
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||17940.755 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||20
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||17946.755 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(1126.89, -964.65)
+ControlType.DataItem||13
+ControlType.DataItem||示向度 215.82°
+ControlType.DataItem||18059.183 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||清除
+ControlType.DataItem||(835.29, -1174.95)
+ControlType.DataItem||13
+ControlType.DataItem||清除成功
+ControlType.DataItem||18136.086 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||1
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||18388.136 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||3
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||18394.136 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||18400.136 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||18406.136 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||10
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||18412.136 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||11
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||18418.136 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||18424.136 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||16
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||18430.136 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||17
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||18436.136 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||19
+ControlType.DataItem||示向度 340.07°
+ControlType.DataItem||18442.136 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:40
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||20
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||18448.136 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(1493.01, -455.21)
+ControlType.DataItem||19
+ControlType.DataItem||示向度 45.64°
+ControlType.DataItem||18562.409 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||清除
+ControlType.DataItem||(1745.35, -197.52)
+ControlType.DataItem||19
+ControlType.DataItem||清除成功
+ControlType.DataItem||18639.541 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||1
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||18982.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||3
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||18988.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||18994.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19000.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||10
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19006.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||11
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19012.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19018.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||16
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19024.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||17
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19030.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||20
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19036.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||1
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19282.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||3
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19288.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19294.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19300.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||10
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19306.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||11
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19312.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19318.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||16
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19324.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||17
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19330.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||20
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||19336.669 s
+ControlType.DataItem||
+ControlType.DataItem||13:27:41
+ControlType.DataItem||退出
+ControlType.DataItem||--
+ControlType.DataItem||--
+ControlType.DataItem||正常退出
+ControlType.DataItem||19336.669 s
+ControlType.Window||问题3演练测试完成
+ControlType.Text|action-dialog-title|问题3演练测试完成
+ControlType.Text||问题3演练测试：机器狗已发送 /exit 指令，测试正常结束。
+本次案例含干扰源10个，其中全向10个、定向0个。
+行为日志已保存。
+ControlType.Button||确认
+ControlType.Pane||
+ControlType.Pane||

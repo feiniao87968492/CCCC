@@ -1,0 +1,187 @@
+{
+  "stage": "comp-modeling",
+  "status": "design_review_ready_not_numerically_validated",
+  "gates": [
+    {
+      "gate_id": "G1_raw_data_integrity",
+      "applicable": true,
+      "status": "upstream_accepted",
+      "evidence_paths": [
+        "data-contract.json",
+        "VALIDATION_PLAN.md"
+      ],
+      "risk": "source lineage must remain unchanged",
+      "claim_impact": "No numerical or final-delivery claim released by design gate",
+      "fallback": "Retain design/audit status; resolve before affected downstream claims",
+      "producer_stage": "comp-modeling",
+      "consumer_stage": [
+        "comp-code",
+        "quality-check"
+      ],
+      "accepted_at": null
+    },
+    {
+      "gate_id": "G2_shared_model_backbone",
+      "applicable": true,
+      "status": "design_bound_pending_downstream_validation",
+      "evidence_paths": [
+        "SHARED_MODEL_BACKBONE.md",
+        "VALIDATION_PLAN.md"
+      ],
+      "risk": "module interfaces not yet implemented",
+      "claim_impact": "No numerical or final-delivery claim released by design gate",
+      "fallback": "Retain design/audit status; resolve before affected downstream claims",
+      "producer_stage": "comp-modeling",
+      "consumer_stage": [
+        "comp-code",
+        "quality-check"
+      ],
+      "accepted_at": null
+    },
+    {
+      "gate_id": "G3_complexity_neutral_admission",
+      "applicable": true,
+      "status": "design_bound_pending_downstream_validation",
+      "evidence_paths": [
+        "MODEL_DECISION.json",
+        "VALIDATION_PLAN.md"
+      ],
+      "risk": "ACTIVE performance not yet measured",
+      "claim_impact": "No numerical or final-delivery claim released by design gate",
+      "fallback": "Retain design/audit status; resolve before affected downstream claims",
+      "producer_stage": "comp-modeling",
+      "consumer_stage": [
+        "comp-code",
+        "quality-check"
+      ],
+      "accepted_at": null
+    },
+    {
+      "gate_id": "G4_evidence_layering_and_censoring",
+      "applicable": true,
+      "status": "design_bound_pending_downstream_validation",
+      "evidence_paths": [
+        "EXTRAPOLATION_CENSORING_LEDGER.csv",
+        "VALIDATION_PLAN.md"
+      ],
+      "risk": "budget failure must not count as completion",
+      "claim_impact": "No numerical or final-delivery claim released by design gate",
+      "fallback": "Retain design/audit status; resolve before affected downstream claims",
+      "producer_stage": "comp-modeling",
+      "consumer_stage": [
+        "comp-code",
+        "quality-check"
+      ],
+      "accepted_at": null
+    },
+    {
+      "gate_id": "G5_reality_and_external_plausibility",
+      "applicable": true,
+      "status": "design_bound_pending_downstream_validation",
+      "evidence_paths": [
+        "MODELING_REPORT.md",
+        "VALIDATION_PLAN.md"
+      ],
+      "risk": "wall-clock feasibility not established",
+      "claim_impact": "No numerical or final-delivery claim released by design gate",
+      "fallback": "Retain design/audit status; resolve before affected downstream claims",
+      "producer_stage": "comp-modeling",
+      "consumer_stage": [
+        "comp-code",
+        "quality-check"
+      ],
+      "accepted_at": null
+    },
+    {
+      "gate_id": "G6_prediction_design_and_leakage",
+      "applicable": true,
+      "status": "design_bound_pending_downstream_validation",
+      "evidence_paths": [
+        "LEAKAGE_AUDIT.md",
+        "VALIDATION_PLAN.md"
+      ],
+      "risk": "online hidden-state leakage",
+      "claim_impact": "No numerical or final-delivery claim released by design gate",
+      "fallback": "Retain design/audit status; resolve before affected downstream claims",
+      "producer_stage": "comp-modeling",
+      "consumer_stage": [
+        "comp-code",
+        "quality-check"
+      ],
+      "accepted_at": null
+    },
+    {
+      "gate_id": "G7_decision_and_continuous_optimization",
+      "applicable": true,
+      "status": "design_bound_pending_downstream_validation",
+      "evidence_paths": [
+        "OPTIMIZATION_DOMAIN_AUDIT.md",
+        "VALIDATION_PLAN.md"
+      ],
+      "risk": "finite search not globally optimal",
+      "claim_impact": "No numerical or final-delivery claim released by design gate",
+      "fallback": "SAFE; candidate-only claims",
+      "producer_stage": "comp-modeling",
+      "consumer_stage": [
+        "comp-code",
+        "quality-check"
+      ],
+      "accepted_at": null
+    },
+    {
+      "gate_id": "G8_figure_evidence_and_readability",
+      "applicable": true,
+      "status": "design_bound_pending_downstream_validation",
+      "evidence_paths": [
+        "FIGURE_EVIDENCE_CONTRACT.md",
+        "VALIDATION_PLAN.md"
+      ],
+      "risk": "plots not generated yet",
+      "claim_impact": "No numerical or final-delivery claim released by design gate",
+      "fallback": "Retain design/audit status; resolve before affected downstream claims",
+      "producer_stage": "comp-modeling",
+      "consumer_stage": [
+        "comp-code",
+        "quality-check"
+      ],
+      "accepted_at": null
+    },
+    {
+      "gate_id": "G9_scientific_narrative_and_abstract",
+      "applicable": true,
+      "status": "design_bound_pending_downstream_validation",
+      "evidence_paths": [
+        "MODEL_IDEA_REGISTER.md",
+        "VALIDATION_PLAN.md"
+      ],
+      "risk": "paper not drafted yet",
+      "claim_impact": "No numerical or final-delivery claim released by design gate",
+      "fallback": "Retain design/audit status; resolve before affected downstream claims",
+      "producer_stage": "comp-modeling",
+      "consumer_stage": [
+        "comp-code",
+        "quality-check"
+      ],
+      "accepted_at": null
+    },
+    {
+      "gate_id": "G10_authority_and_minimal_reproduction",
+      "applicable": true,
+      "status": "design_bound_pending_downstream_validation",
+      "evidence_paths": [
+        "LITERATURE_MODEL_NOTES.md",
+        "VALIDATION_PLAN.md"
+      ],
+      "risk": "code and release reproduction pending",
+      "claim_impact": "No numerical or final-delivery claim released by design gate",
+      "fallback": "Retain design/audit status; resolve before affected downstream claims",
+      "producer_stage": "comp-modeling",
+      "consumer_stage": [
+        "comp-code",
+        "quality-check"
+      ],
+      "accepted_at": null
+    }
+  ],
+  "hash_manifest": "MODELING_INPUT_HASHES.json"
+}

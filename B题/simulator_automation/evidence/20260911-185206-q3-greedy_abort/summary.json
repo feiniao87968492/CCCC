@@ -1,0 +1,181 @@
+{
+  "strategy": "GREEDY_ABORT",
+  "failure": null,
+  "K": 9,
+  "T": 3863.592666,
+  "T_over_K": 429.288074,
+  "wall_s": 19.196014000001014,
+  "move_m": 15322.963322375268,
+  "global_move_distance": 7511.862360095744,
+  "localization_move_distance": 7811.100962279523,
+  "safe_move_distance": 0.0,
+  "measure_time": 2256.3823119999997,
+  "clear_time": 1607.210354,
+  "n_measure": 125,
+  "n_clear": 11,
+  "n_clear_ok": 9,
+  "n_safe": 0,
+  "n_full_225": 0,
+  "n_reuse": 0,
+  "n_active_measure": 4,
+  "same_position_repeat_count": 0,
+  "detected": 10,
+  "R_left": 0,
+  "P_left": [],
+  "all_certified": false,
+  "channel_status": {
+    "1": "detected",
+    "2": "cleared",
+    "3": "certified_absent",
+    "4": "certified_absent",
+    "5": "cleared",
+    "6": "certified_absent",
+    "7": "certified_absent",
+    "8": "certified_absent",
+    "9": "cleared",
+    "10": "cleared",
+    "11": "cleared",
+    "12": "cleared",
+    "13": "certified_absent",
+    "14": "cleared",
+    "15": "certified_absent",
+    "16": "cleared",
+    "17": "certified_absent",
+    "18": "cleared",
+    "19": "certified_absent",
+    "20": "certified_absent"
+  },
+  "per_source": {
+    "1": {
+      "status": "detected",
+      "first_detection_virtual_time": 2116.317573,
+      "clear_success_virtual_time": null,
+      "localize_clear_time": null,
+      "active_positions": [
+        [
+          1067.7930705933818,
+          1042.019504479395
+        ],
+        [
+          779.6903613380534,
+          958.3724548019577
+        ]
+      ],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 2,
+      "safe_attempted": false
+    },
+    "2": {
+      "status": "cleared",
+      "first_detection_virtual_time": 11.0,
+      "clear_success_virtual_time": 2847.64937,
+      "localize_clear_time": 2836.64937,
+      "active_positions": [
+        [
+          -668.8223336766655,
+          917.6864343660422
+        ]
+      ],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 1,
+      "safe_attempted": false
+    },
+    "5": {
+      "status": "cleared",
+      "first_detection_virtual_time": 1115.316463,
+      "clear_success_virtual_time": 3072.197186,
+      "localize_clear_time": 1956.8807229999998,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    },
+    "9": {
+      "status": "cleared",
+      "first_detection_virtual_time": 1828.317573,
+      "clear_success_virtual_time": 2265.616579,
+      "localize_clear_time": 437.29900599999996,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    },
+    "10": {
+      "status": "cleared",
+      "first_detection_virtual_time": 59.0,
+      "clear_success_virtual_time": 1232.251724,
+      "localize_clear_time": 1173.251724,
+      "active_positions": [
+        [
+          478.05012764422463,
+          951.890753419631
+        ]
+      ],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 1,
+      "safe_attempted": false
+    },
+    "11": {
+      "status": "cleared",
+      "first_detection_virtual_time": 1834.317573,
+      "clear_success_virtual_time": 2312.307733,
+      "localize_clear_time": 477.99016000000006,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    },
+    "12": {
+      "status": "cleared",
+      "first_detection_virtual_time": 419.0,
+      "clear_success_virtual_time": 3762.592666,
+      "localize_clear_time": 3343.592666,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    },
+    "14": {
+      "status": "cleared",
+      "first_detection_virtual_time": 1157.316463,
+      "clear_success_virtual_time": 2929.519095,
+      "localize_clear_time": 1772.202632,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    },
+    "16": {
+      "status": "cleared",
+      "first_detection_virtual_time": 95.0,
+      "clear_success_virtual_time": 3520.03075,
+      "localize_clear_time": 3425.03075,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    },
+    "18": {
+      "status": "cleared",
+      "first_detection_virtual_time": 1522.317573,
+      "clear_success_virtual_time": 2554.231084,
+      "localize_clear_time": 1031.913511,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    }
+  },
+  "abandoned_channels": [
+    1
+  ],
+  "uncleared_detected_channels": [
+    1
+  ],
+  "experimental_incomplete_allowed": true,
+  "N": 10,
+  "K_over_N": 0.9,
+  "mode": "practice",
+  "problem": 3,
+  "evidence": "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\simulator_automation\\evidence\\20260911-185206-q3-greedy_abort"
+}

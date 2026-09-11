@@ -1,0 +1,18 @@
+parameter,value,unit,identity,source,information_cutoff,freeze_point,sensitivity,use,recompute_trigger
+official_parameters,user_data/parameters.csv,mixed,official_constants,official PDF and attachments,before run,upstream accepted,not tuned,all modules,official clarification
+q3_ring_radius,1200,m,user_directed_design,seven_disk_coverage_proof,before development,revised model review,requires continuous reproof,Q3 search,radius change
+q3_outer_points,6,count,user_directed_design,seven_disk_coverage_proof,before development,revised model review,requires continuous reproof,Q3 search,point count change
+q3_scan_points,7,count,derived_design,origin plus six ring points,before development,revised model review,not claimed minimal,Q3 search,cover change
+q4_grid_spacing,600,m,design,coverage proof,before development,model review,alternative certified grids,search,grid change
+q4_grid_extent,2400,m,design,coverage proof,before development,model review,paired spacing change,search,grid change
+q4_witness_offset,500,m,proof_auxiliary,coverage proof,not online input,model review,requires strict margin,proof,grid change
+optical_spacing,20,m,design,rectangle covering proof,before development,model review,must keep covering radius below20,clear fallback,grid change
+optical_rows,3,count,design,rectangle covering proof,before development,model review,must span lateral uncertainty,clear fallback,error bound change
+optical_columns,75,count,design,rectangle covering proof,before development,model review,must span1500,clear fallback,range bound change
+active_measure_limit,6,count,hyperparameter,engineering proposal,before heldout,after development,0 3 6,local search,budget change
+active_extra_clear_limit,2,count,hyperparameter,engineering proposal,before heldout,after development,0 1 2,local search,budget change
+active_virtual_budget,600,s,risk_budget,engineering proposal,before heldout,after development,0 300 600,local search,budget change
+candidate_directions,24,count,solver_setting,engineering proposal,before heldout,after development,24 48 96,Q2,convergence failure
+angle_envelope_extra,0.005,degree,numerical_sensitivity_only,rounding envelope not official,before run,explicit implementation choice,0 versus0.005,enclosure,truth containment failure
+bootstrap_replicates,2000,count,validation_setting,validation plan,before heldout,model review,convergence check,case inference,insufficient precision
+bootstrap_seed,31000,index,validation_setting,validation plan,before heldout,model review,record reruns,case inference,protocol change

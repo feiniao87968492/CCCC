@@ -1,0 +1,621 @@
+{
+  "schema_version": 1,
+  "format": "modickx-codex-workspace",
+  "workspace_id": "66ec904d1ca7469991c2a0a22c1b7c74",
+  "title": "B题数学建模",
+  "template": "mcm_paper_writer",
+  "status": "waiting_review",
+  "current_step": "comp-modeling",
+  "auto_started": false,
+  "created_at": "2026-09-10T12:46:40.241822+00:00",
+  "updated_at": "2026-09-10T13:58:42.644151+00:00",
+  "pipeline": [
+    {
+      "skill_name": "comp-prob-analysis",
+      "status": "completed",
+      "has_checkpoint": true,
+      "completed_at": "2026-09-10T13:01:19.797851+00:00",
+      "evidence": [
+        {
+          "path": "PROBLEM_ANALYSIS.md",
+          "size": 2563,
+          "sha256": "1eb1803ff1f6169b834f661c86fbc03e99bef405e77fc28ef342dafdf2f06411"
+        },
+        {
+          "path": "PROBLEM_TRANSLATION.md",
+          "size": 54419,
+          "sha256": "aff07678e9fddc8bd114b620343d90c0d69df4fdc6c85c46c1ea8455f3cadfab"
+        },
+        {
+          "path": "SEMANTIC_DECISIONS.md",
+          "size": 2228,
+          "sha256": "b2d787618346c4421d743048be448ab3cb0e3009f05137ace15849c1a4f8159a"
+        },
+        {
+          "path": "data-contract.json",
+          "size": 913,
+          "sha256": "8159c8ea19835c66a0164c3257e6fa948107fce75f25d6e5f763c30b50d16f2b"
+        },
+        {
+          "path": "task-profile-Q1.json",
+          "size": 742,
+          "sha256": "c7bb02de271ed2794f4abd9c007c1df8f3850be7f2e6097523f59a1e1af92913"
+        },
+        {
+          "path": "task-profile-Q2.json",
+          "size": 758,
+          "sha256": "d0c775b13c97be6bcdd5f9b69094a44d59d4ea2d7a19f55f151b7df8d3a6e9ea"
+        },
+        {
+          "path": "task-profile-Q3.json",
+          "size": 777,
+          "sha256": "d67910a9c148be19d91409f7eaeeaaa49b3b816bceb3539abd4655ad2c065743"
+        },
+        {
+          "path": "task-profile-Q4.json",
+          "size": 772,
+          "sha256": "c1800a7fa08488b3a515e059d6889bb46c20fc9eb2f12e681b0a6847ed6ba21b"
+        },
+        {
+          "path": "event-observability-ledger.md",
+          "size": 698,
+          "sha256": "79855b6643a2d6a0052f7c5426712fa1f9c59c2ad36292db587837f9392ad538"
+        },
+        {
+          "path": "decision-domain.json",
+          "size": 926,
+          "sha256": "3d9ebe9698a97c9192812ae644241b6bfe40ba1b3692c986d06cf9c3b5d4d6b0"
+        }
+      ],
+      "acceptance_record": "stage-acceptance/comp-prob-analysis.json"
+    },
+    {
+      "skill_name": "comp-modeling",
+      "status": "waiting_review",
+      "has_checkpoint": true
+    },
+    {
+      "skill_name": "comp-code",
+      "status": "pending",
+      "has_checkpoint": false
+    },
+    {
+      "skill_name": "paper-plan",
+      "status": "pending",
+      "has_checkpoint": false
+    },
+    {
+      "skill_name": "paper-figure",
+      "status": "pending",
+      "has_checkpoint": true
+    },
+    {
+      "skill_name": "projects:mcm-paper-writer/mcm-paper-writer",
+      "status": "pending",
+      "has_checkpoint": true
+    },
+    {
+      "skill_name": "quality-check",
+      "status": "pending",
+      "has_checkpoint": false
+    },
+    {
+      "skill_name": "manuscript-qa",
+      "status": "pending",
+      "has_checkpoint": true
+    }
+  ],
+  "human_review_contract": [
+    {
+      "id": "idea_intake",
+      "skill_name": "comp-prob-analysis",
+      "label": "题面、思路与数据边界",
+      "check": "确认赛题、用户思路、数据来源、交付要求和未知项。",
+      "evidence": "题面、思路说明、数据字典与任务约束。"
+    },
+    {
+      "id": "model_mechanism",
+      "skill_name": "comp-modeling",
+      "label": "关键机理、假设与模型",
+      "check": "确认机制、变量、假设、约束、目标函数、求解路径与可证伪边界。",
+      "evidence": "机制说明、公式、参数、假设账本与候选模型比较。"
+    },
+    {
+      "id": "figure_integrity",
+      "skill_name": "paper-figure",
+      "label": "图表、量纲与结果可信度",
+      "check": "检查数据来源、单位、图例、坐标、显著性、结论与图表的一致性。",
+      "evidence": "图表、绘图脚本、结果表与 figures JSON。"
+    },
+    {
+      "id": "writing_voice",
+      "skill_name": "projects:mcm-paper-writer/mcm-paper-writer",
+      "label": "AI 味与竞赛表达",
+      "check": "删除模板腔、空泛判断、重复连接词和缺少证据的总结。",
+      "evidence": "摘要、关键段落与修改记录。"
+    },
+    {
+      "id": "defensive_writing",
+      "skill_name": "projects:mcm-paper-writer/mcm-paper-writer",
+      "label": "防御性写作与局限",
+      "check": "明确适用范围、反例、敏感性、失败条件、数据局限与可复现边界。",
+      "evidence": "假设账本、验证、敏感性分析与局限章节。"
+    },
+    {
+      "id": "citation_truth",
+      "skill_name": "projects:mcm-paper-writer/mcm-paper-writer",
+      "label": "文献导入与真实性",
+      "check": "核对作者、年份、题名、DOI、官方页面和支持主张；未核验文献不得进入终稿。",
+      "evidence": "引用库、DOI 或出版社页面、文献验证记录。"
+    },
+    {
+      "id": "final_conflict_choice",
+      "skill_name": "manuscript-qa",
+      "label": "终审冲突消融结果与最终选择",
+      "check": "查看每个冲突的至少两轮受控消融、硬门资格与并列结果，并逐项选择幸存方案。",
+      "evidence": "FINAL_REVIEW_CONFLICTS.json、逐轮消融结果、独立硬门回执与当前渲染终检。"
+    }
+  ],
+  "human_review_records": [
+    {
+      "checkpoint_id": "3eba4ecd95b14d118b0f726076a7d1c4",
+      "skill_name": "comp-prob-analysis",
+      "checklist_ids": [
+        "idea_intake"
+      ],
+      "notes": "用户在完整审题材料及正式检查点展示后回复：继续。通过当前审题审核，允许进入模型构建；A-D既有确认保留，不授权正式测试。",
+      "decision": "continue",
+      "evidence": [
+        {
+          "path": "PROBLEM_ANALYSIS.md",
+          "size": 2563,
+          "sha256": "1eb1803ff1f6169b834f661c86fbc03e99bef405e77fc28ef342dafdf2f06411"
+        },
+        {
+          "path": "PROBLEM_TRANSLATION.md",
+          "size": 54419,
+          "sha256": "aff07678e9fddc8bd114b620343d90c0d69df4fdc6c85c46c1ea8455f3cadfab"
+        },
+        {
+          "path": "SEMANTIC_DECISIONS.md",
+          "size": 2228,
+          "sha256": "b2d787618346c4421d743048be448ab3cb0e3009f05137ace15849c1a4f8159a"
+        },
+        {
+          "path": "data-contract.json",
+          "size": 913,
+          "sha256": "8159c8ea19835c66a0164c3257e6fa948107fce75f25d6e5f763c30b50d16f2b"
+        },
+        {
+          "path": "task-profile-Q1.json",
+          "size": 742,
+          "sha256": "c7bb02de271ed2794f4abd9c007c1df8f3850be7f2e6097523f59a1e1af92913"
+        },
+        {
+          "path": "task-profile-Q2.json",
+          "size": 758,
+          "sha256": "d0c775b13c97be6bcdd5f9b69094a44d59d4ea2d7a19f55f151b7df8d3a6e9ea"
+        },
+        {
+          "path": "task-profile-Q3.json",
+          "size": 777,
+          "sha256": "d67910a9c148be19d91409f7eaeeaaa49b3b816bceb3539abd4655ad2c065743"
+        },
+        {
+          "path": "task-profile-Q4.json",
+          "size": 772,
+          "sha256": "c1800a7fa08488b3a515e059d6889bb46c20fc9eb2f12e681b0a6847ed6ba21b"
+        },
+        {
+          "path": "event-observability-ledger.md",
+          "size": 698,
+          "sha256": "79855b6643a2d6a0052f7c5426712fa1f9c59c2ad36292db587837f9392ad538"
+        },
+        {
+          "path": "decision-domain.json",
+          "size": 926,
+          "sha256": "3d9ebe9698a97c9192812ae644241b6bfe40ba1b3692c986d06cf9c3b5d4d6b0"
+        }
+      ],
+      "recorded_at": "2026-09-10T13:01:19.797851+00:00"
+    },
+    {
+      "checkpoint_id": "41f946bc3ff84ba5854622a3600dd23b",
+      "skill_name": "comp-modeling",
+      "checklist_ids": [],
+      "notes": "用户明确要求修改Q3为原点加外围六点的七点覆盖，保留Q1/Q2/225点SAFE/Q4。原模型检查点返修，不视为通过。",
+      "decision": "pause",
+      "evidence": [
+        {
+          "path": "MODELING_REPORT.md",
+          "size": 14263,
+          "sha256": "264639eb9c9df97462e3301e5fc777de2b942569244f7a7563703c79ba3a940e"
+        },
+        {
+          "path": "MODEL_CARD.md",
+          "size": 5582,
+          "sha256": "e4ade07786101bc925872df0cd36ed9df2896165daa92e2a79ec8f43ee78d2f8"
+        },
+        {
+          "path": "MODEL_DECISION.json",
+          "size": 2275,
+          "sha256": "f97ba28ac9655f3b4334669cfdcba05bbad3148774c993f439c5ae5061e64120"
+        },
+        {
+          "path": "MODEL_IDEA_REGISTER.md",
+          "size": 2673,
+          "sha256": "1ee16ded671ded76aa2263d19fba8826bbbbc62fce69ff916fb81d80c9324b2e"
+        },
+        {
+          "path": "ASSUMPTION_LEDGER.md",
+          "size": 1759,
+          "sha256": "40fdcae39a7dc6645dfd0bed29c39669caddf5f40a2d24738bd479977e6a45b2"
+        },
+        {
+          "path": "VALIDATION_PLAN.md",
+          "size": 4318,
+          "sha256": "c1c35e9a8acbb964128d94b39ccef0f1758992f3723e95d693cddfdb1bc1c574"
+        },
+        {
+          "path": "SHARED_MODEL_BACKBONE.md",
+          "size": 2186,
+          "sha256": "9e05367aa218d4c4baeb557d30ba5dc322671943e588a31d08c3902cc58a6d7a"
+        },
+        {
+          "path": "MODELING_GOVERNANCE_MATRIX.json",
+          "size": 6378,
+          "sha256": "84c1521e362f13dc01425d0808355566406119ddf55808a27853c758dba4a2f4"
+        },
+        {
+          "path": "MODELING_INPUT_HASHES.json",
+          "size": 5161,
+          "sha256": "2dca3f725fbf52a8a0ce6d0983b960fcbe56a5e5839ff4df24c3add029299eee"
+        },
+        {
+          "path": "MODELING_ACCEPTANCE_NOTES.md",
+          "size": 1697,
+          "sha256": "2ccc94938eef5fed69608caf3c466d6c16daccf32a65d0e877284452ade1b1bf"
+        }
+      ],
+      "recorded_at": "2026-09-10T13:53:53.547877+00:00"
+    }
+  ],
+  "stage_acceptance_records": [
+    {
+      "stage_id": "comp-prob-analysis",
+      "status": "ready",
+      "accepted_at": "2026-09-10T13:01:19.797851+00:00",
+      "path": "stage-acceptance/comp-prob-analysis.json",
+      "downstream_consumers": [
+        "comp-modeling"
+      ]
+    }
+  ],
+  "active_checkpoint": {
+    "checkpoint_id": "bbc5949dbf3e4fdbbf62e8aebfff62e7",
+    "skill_name": "comp-modeling",
+    "label": "关键机理、假设与模型",
+    "checklist_ids": [
+      "model_mechanism"
+    ],
+    "items": [
+      {
+        "id": "model_mechanism",
+        "skill_name": "comp-modeling",
+        "label": "关键机理、假设与模型",
+        "check": "确认机制、变量、假设、约束、目标函数、求解路径与可证伪边界。",
+        "evidence": "机制说明、公式、参数、假设账本与候选模型比较。"
+      }
+    ],
+    "evidence": [
+      {
+        "path": "MODELING_REPORT.md",
+        "size": 17992,
+        "sha256": "9ecf36b0ab6c08505c2f4106c885167caba4415b5ad3d5902b580a0a69180830"
+      },
+      {
+        "path": "Q3_REVISION.md",
+        "size": 1074,
+        "sha256": "2b08d5d422200ff583cd0975ec78974879ecf33f6e0d75fb91ebe767b985c3bd"
+      },
+      {
+        "path": "MODEL_CARD.md",
+        "size": 5637,
+        "sha256": "239bd327771e3f734005d85a22b5d21f5cf0d4f06489ef56ba51d6d438f124e7"
+      },
+      {
+        "path": "MODEL_DECISION.json",
+        "size": 2688,
+        "sha256": "672370760eaea658cf78bc87cabe350b9e509331efe102d64e5a05cb8f87005c"
+      },
+      {
+        "path": "MODEL_SELECTION.json",
+        "size": 1342,
+        "sha256": "c95a6071522f4fd799f58c0cb6012159ef11cff83228dc941a493fa72fdc462d"
+      },
+      {
+        "path": "VALIDATION_PLAN.md",
+        "size": 4857,
+        "sha256": "ee73cc2f4a7ec04a6aef36a704e219d3d359363cecec66b9d6091ca875a3f029"
+      },
+      {
+        "path": "SHARED_MODEL_BACKBONE.md",
+        "size": 2401,
+        "sha256": "fd8089d92820093431e861b7ea031d1b57349f6f59880117228806f400bef864"
+      },
+      {
+        "path": "parameter-register.csv",
+        "size": 2550,
+        "sha256": "20672a3e7e74c03a8ce5daee1b8abc08d36173f527a576254173faeb7a88d4f8"
+      },
+      {
+        "path": "MODELING_INPUT_HASHES.json",
+        "size": 5304,
+        "sha256": "062406f1678755cc6fc706daddb159447198b659a2775d008a67be092efa6286"
+      }
+    ],
+    "validation": {
+      "workspace": "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\modickx_legacy",
+      "stage_id": "comp-modeling",
+      "stage_label": "候选模型与机理",
+      "passed": true,
+      "missing_artifacts": [],
+      "failed_checks": [],
+      "triggered_stop_conditions": [],
+      "applicability": {
+        "has_structured_data": true,
+        "has_prediction_task": false,
+        "has_threshold_event": true,
+        "has_continuous_optimization": true,
+        "has_decision_task": true,
+        "has_multiple_models": true
+      },
+      "skipped_artifacts": [
+        {
+          "id": "model_dictionary_retrieval",
+          "applies_when": [],
+          "requires_capabilities": [
+            "bzd-model-dictionary-router",
+            "local-model-dictionary"
+          ],
+          "reason": "required local capability is unavailable"
+        }
+      ],
+      "skipped_checks": [
+        {
+          "id": "dictionary_candidates_are_routed_into_validated_model_cards",
+          "applies_when": [],
+          "requires_capabilities": [
+            "bzd-model-dictionary-router",
+            "local-model-dictionary",
+            "model-template-library"
+          ],
+          "reason": "required local capability is unavailable"
+        },
+        {
+          "id": "strict_prefix_and_leakage_boundary",
+          "applies_when": [
+            "has_prediction_task"
+          ],
+          "requires_capabilities": [],
+          "reason": "explicitly not applicable in model-applicability.json"
+        },
+        {
+          "id": "forecast_window_factors_are_separated",
+          "applies_when": [
+            "has_prediction_task"
+          ],
+          "requires_capabilities": [],
+          "reason": "explicitly not applicable in model-applicability.json"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "MODELING_REPORT.md",
+          "size": 17992,
+          "sha256": "9ecf36b0ab6c08505c2f4106c885167caba4415b5ad3d5902b580a0a69180830"
+        },
+        {
+          "path": "Q3_REVISION.md",
+          "size": 1074,
+          "sha256": "2b08d5d422200ff583cd0975ec78974879ecf33f6e0d75fb91ebe767b985c3bd"
+        },
+        {
+          "path": "MODEL_CARD.md",
+          "size": 5637,
+          "sha256": "239bd327771e3f734005d85a22b5d21f5cf0d4f06489ef56ba51d6d438f124e7"
+        },
+        {
+          "path": "MODEL_DECISION.json",
+          "size": 2688,
+          "sha256": "672370760eaea658cf78bc87cabe350b9e509331efe102d64e5a05cb8f87005c"
+        },
+        {
+          "path": "MODEL_SELECTION.json",
+          "size": 1342,
+          "sha256": "c95a6071522f4fd799f58c0cb6012159ef11cff83228dc941a493fa72fdc462d"
+        },
+        {
+          "path": "VALIDATION_PLAN.md",
+          "size": 4857,
+          "sha256": "ee73cc2f4a7ec04a6aef36a704e219d3d359363cecec66b9d6091ca875a3f029"
+        },
+        {
+          "path": "SHARED_MODEL_BACKBONE.md",
+          "size": 2401,
+          "sha256": "fd8089d92820093431e861b7ea031d1b57349f6f59880117228806f400bef864"
+        },
+        {
+          "path": "parameter-register.csv",
+          "size": 2550,
+          "sha256": "20672a3e7e74c03a8ce5daee1b8abc08d36173f527a576254173faeb7a88d4f8"
+        },
+        {
+          "path": "MODELING_INPUT_HASHES.json",
+          "size": 5304,
+          "sha256": "062406f1678755cc6fc706daddb159447198b659a2775d008a67be092efa6286"
+        }
+      ],
+      "publication_profile": "competition-cn",
+      "knowledge_capabilities": {
+        "schema_version": 1,
+        "mode": "read-only-discovery",
+        "workspace": "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\modickx_legacy",
+        "workspace_bound": true,
+        "capabilities": [
+          {
+            "id": "bzd-problem-translator",
+            "available": true,
+            "source": "global",
+            "path": "C:\\Users\\zty\\.codex\\skills\\bzd-problem-translator",
+            "redistributable": false
+          },
+          {
+            "id": "bzd-model-dictionary-router",
+            "available": true,
+            "source": "bundled",
+            "path": "C:\\Users\\zty\\.codex\\plugins\\cache\\personal\\modickx\\0.5.0\\skills\\bzd-model-dictionary-router",
+            "redistributable": true
+          },
+          {
+            "id": "model-template-library",
+            "available": true,
+            "source": "bundled",
+            "path": "C:\\Users\\zty\\.codex\\plugins\\cache\\personal\\modickx\\0.5.0\\skills\\model-template-library",
+            "redistributable": true
+          },
+          {
+            "id": "local-model-dictionary",
+            "available": false,
+            "source": "unavailable",
+            "path": "",
+            "sha256": "",
+            "redistributable": false
+          },
+          {
+            "id": "dual-mode-visual-contract",
+            "available": true,
+            "source": "bundled",
+            "path": "C:\\Users\\zty\\.codex\\plugins\\cache\\personal\\modickx\\0.5.0\\vendor\\mcm-paper-writer\\runtime\\src\\mcm_paper_miner\\visual_style.py",
+            "contract_id": "dual_mode_print_series_v1",
+            "redistributable": true
+          }
+        ],
+        "routes": {
+          "problem_translation": {
+            "ready": true,
+            "fallback": "compatible_sentence_ledger"
+          },
+          "model_dictionary": {
+            "ready": false,
+            "reason": "local_dictionary_or_router_unavailable"
+          },
+          "model_card": {
+            "ready": true
+          },
+          "dual_mode_figure": {
+            "ready": true
+          }
+        },
+        "distribution_boundary": {
+          "problem_translator": "global_install_only_no_vendoring",
+          "model_dictionary": "local_read_only_no_redistribution"
+        }
+      }
+    },
+    "prompt": "Q3已按你指定改为原点加半径1200米六等分外围点；连续覆盖最坏距离968.902米，基础移动7200米，140次全局measure，SAFE界32360秒，ACTIVE+SAFE界41960秒。永久ever_detected及七点完整no_signal记录防止错误无源判定。Q1/Q2/225点SAFE/Q4算法未改，旧方案仅作历史比较。请审核修订后的模型方案是否通过，以便后续进入实现。当前仅完成文档及结构验证，未运行策略或正式测试。",
+    "opened_at": "2026-09-10T13:58:42.644151+00:00"
+  },
+  "intake": {
+    "problem_source_received": true,
+    "idea_received": true,
+    "source_files": [
+      {
+        "path": "user_data/B题.pdf",
+        "size": 514825,
+        "sha256": "81c992a9bee5376308c4768b58719b177f17d6ee1f9861577a851924c5a838ca"
+      },
+      {
+        "path": "user_data/附件1.docx",
+        "size": 33675,
+        "sha256": "20a27603ea81efa8f11658b3fa5b859a69aa3ff88fb3664d2abb80d740b47553"
+      },
+      {
+        "path": "user_data/附件2.docx",
+        "size": 57179,
+        "sha256": "c882513d5b7e0ec50f3068570ea55fdc1b5c4a5fa2d6e9e54e79b33cf0858cb2"
+      },
+      {
+        "path": "user_data/B题-统一建模口径.md",
+        "size": 11576,
+        "sha256": "c173df8c03478c3dee8a32169b832c75742ab48cf18c02f8edb88bdf2a3b76a9"
+      },
+      {
+        "path": "user_data/B题-题意逐句翻译.md",
+        "size": 54419,
+        "sha256": "aff07678e9fddc8bd114b620343d90c0d69df4fdc6c85c46c1ea8455f3cadfab"
+      },
+      {
+        "path": "user_data/parameters.csv",
+        "size": 2114,
+        "sha256": "aded0d7b20628700a2e3aae19290d870603b2fc5a4db316cf4b1c0cbd1cf2c96"
+      },
+      {
+        "path": "user_data/语义辨析与数据清理.md",
+        "size": 12015,
+        "sha256": "1c7e0d16dc1c5a5d6e330113842cd2d568317fee90284b4b2666e3575952b4c6"
+      },
+      {
+        "path": "user_data/README.md",
+        "size": 6777,
+        "sha256": "1fb2704d63ec288f193d5223e283ec76315bf91133c6886ab3439e956de4cc35"
+      },
+      {
+        "path": "user_data/Bishop2010_Optimality_analysis_sensor_target_geometries.pdf",
+        "size": 6227136,
+        "sha256": "6d3f61c414696adb6fe0bce05968114e8e6f0c303a79df8c758002b0c79ec0ac"
+      },
+      {
+        "path": "user_data/VanderHook2014_Cautious_Greedy_Bearing_Only.pdf",
+        "size": 2283380,
+        "sha256": "5d960e2bb570eb8d550544f07b65ee90f74e0a78d87a73d53298f6d863ae4c8d"
+      },
+      {
+        "path": "user_data/Galceran2013_RAS_Survey_CPP.pdf",
+        "size": 2302438,
+        "sha256": "b099c73f424ed5b5e47878cff2cd2a6118d57a14fdddef0020682871643c0afb"
+      },
+      {
+        "path": "user_data/robot_client.py",
+        "size": 3548,
+        "sha256": "74e8b193b2e07c9765afd127e1300387d5157f01f09982dcd1f496eec5c440be"
+      }
+    ]
+  },
+  "package_source": null,
+  "publication_route": {
+    "profile": "competition-cn",
+    "target_venue": "",
+    "output_format": "latex-pdf",
+    "contract_id": "unified-publication-entry-v1",
+    "packaging_contract_id": "unified-publication-plugin-v1",
+    "plugin_id": "modickx",
+    "entry_mode": "single-plugin-entry",
+    "state_machine": "modickx-workspace",
+    "qualified_entry_skill": "modickx:modickx-publication",
+    "component_manifest": "publication-components.json",
+    "component_visibility": "internal",
+    "maintenance_protocols": [
+      "skill-maintenance-protocol"
+    ],
+    "writing_skills_scope": "maintenance-only",
+    "embedded_capability_mode": "bundled-internal-component",
+    "recursive_reinvocation": "forbidden",
+    "resume_policy": "resume-from-existing-publication-route",
+    "entry_skill": "modickx-publication",
+    "embedded_capabilities": [
+      "competition-writer",
+      "publication-core"
+    ]
+  }
+}

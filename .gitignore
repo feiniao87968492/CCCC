@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+
+# Local editor / agent
+.claude/
+.codex/
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Official contest simulator runtime (too large for GitHub; keep locally)
+Jammers-simulator-full-win64/
+Jammers-simulator-full-win64.7z
+*.exe
+*.dll
+*.pak
+
+# Encrypted / binary simulator logs
+*.jlog
+
+# Literature PDFs (keep dois / metadata only)
+B题/papers/*.pdf
+B题/papers/_land_*.html
+B题/modickx_legacy/user_data/*.pdf

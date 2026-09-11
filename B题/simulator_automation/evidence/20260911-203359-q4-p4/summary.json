@@ -1,0 +1,53 @@
+{
+  "strategy": "Q4_P4",
+  "failure": null,
+  "K": 4,
+  "T": 2450.871846,
+  "T_over_K": 612.7179615,
+  "wall_s": 0.49104170000646263,
+  "move_m": 10914.359229173517,
+  "n_measure": 41,
+  "n_clear": 7,
+  "n_clear_ok": 4,
+  "detected": 5,
+  "certified_absent": [],
+  "cleared_channels": [
+    1,
+    6,
+    11,
+    18
+  ],
+  "pending": [
+    16
+  ],
+  "all_certified": false,
+  "channel_status": {
+    "1": "cleared",
+    "2": "unseen",
+    "3": "unseen",
+    "4": "unseen",
+    "5": "unseen",
+    "6": "cleared",
+    "7": "unseen",
+    "8": "unseen",
+    "9": "unseen",
+    "10": "unseen",
+    "11": "cleared",
+    "12": "unseen",
+    "13": "unseen",
+    "14": "unseen",
+    "15": "unseen",
+    "16": "detected",
+    "17": "unseen",
+    "18": "cleared",
+    "19": "unseen",
+    "20": "unseen"
+  },
+  "N": null,
+  "n_omni": null,
+  "n_dir": null,
+  "K_over_N": null,
+  "mode": "practice",
+  "problem": 4,
+  "evidence": "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\simulator_automation\\evidence\\20260911-203359-q4-p4"
+}

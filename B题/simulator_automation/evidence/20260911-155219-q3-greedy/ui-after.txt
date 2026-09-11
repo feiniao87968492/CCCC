@@ -1,0 +1,1678 @@
+ControlType.Pane||无线电干扰源环境模拟器
+ControlType.Pane||
+ControlType.Pane||无线电干扰源环境模拟器 - Web 内容
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Pane||
+ControlType.Document|RootWebArea|无线电干扰源环境模拟器
+ControlType.Group||
+ControlType.Group||
+ControlType.Text||环境模拟器
+ControlType.Group||主导航
+ControlType.Text||测试
+ControlType.Button||演练测试
+ControlType.Text||正式测试
+ControlType.Button||问题3正式测试
+ControlType.Button||问题4正式测试
+ControlType.Text||其他
+ControlType.Button||公告
+ControlType.Button||账号
+ControlType.Button||设置
+ControlType.Button||关于
+ControlType.Text||v1.1
+ControlType.Group||
+ControlType.Text||无线电干扰源环境模拟器
+ControlType.Text||2026年9月13日17:30之后无法启动新的演练测试或正式测试
+ControlType.StatusBar||服务器已连接
+ControlType.Text||已连接
+ControlType.Text||队号 202611102016
+ControlType.Button||退出登录
+ControlType.Group||
+ControlType.Group||问题3 演练 测试
+ControlType.Text|test-run-title|问题3 演练 测试
+ControlType.StatusBar||
+ControlType.Text||测试已结束
+ControlType.Text||测试案例编码
+ControlType.Text||SAVK-73T7-P5E4-R9JN
+ControlType.Text||测试窗口剩余
+ControlType.Text||24:51
+ControlType.Text||机器狗程序剩余
+ControlType.Text||19:53
+ControlType.Text||接口端口
+ControlType.Text||2026
+ControlType.Button||返回演练测试
+ControlType.Group||本次演练测试干扰源数量
+ControlType.Text||本次演练测试干扰源数量
+ControlType.Text||共
+ControlType.Text||14
+ControlType.Text||个， 全向
+ControlType.Text||14
+ControlType.Text||个， 定向
+ControlType.Text||0
+ControlType.Text||个
+ControlType.Group||
+ControlType.Text||行为日志已保存
+ControlType.Text||practice-p3-127531175392958467-SAVK-73T7-P5E4-R9JN.jlog
+ControlType.Text||67.0 KiB
+ControlType.Text||指令与反馈
+ControlType.Text||仅显示最新1000条
+ControlType.Table||
+ControlType.DataItem||
+ControlType.DataItem||接收时间
+ControlType.DataItem||指令
+ControlType.DataItem||位置
+ControlType.DataItem||频道
+ControlType.DataItem||响应摘要
+ControlType.DataItem||虚拟时间
+ControlType.DataItem||
+ControlType.DataItem||15:52:20
+ControlType.DataItem||进入
+ControlType.DataItem||--
+ControlType.DataItem||--
+ControlType.DataItem||进入成功
+ControlType.DataItem||0.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:20
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||1
+ControlType.DataItem||示向度 190.30°
+ControlType.DataItem||5.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:20
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||2
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||11.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:20
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||3
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||17.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:20
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||4
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||23.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:20
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||5
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||29.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:20
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||35.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||41.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||8
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||47.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||9
+ControlType.DataItem||示向度 141.15°
+ControlType.DataItem||53.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||10
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||59.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||11
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||65.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||12
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||71.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||13
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||77.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||83.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||15
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||89.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||16
+ControlType.DataItem||示向度 99.73°
+ControlType.DataItem||95.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||17
+ControlType.DataItem||示向度 173.75°
+ControlType.DataItem||101.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||18
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||107.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||19
+ControlType.DataItem||示向度 307.03°
+ControlType.DataItem||113.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(0.00, 0.00)
+ControlType.DataItem||20
+ControlType.DataItem||示向度 98.67°
+ControlType.DataItem||119.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||2
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||365.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||3
+ControlType.DataItem||示向度 99.09°
+ControlType.DataItem||371.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||4
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||377.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||5
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||383.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||389.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||395.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||8
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||401.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||10
+ControlType.DataItem||示向度 291.54°
+ControlType.DataItem||407.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||11
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||413.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||12
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||419.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||13
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||425.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||431.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||15
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||437.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||18
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||443.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||1
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||449.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||9
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||455.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||16
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||461.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||17
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||467.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||19
+ControlType.DataItem||示向度 239.13°
+ControlType.DataItem||473.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(1200.00, 0.00)
+ControlType.DataItem||20
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||479.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||2
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||725.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||4
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||731.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||5
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||737.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||743.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||749.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||8
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||755.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||11
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||761.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||12
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||767.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||13
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||773.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||779.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||15
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||785.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||18
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||791.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||1
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||797.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||9
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||803.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||16
+ControlType.DataItem||示向度 180.70°
+ControlType.DataItem||809.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||17
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||815.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||19
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||821.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||20
+ControlType.DataItem||示向度 189.26°
+ControlType.DataItem||827.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||3
+ControlType.DataItem||示向度 353.05°
+ControlType.DataItem||833.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, 1039.23)
+ControlType.DataItem||10
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||839.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||2
+ControlType.DataItem||示向度 160.21°
+ControlType.DataItem||1085.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||4
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1091.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||5
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1097.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1103.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1109.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||8
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1115.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||11
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1121.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||12
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1127.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||13
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1133.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||14
+ControlType.DataItem||示向度 149.66°
+ControlType.DataItem||1139.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||15
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1145.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:21
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||18
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1151.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:22
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||1
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1157.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:22
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||9
+ControlType.DataItem||示向度 237.02°
+ControlType.DataItem||1163.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:22
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||16
+ControlType.DataItem||示向度 356.34°
+ControlType.DataItem||1169.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:22
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||17
+ControlType.DataItem||示向度 269.31°
+ControlType.DataItem||1175.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:22
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||19
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1181.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:22
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||20
+ControlType.DataItem||示向度 346.58°
+ControlType.DataItem||1187.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:22
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||3
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1193.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:22
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, 1039.23)
+ControlType.DataItem||10
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1199.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:22
+ControlType.DataItem||测量
+ControlType.DataItem||(-573.18, 891.65)
+ControlType.DataItem||1
+ControlType.DataItem||示向度 237.22°
+ControlType.DataItem||1235.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:22
+ControlType.DataItem||测量
+ControlType.DataItem||(-573.18, 891.65)
+ControlType.DataItem||3
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1241.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:22
+ControlType.DataItem||测量
+ControlType.DataItem||(-573.18, 891.65)
+ControlType.DataItem||9
+ControlType.DataItem||示向度 218.68°
+ControlType.DataItem||1247.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:22
+ControlType.DataItem||测量
+ControlType.DataItem||(-573.18, 891.65)
+ControlType.DataItem||16
+ControlType.DataItem||示向度 17.90°
+ControlType.DataItem||1253.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:22
+ControlType.DataItem||测量
+ControlType.DataItem||(-573.18, 891.65)
+ControlType.DataItem||17
+ControlType.DataItem||示向度 267.01°
+ControlType.DataItem||1259.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-573.18, 891.65)
+ControlType.DataItem||20
+ControlType.DataItem||示向度 3.56°
+ControlType.DataItem||1265.000 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||4
+ControlType.DataItem||示向度 255.40°
+ControlType.DataItem||1488.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||5
+ControlType.DataItem||示向度 192.39°
+ControlType.DataItem||1494.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1500.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1506.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||8
+ControlType.DataItem||示向度 274.32°
+ControlType.DataItem||1512.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||11
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1518.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||12
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1524.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||13
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1530.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||15
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1536.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||18
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1542.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||1
+ControlType.DataItem||示向度 253.17°
+ControlType.DataItem||1548.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||9
+ControlType.DataItem||示向度 61.01°
+ControlType.DataItem||1554.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||16
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1560.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||17
+ControlType.DataItem||示向度 7.21°
+ControlType.DataItem||1566.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||19
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1572.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||20
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1578.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||3
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1584.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||10
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1590.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||2
+ControlType.DataItem||示向度 74.14°
+ControlType.DataItem||1596.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||测量
+ControlType.DataItem||(-1200.00, 0.00)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1602.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||清除
+ControlType.DataItem||(-1080.00, 0.00)
+ControlType.DataItem||17
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||1629.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||清除
+ControlType.DataItem||(-1120.00, 0.00)
+ControlType.DataItem||17
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||1640.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:23
+ControlType.DataItem||清除
+ControlType.DataItem||(-1160.00, 0.00)
+ControlType.DataItem||17
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||1651.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-1160.00, 0.00)
+ControlType.DataItem||1
+ControlType.DataItem||示向度 244.53°
+ControlType.DataItem||1657.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-1160.00, 0.00)
+ControlType.DataItem||9
+ControlType.DataItem||示向度 63.74°
+ControlType.DataItem||1663.985 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1906.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1912.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||11
+ControlType.DataItem||示向度 343.29°
+ControlType.DataItem||1918.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||12
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1924.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||13
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1930.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||15
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1936.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||18
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1942.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||1
+ControlType.DataItem||示向度 129.88°
+ControlType.DataItem||1948.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||9
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1954.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||16
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1960.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||17
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1966.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||19
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1972.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||20
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1978.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||3
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1984.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||10
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1990.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||2
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||1996.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2002.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||4
+ControlType.DataItem||示向度 176.35°
+ControlType.DataItem||2008.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||5
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2014.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:24
+ControlType.DataItem||测量
+ControlType.DataItem||(-600.00, -1039.23)
+ControlType.DataItem||8
+ControlType.DataItem||示向度 170.13°
+ControlType.DataItem||2020.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(-460.48, -984.16)
+ControlType.DataItem||10
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2056.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(-460.48, -984.16)
+ControlType.DataItem||1
+ControlType.DataItem||示向度 137.33°
+ControlType.DataItem||2062.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(-460.48, -984.16)
+ControlType.DataItem||4
+ControlType.DataItem||示向度 178.87°
+ControlType.DataItem||2068.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(-460.48, -984.16)
+ControlType.DataItem||8
+ControlType.DataItem||示向度 176.52°
+ControlType.DataItem||2074.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(-460.48, -984.16)
+ControlType.DataItem||17
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2080.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(-460.48, -984.16)
+ControlType.DataItem||19
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2086.087 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||6
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2304.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||7
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2310.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||12
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2316.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||13
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2322.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||15
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2328.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||18
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2334.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||1
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2340.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||9
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2346.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||16
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2352.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||17
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2358.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||19
+ControlType.DataItem||示向度 60.88°
+ControlType.DataItem||2364.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||20
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2370.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||3
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2376.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||10
+ControlType.DataItem||示向度 32.57°
+ControlType.DataItem||2382.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||2
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2388.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2394.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||4
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2400.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||5
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2406.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||8
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||2412.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||测量
+ControlType.DataItem||(600.00, -1039.23)
+ControlType.DataItem||11
+ControlType.DataItem||示向度 184.03°
+ControlType.DataItem||2418.468 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:25
+ControlType.DataItem||清除
+ControlType.DataItem||(-1278.06, -231.53)
+ControlType.DataItem||1
+ControlType.DataItem||清除成功
+ControlType.DataItem||2832.344 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||清除
+ControlType.DataItem||(-830.29, 669.16)
+ControlType.DataItem||9
+ControlType.DataItem||清除成功
+ControlType.DataItem||3038.513 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||清除
+ControlType.DataItem||(-174.84, 1020.66)
+ControlType.DataItem||16
+ControlType.DataItem||清除成功
+ControlType.DataItem||3192.265 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||清除
+ControlType.DataItem||(-643.16, 68.87)
+ControlType.DataItem||17
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||3407.419 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||清除
+ControlType.DataItem||(-599.32, 64.54)
+ControlType.DataItem||17
+ControlType.DataItem||清除成功
+ControlType.DataItem||3421.229 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||清除
+ControlType.DataItem||(677.77, -898.80)
+ControlType.DataItem||19
+ControlType.DataItem||清除成功
+ControlType.DataItem||3746.166 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||清除
+ControlType.DataItem||(-140.19, 918.29)
+ControlType.DataItem||20
+ControlType.DataItem||清除成功
+ControlType.DataItem||4149.707 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||清除
+ControlType.DataItem||(1042.18, 984.97)
+ControlType.DataItem||3
+ControlType.DataItem||清除成功
+ControlType.DataItem||4391.555 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||清除
+ControlType.DataItem||(1406.41, -523.83)
+ControlType.DataItem||10
+ControlType.DataItem||清除成功
+ControlType.DataItem||4706.984 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||清除
+ControlType.DataItem||(-876.49, 1139.11)
+ControlType.DataItem||2
+ControlType.DataItem||清除成功
+ControlType.DataItem||5276.857 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||清除
+ControlType.DataItem||(-1451.76, -964.99)
+ControlType.DataItem||4
+ControlType.DataItem||清除成功
+ControlType.DataItem||5718.121 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||清除
+ControlType.DataItem||(-1128.50, -943.21)
+ControlType.DataItem||8
+ControlType.DataItem||清除成功
+ControlType.DataItem||5787.919 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||清除
+ControlType.DataItem||(-371.68, -1106.70)
+ControlType.DataItem||11
+ControlType.DataItem||清除成功
+ControlType.DataItem||5947.774 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||测量
+ControlType.DataItem||(-447.45, -1236.15)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||5983.774 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:26
+ControlType.DataItem||测量
+ControlType.DataItem||(-295.91, -977.24)
+ControlType.DataItem||14
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||6048.774 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||测量
+ControlType.DataItem||(-263.73, -1123.75)
+ControlType.DataItem||5
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||6084.774 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||测量
+ControlType.DataItem||(-328.10, -830.73)
+ControlType.DataItem||5
+ControlType.DataItem||未检测到信号
+ControlType.DataItem||6149.774 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1214.06, 17.39)
+ControlType.DataItem||5
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6398.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1233.59, 13.10)
+ControlType.DataItem||5
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6405.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1253.13, 8.81)
+ControlType.DataItem||5
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6412.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1761.02, -102.77)
+ControlType.DataItem||5
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6519.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1780.55, -107.06)
+ControlType.DataItem||5
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6526.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1800.08, -111.35)
+ControlType.DataItem||5
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6533.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1819.62, -115.64)
+ControlType.DataItem||5
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6540.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1839.15, -119.93)
+ControlType.DataItem||5
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6547.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1834.86, -139.47)
+ControlType.DataItem||5
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6554.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1815.33, -135.18)
+ControlType.DataItem||5
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6561.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1795.79, -130.88)
+ControlType.DataItem||5
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6568.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1776.26, -126.59)
+ControlType.DataItem||5
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6575.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1756.72, -122.30)
+ControlType.DataItem||5
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6582.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1248.84, -10.73)
+ControlType.DataItem||5
+ControlType.DataItem||清除成功
+ControlType.DataItem||6691.068 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-598.53, 1061.54)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6944.880 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-615.79, 1071.65)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6951.880 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-633.05, 1081.75)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||6958.880 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1116.35, 1364.62)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7073.880 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1133.61, 1374.72)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7080.880 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1150.88, 1384.83)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7087.880 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1168.14, 1394.93)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7094.880 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1185.40, 1405.03)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7101.880 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1212.76, 1397.87)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7110.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1195.50, 1387.77)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7117.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1178.24, 1377.67)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7124.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1160.98, 1367.57)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7131.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1143.72, 1357.46)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7138.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1126.46, 1347.36)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7145.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-643.15, 1064.49)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7260.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-625.89, 1054.38)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7267.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-608.63, 1044.28)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7274.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-618.73, 1027.02)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7281.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-635.99, 1037.12)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7288.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-653.25, 1047.23)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7295.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1136.56, 1330.10)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7410.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1153.82, 1340.20)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7417.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1171.08, 1350.30)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7424.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1188.34, 1360.41)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7431.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1205.60, 1370.51)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7438.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-1222.86, 1380.61)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7445.537 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-650.31, 1091.85)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7576.787 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-667.57, 1101.95)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7583.787 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-684.83, 1112.06)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7590.787 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-702.09, 1122.16)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7597.787 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-719.35, 1132.26)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7604.787 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-736.61, 1142.36)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7611.787 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-753.88, 1152.47)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7618.787 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-771.14, 1162.57)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7625.787 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-788.40, 1172.67)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7632.787 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-805.66, 1182.77)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7639.787 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-822.92, 1192.88)
+ControlType.DataItem||14
+ControlType.DataItem||范围内无目标
+ControlType.DataItem||7646.787 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||清除
+ControlType.DataItem||(-840.18, 1202.98)
+ControlType.DataItem||14
+ControlType.DataItem||清除成功
+ControlType.DataItem||7655.787 s
+ControlType.DataItem||
+ControlType.DataItem||15:52:27
+ControlType.DataItem||退出
+ControlType.DataItem||--
+ControlType.DataItem||--
+ControlType.DataItem||正常退出
+ControlType.DataItem||7655.787 s
+ControlType.Window||问题3演练测试完成
+ControlType.Text|action-dialog-title|问题3演练测试完成
+ControlType.Text||问题3演练测试：机器狗已发送 /exit 指令，测试正常结束。
+本次案例含干扰源14个，其中全向14个、定向0个。
+行为日志已保存。
+ControlType.Button||确认
+ControlType.Pane||
+ControlType.Pane||

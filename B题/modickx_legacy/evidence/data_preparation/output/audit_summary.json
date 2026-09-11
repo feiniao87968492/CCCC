@@ -1,0 +1,17 @@
+{
+  "source_documents": 3,
+  "source_sessions": 2,
+  "clean_rows": 12,
+  "issues": 0,
+  "measurement_results": {
+    "no_signal": 4,
+    "direction": 2
+  },
+  "bearings_present": 2,
+  "structural_bearing_blanks": 10,
+  "repeated_site_channel_actions": 2,
+  "idempotent_replays": 0,
+  "cleaned_data_scope": "Observed actions only; no hidden cases or credentials read",
+  "http_status": "Original transcripts omit HTTP status; not independently auditable",
+  "source_extraction": "DOCX paragraphs retain basic OMML fractions/scripts; consult originals for figures and complex formulas"
+}

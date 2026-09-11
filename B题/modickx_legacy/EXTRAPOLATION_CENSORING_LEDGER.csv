@@ -1,0 +1,6 @@
+object,evidence_class,quantity,boundary
+existing_smoke,observed,12 accepted actions in 2 sessions,no strategy performance inference
+coverage_proofs,derived,existence of detecting probe and optical clearing point,conditional on stated geometry and completed execution
+offline_cases,scenario_extrapolated,pending generated case performance,not official distribution
+formal_N,unresolved,unknown source count,never supplied online
+budget_stop,right_censored,completion time not reached,do not treat elapsed time as successful completion

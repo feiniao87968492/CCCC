@@ -1,0 +1,5 @@
+id,classification,scope,observation,action
+HTTP_STATUS,information_insufficient,smoke_transcripts,HTTP status omitted by original transcript,retain and do not claim HTTP status audited
+ANGLE_BLANK,valid_extreme,10 of 12 action rows,structural absence rather than numeric angle,retain null and reason
+ZERO_CLEAR,valid_extreme,both smoke sessions,K=0,leave T_per_K blank
+REPEAT_SITE,valid_extreme,2 actions,repeated site and channel,retain but do not treat as independent angular samples

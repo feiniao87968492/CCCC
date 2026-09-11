@@ -1,0 +1,497 @@
+[
+  {
+    "op": "measure",
+    "k": 1,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 5.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 2,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 11.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 3,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 17.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 4,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 23.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 5,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 29.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 6,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 35.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 7,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 41.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 8,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 47.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 9,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 53.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 10,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 59.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 11,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 65.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 12,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 71.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 13,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 77.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 14,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 83.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 15,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 89.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 16,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 95.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 17,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 101.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 18,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 107.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 19,
+    "result": "no_signal",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 113.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 20,
+    "result": "direction",
+    "x": 0.0,
+    "y": 0.0,
+    "T": 119.0,
+    "active": false
+  },
+  {
+    "op": "measure",
+    "k": 2,
+    "result": "direction",
+    "x": -323.08389925555,
+    "y": 553.4762005383129,
+    "T": 253.174742,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 2,
+    "result": "direction",
+    "x": -599.9999999999998,
+    "y": 1039.2304845413264,
+    "T": 370.003138,
+    "active": true
+  },
+  {
+    "op": "clear",
+    "k": 2,
+    "ok": true,
+    "x": -330.8377473015845,
+    "y": 752.3661409758597,
+    "T": 453.677014
+  },
+  {
+    "op": "measure",
+    "k": 3,
+    "result": "direction",
+    "x": -318.1103424170566,
+    "y": 739.2067583728,
+    "T": 463.338468,
+    "active": true
+  },
+  {
+    "op": "clear",
+    "k": 3,
+    "ok": true,
+    "x": 93.46364833575882,
+    "y": 587.225717274538,
+    "T": 556.086149
+  },
+  {
+    "op": "measure",
+    "k": 6,
+    "result": "direction",
+    "x": -496.90705220634754,
+    "y": -309.81587821399,
+    "T": 776.862422,
+    "active": true
+  },
+  {
+    "op": "clear",
+    "k": 6,
+    "ok": true,
+    "x": -205.95683159529784,
+    "y": -513.2536779400589,
+    "T": 852.866357
+  },
+  {
+    "op": "measure",
+    "k": 7,
+    "result": "direction",
+    "x": -736.107015189612,
+    "y": -160.0175320900001,
+    "T": 986.276716,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 7,
+    "result": "direction",
+    "x": -1200.0,
+    "y": 1.4695761589768238e-13,
+    "T": 1089.41994,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 7,
+    "result": "direction",
+    "x": -600.0000000000006,
+    "y": -1039.2304845413262,
+    "T": 1334.41994,
+    "active": true
+  },
+  {
+    "op": "clear",
+    "k": 7,
+    "ok": true,
+    "x": -757.857434241608,
+    "y": -778.8710712799573,
+    "T": 1400.315258
+  },
+  {
+    "op": "measure",
+    "k": 8,
+    "result": "direction",
+    "x": 322.9723232495354,
+    "y": 902.279314836848,
+    "T": 1806.038141,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 8,
+    "result": "direction",
+    "x": 600.0000000000001,
+    "y": 1039.2304845413264,
+    "T": 1872.844276,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 8,
+    "result": "direction",
+    "x": 1200.0,
+    "y": 0.0,
+    "T": 2117.844276,
+    "active": true
+  },
+  {
+    "op": "clear",
+    "k": 8,
+    "ok": true,
+    "x": 364.79086665757643,
+    "y": 349.0471704408352,
+    "T": 2303.886616
+  },
+  {
+    "op": "measure",
+    "k": 10,
+    "result": "direction",
+    "x": 755.3774117504481,
+    "y": -140.9781297867288,
+    "T": 2435.215407,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 10,
+    "result": "direction",
+    "x": 600.0000000000001,
+    "y": -1039.2304845413264,
+    "T": 2622.533748,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 10,
+    "result": "direction",
+    "x": 675.3025057353193,
+    "y": -1163.2467936924522,
+    "T": 2656.551337,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 10,
+    "result": "direction",
+    "x": 330.59968347744643,
+    "y": -1020.466209724959,
+    "T": 2736.172066,
+    "active": true
+  },
+  {
+    "op": "clear",
+    "k": 10,
+    "ok": true,
+    "x": 674.3188275228504,
+    "y": -674.5300288968871,
+    "T": 2838.704561
+  },
+  {
+    "op": "measure",
+    "k": 12,
+    "result": "direction",
+    "x": 273.4734092694534,
+    "y": 729.3664152930061,
+    "T": 3136.704717,
+    "active": true
+  },
+  {
+    "op": "clear",
+    "k": 12,
+    "ok": true,
+    "x": -86.3440866721151,
+    "y": 340.0488440517938,
+    "T": 3247.730525
+  },
+  {
+    "op": "measure",
+    "k": 14,
+    "result": "direction",
+    "x": 898.2932248413102,
+    "y": 55.88950552003291,
+    "T": 3458.694636,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 14,
+    "result": "direction",
+    "x": 1169.1367972001754,
+    "y": -79.99133900602834,
+    "T": 3524.298215,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 14,
+    "result": "direction",
+    "x": 1160.8372346081105,
+    "y": -65.57539138508054,
+    "T": 3532.625089,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 14,
+    "result": "direction",
+    "x": 1451.8898996176558,
+    "y": 63.0423386383801,
+    "T": 3601.266011,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 14,
+    "result": "direction",
+    "x": 1459.4611523986607,
+    "y": 62.596547978819444,
+    "T": 3607.782884,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 14,
+    "result": "direction",
+    "x": 1511.577591519284,
+    "y": -209.0864488044512,
+    "T": 3668.110192,
+    "active": true
+  },
+  {
+    "op": "clear",
+    "k": 14,
+    "ok": true,
+    "x": 1163.640088713877,
+    "y": -548.7298275876166,
+    "T": 3770.355887
+  },
+  {
+    "op": "measure",
+    "k": 20,
+    "result": "direction",
+    "x": 126.15665770971134,
+    "y": -678.0688733361,
+    "T": 3985.458776,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 20,
+    "result": "direction",
+    "x": 33.34850883879585,
+    "y": -973.7122047032079,
+    "T": 4052.432426,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 20,
+    "result": "direction",
+    "x": 45.47905454219864,
+    "y": -970.4835423076536,
+    "T": 4059.942999,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 20,
+    "result": "direction",
+    "x": 179.16171001966245,
+    "y": -1252.9441813020835,
+    "T": 4127.44262,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 20,
+    "result": "direction",
+    "x": 181.41130421159755,
+    "y": -1253.9319195101446,
+    "T": 4132.933998,
+    "active": true
+  },
+  {
+    "op": "measure",
+    "k": 20,
+    "result": "direction",
+    "x": -95.94579699998525,
+    "y": -1316.2374540017709,
+    "T": 4194.787825,
+    "active": true
+  },
+  {
+    "op": "clear",
+    "k": 20,
+    "ok": true,
+    "x": -434.59904519838483,
+    "y": -965.6059311241634,
+    "T": 4297.28213
+  }
+]

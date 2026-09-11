@@ -1,0 +1,15 @@
+{
+  "family":"bounded-set geometry and robust/Pareto decision",
+  "role":"baseline_with_audit_extension",
+  "status":"implementation_ready_pending_human_gate",
+  "selection_authority":"agent",
+  "q3_scan_selection":{"selection_authority":"user","role":"user_directed_primary","geometry":"origin plus six equiangular radius1200m sites","status":"design_pending_validation","global_measure_bound":140,"safe_time_bound_s":32360,"active_safe_time_bound_s":41960},
+  "inputs":["user_data/parameters.csv","task-profile-Q1.json","task-profile-Q2.json","task-profile-Q3.json","task-profile-Q4.json","accepted_action_prefix"],
+  "target":"diameter; layered J(q) second point; certified all-clear followed by time minimization",
+  "split":{"development_seeds":[11000,11019],"heldout_seeds":[21000,21099],"independent_unit":"whole case"},
+  "metrics":["geometry status correctness","diameter residual","source enclosure","all-clear certificate correctness","K/N when available","T","T/K when K>0","wall runtime","calls"],
+  "validation":"VALIDATION_PLAN.md",
+  "failure_triggers":["false certificate","enclosure excludes source","API contradiction","wall deadline","local search stagnation"],
+  "fallback":"SAFE; report unresolved on protocol or budget failure",
+  "formal_promotion":"No performance model promoted until recorded execution and validation"
+}

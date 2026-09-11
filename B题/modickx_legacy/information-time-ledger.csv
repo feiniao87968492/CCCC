@@ -1,0 +1,8 @@
+quantity,available_at,allowed_use,forbidden_use
+official_constants,before run,policy and evaluator,retuning to test result
+action_response,after accepted action,update legal prefix,future response in current decision
+source_truth,offline evaluator only,score and verify enclosure,policy input
+practice_N,after practice ends,compute K_over_N,online termination
+formal_N,never supplied,none,claim inferred N equals K
+design_hyperparameters,before heldout,policy configuration,heldout result based retuning without new test set
+error_field_seed,offline evaluator only,reproducible case generator,policy oracle
