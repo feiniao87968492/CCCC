@@ -26,6 +26,7 @@ def main():
     parser.add_argument("--v3-clear-insert", type=float, default=None)
     parser.add_argument("--v3-measure-insert", type=float, default=None)
     parser.add_argument("--v3-agg-rho", type=float, default=None)
+    parser.add_argument("--hex37-route", default=None, help="CURRENT or a registered HEX37 prefix route")
     args = parser.parse_args()
     if args.cover_mode:
         from q4_cover import set_cover_mode
@@ -43,6 +44,9 @@ def main():
         if args.v3_agg_rho is not None:
             kw["aggressive_clear_rho"] = args.v3_agg_rho
         set_v3_params(**kw)
+    if args.hex37_route:
+        from q4_cover import set_hex37_route
+        set_hex37_route(args.hex37_route)
     if (args.runner.parent / "q4_localize.py").exists():
         # A snapshot runner must use its own localization, state and policy.
         for name in ("q4_localize", "q4_state", "q4_policy"):
@@ -63,7 +67,8 @@ def main():
         keys = ("K", "T", "T_over_K", "move_m", "localization_move", "n_measure", "n_clear", "n_clear_ok",
                 "all_certified", "failure", "wall_s", "cover_mode", "route_mode",
                 "n_optical_fallback", "n_cover_visited", "n_insert", "n_defer", "pending_max",
-                "n_batch", "n_probe", "n_aggressive_clear", "n_aggressive_clear_ok")
+                "n_batch", "n_probe", "n_aggressive_clear", "n_aggressive_clear_ok",
+                "hex37_route", "mean_first_detect_index", "p95_first_detect_index")
         row = {key: result.get(key) for key in keys}
         row.update(seed=seed, N=len(sources), error_mode=args.error_mode)
         rows.append(row)
@@ -95,6 +100,9 @@ def main():
                    mean_n_probe=_mean("n_probe"),
                    mean_n_aggressive_clear=_mean("n_aggressive_clear"),
                    mean_n_aggressive_clear_ok=_mean("n_aggressive_clear_ok"),
+                   mean_first_detect_index=_mean("mean_first_detect_index"),
+                   mean_p95_first_detect_index=_mean("p95_first_detect_index"),
+                   hex37_route=args.hex37_route,
                    max_wall_s=max(r["wall_s"] for r in rows),
                    source="offline geometry with bounded deterministic error; not official practice")
     args.output.with_suffix(".json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")

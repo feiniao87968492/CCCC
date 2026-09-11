@@ -16,9 +16,10 @@ def pytest_runtest_setup(item) -> None:
         if src not in sys.path:
             sys.path.insert(0, src)
         try:
-            from q4_cover import COVER_SQUARE81, set_cover_mode
+            from q4_cover import COVER_SQUARE81, HEX37_ROUTE_CURRENT, set_cover_mode, set_hex37_route
             from q4_policy import ROUTE_OLD, set_route_mode
         except ImportError:
             return
         set_cover_mode(COVER_SQUARE81)
         set_route_mode(ROUTE_OLD)
+        set_hex37_route(HEX37_ROUTE_CURRENT)

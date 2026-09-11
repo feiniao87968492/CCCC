@@ -124,6 +124,52 @@ def _build_hex37() -> CoverModel:
 _SQUARE81 = _build_square81()
 _HEX37 = _build_hex37()
 _MODELS = {COVER_SQUARE81: _SQUARE81, COVER_HEX37: _HEX37}
+HEX37_ROUTE_CURRENT = "CURRENT"
+_HEX37_VISITS: dict[str, list[int]] = {HEX37_ROUTE_CURRENT: list(range(37))}
+_HEX37_VISIT_NAME = HEX37_ROUTE_CURRENT
+# Equal-length 800 m Hamilton paths scored offline for earlier first detection.
+HEX37_ROUTE_PREFIX_A = "PREFIX_A"
+HEX37_ROUTE_PREFIX_B = "PREFIX_B"
+
+
+def current_hex37_route_name() -> str:
+    return _HEX37_VISIT_NAME
+
+
+def hex37_route_names() -> list[str]:
+    return list(_HEX37_VISITS)
+
+
+def register_hex37_route(name: str, order: list[int]) -> None:
+    """Register a 37-index Hamilton visit order over the canonical HEX37 points."""
+    pts = _HEX37.points
+    order = [int(i) for i in order]
+    if len(order) != 37 or len(set(order)) != 37 or set(order) != set(range(37)):
+        raise ValueError("HEX37 route must be a permutation of 0..36")
+    if float(np.linalg.norm(pts[order[0]])) > 1e-9:
+        raise ValueError("HEX37 route must start at the origin")
+    for a, b in zip(order, order[1:]):
+        if abs(float(np.linalg.norm(pts[a] - pts[b])) - HEX_STEP) > 1e-6:
+            raise ValueError("HEX37 route must use 800 m edges")
+    _HEX37_VISITS[str(name)] = order
+
+
+def set_hex37_route(name: str) -> None:
+    global _HEX37_VISIT_NAME
+    key = str(name)
+    if key not in _HEX37_VISITS:
+        raise ValueError(f"unknown HEX37 route {name!r}")
+    _HEX37_VISIT_NAME = key
+
+
+register_hex37_route(
+    HEX37_ROUTE_PREFIX_A,
+    [0, 2, 1, 10, 18, 19, 20, 21, 25, 26, 27, 28, 29, 30, 31, 32, 33, 36, 34, 35, 16, 17, 15, 14, 13, 12, 11, 8, 9, 7, 5, 6, 4, 3, 23, 24, 22],
+)
+register_hex37_route(
+    HEX37_ROUTE_PREFIX_B,
+    [0, 20, 2, 1, 10, 18, 19, 30, 29, 27, 28, 26, 21, 25, 24, 22, 23, 3, 4, 5, 6, 7, 9, 8, 12, 11, 13, 14, 15, 16, 17, 35, 34, 36, 33, 31, 32],
+)
 
 _P4_POINTS = _SQUARE81.points
 _P4_KEY_TO_IDX = _SQUARE81.key_to_idx
@@ -167,7 +213,10 @@ def cover_points(mode: str | None = None) -> np.ndarray:
 
 
 def cover_route(mode: str | None = None) -> list[int]:
-    return list(_model(mode).route)
+    model = _model(mode)
+    if model.name == COVER_HEX37:
+        return list(_HEX37_VISITS[_HEX37_VISIT_NAME])
+    return list(model.route)
 
 
 def cover_distance_matrix(mode: str | None = None) -> np.ndarray:
@@ -194,7 +243,7 @@ def cover_index(p, mode: str | None = None) -> int | None:
 def cover_route_stats(mode: str | None = None) -> dict:
     model = _model(mode)
     pts = model.points
-    route = model.route
+    route = cover_route(mode)
     steps = [float(np.linalg.norm(pts[a] - pts[b])) for a, b in zip(route, route[1:])]
     n_adj = sum(abs(step - model.step) <= 1e-6 for step in steps)
     return {

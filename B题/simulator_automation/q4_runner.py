@@ -13,7 +13,7 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(HERE))
 
 from params import CLEAR_RADIUS
-from q4_cover import cover_index, current_cover_mode
+from q4_cover import cover_index, cover_route, current_cover_mode, current_hex37_route_name
 from q4_localize import history_region, legal_xy, optical_cover_points, second_measure_points
 from q4_policy import (
     INSERT_MAX_M,
@@ -82,6 +82,7 @@ class Q4Runner:
         self._aggressive_tries = {k: 0 for k in self.state.channels}
         self.pending_max = 0
         self._loc_leg = False
+        self.first_detect_index: dict[int, int] = {}
 
     def _note(self, **kw) -> None:
         self.log.append(kw)
@@ -109,6 +110,11 @@ class Q4Runner:
         self.virtual_time = float(resp.get("virtual_time_s", self.virtual_time))
         result, svd = resp.get("measure_result"), resp.get("svd_deg")
         self.state.apply_measure(int(k), [x, y], result, svd)
+        if result in ("direction", "near") and k not in self.first_detect_index:
+            idx = cover_index([x, y])
+            if idx is not None:
+                route = cover_route()
+                self.first_detect_index[k] = route.index(idx)
         self._note(op="measure", k=k, x=float(x), y=float(y), result=result, svd=svd, t=self.virtual_time)
         return resp
 
@@ -711,6 +717,16 @@ class Q4Runner:
                     n_batch=self.n_batch, n_probe=self.n_probe,
                     n_aggressive_clear=self.n_aggressive_clear,
                     n_aggressive_clear_ok=self.n_aggressive_clear_ok,
+                    hex37_route=current_hex37_route_name(),
+                    first_detect_indices=list(self.first_detect_index.values()),
+                    mean_first_detect_index=(
+                        float(np.mean(list(self.first_detect_index.values())))
+                        if self.first_detect_index else None
+                    ),
+                    p95_first_detect_index=(
+                        float(np.quantile(list(self.first_detect_index.values()), 0.95))
+                        if self.first_detect_index else None
+                    ),
                     detected=sum(ch.ever_detected for ch in self.state.channels.values()),
                     certified_absent=[k for k, ch in self.state.channels.items() if ch.status == "certified_absent"],
                     cleared_channels=[k for k, ch in self.state.channels.items() if ch.status == "cleared"],

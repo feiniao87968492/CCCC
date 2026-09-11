@@ -78,6 +78,23 @@ Frozen params after a 10-seed grid: `CLEAR_INSERT_MAX=600`, `MEASURE_INSERT_MAX=
 
 V3 beats V2 on T/K and travel, with 30/30 certificates. The gain is under 5%, so further threshold search is not the next lever; a later HEX37 prefix-route stage is reserved and not implemented here.
 
+## HEX37 PREFIX_A vs CURRENT (V3 frozen, seeds 0–29)
+
+Equal-length 800 m Hamilton paths. PREFIX_A is the best offline-scored DFS path (mean first-detect index 5.54 vs 8.98 on synthetic sources).
+
+| metric | CURRENT | PREFIX_A | change |
+|---|---:|---:|---:|
+| full clear | 30/30 | 30/30 | same |
+| all_certified | 30/30 | 30/30 | same |
+| mean T/K (s) | 711.20 | **683.09** | −4.0% |
+| mean T (s) | 9646 | **9277** | −3.8% |
+| mean move_m | 36870 | **36103** | −2.1% |
+| mean first detect index | 6.85 | **4.20** | −38.7% |
+| mean P95 first detect | 20.26 | **16.19** | −20.1% |
+| mean n_measure | 367 | **332** | −9.6% |
+
+PREFIX_A replaces CURRENT as the practice default visit order. CURRENT remains selectable. Dynamic origin-based route choice is not enabled.
+
 | metric | SQUARE81 | HEX37 | change |
 |---|---:|---:|---:|
 | full clear | 30/30 | 30/30 | same |

@@ -67,8 +67,15 @@ Contest metric is T/K after full clear, so V2 is the live scheduler.
 Frozen after 18-cell 10-seed grid then two 30-seed finals:
 `CLEAR_INSERT_MAX=600`, `MEASURE_INSERT_MAX=250`, `AGGRESSIVE_CLEAR_RHO=80`.
 3-step HEX lookahead; rho>60 at most 2 heuristic clears per channel.
-Offline 30/30. Mean T/K 735.31→711.20 (−3.3%). Gain <5%, so do not keep tuning thresholds;
-the reserved next lever is HEX37 equal-length prefix routes, not implemented this round.
+Offline 30/30. Mean T/K 735.31→711.20 (−3.3%). Gain <5%, so do not keep tuning thresholds.
+
+## HEX37 PREFIX_A (2026-09-11)
+
+Equal-length 800 m Hamilton path from origin, scored offline (mean first-detect
+index 5.54 vs CURRENT 8.98; cov10 0.84 vs 0.56). Frozen as `PREFIX_A`.
+Paired V3 seeds 0–29: T/K 711.20→683.09 (−4.0%), mean first-detect 6.85→4.20.
+30/30 full clear. Practice default is PREFIX_A; CURRENT remains selectable.
+Dynamic origin-based route choice is not enabled.
 
 ## Decision rule
 

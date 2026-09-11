@@ -103,6 +103,7 @@ def main() -> None:
     parser.add_argument("--skip-ui-start", action="store_true")
     parser.add_argument("--cover-mode", default="HEX37", help="SQUARE81 or HEX37; practice challenger default is HEX37")
     parser.add_argument("--route-mode", default="ROUTE_INSERT_V3", help="OLD_HEX37, V1, V2, or V3")
+    parser.add_argument("--hex37-route", default="PREFIX_A", help="CURRENT, PREFIX_A, or PREFIX_B")
     args = parser.parse_args()
     _assert_no_oracle()
     if args.cover_mode:
@@ -111,6 +112,9 @@ def main() -> None:
     if args.route_mode:
         from q4_policy import set_route_mode
         set_route_mode(args.route_mode)
+    if args.hex37_route:
+        from q4_cover import set_hex37_route
+        set_hex37_route(args.hex37_route)
     if not args.skip_ui_start:
         start_q4_practice(args.team)
     ui_before = assert_q4_practice_ready(args.team)
