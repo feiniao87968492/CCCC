@@ -1,0 +1,19 @@
+{
+  "runner": "B题\\experiments\\q4_revision\\baseline\\q4_runner.py",
+  "seed_start": 0,
+  "cases": 30,
+  "error_mode": "smooth",
+  "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+  "sha256": {
+    "B题\\experiments\\q4_revision\\baseline\\q4_runner.py": "eb34b6c5eb92050e84ecd21fd8eba6fb481f5938614715e817fb9df752977a3b",
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\tests\\test_q4_regressions.py": "821323d575ce4e1f0e551f5dc0d3f9fef0c8d96262fb5786a94eb1b59c42da4d",
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\tests\\test_q4_geomsim.py": "f54193dbfb69633fff290216b1b22f9c5765b64dfda0d734bebce507b6c33f2b",
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\src\\geometry.py": "0262fc60dec3c71e89103a35a34631b553b2299f489bea6183998e867f155294",
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\src\\params.py": "07f886cb83d470b3c287d5c54ab6bd00be3c40484805ac911d20077694a5bdb4",
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\src\\q4_cover.py": "12555764f54ae86b39a3a74a8bb0ee2a1de497379a8ba007f5411fcfc4f2b853",
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\data_preparation\\parameters.csv": "aded0d7b20628700a2e3aae19290d870603b2fc5a4db316cf4b1c0cbd1cf2c96",
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\experiments\\q4_revision\\baseline\\q4_localize.py": "e1d5e8b72cfe77ffc23efa296881190102ec04f9a3fad7d16ceb2109df89a948",
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\experiments\\q4_revision\\baseline\\q4_state.py": "7b3826dd3661592e2f10f20c18e71fecea9b8a6630a6d74d37fc641994396d3a",
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\experiments\\q4_revision\\baseline\\q4_policy.py": "23e135015baacb04c15683ee8049b3026c3034bad37c5886de0a6c2b8eab34ee"
+  }
+}

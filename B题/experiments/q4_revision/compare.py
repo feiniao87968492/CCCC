@@ -1,6 +1,7 @@
 """Reproducible offline paired Q4 evaluation; never connects to a simulator."""
 import argparse
 import csv
+import hashlib
 import importlib.util
 import json
 import sys
@@ -21,6 +22,14 @@ def main():
     parser.add_argument("--seed-start", type=int, default=0)
     parser.add_argument("--error-mode", choices=["smooth", "endpoint"], default="smooth")
     args = parser.parse_args()
+    if (args.runner.parent / "q4_localize.py").exists():
+        # A snapshot runner must use its own localization, state and policy.
+        for name in ("q4_localize", "q4_state", "q4_policy"):
+            dependency = args.runner.parent / (name + ".py")
+            dep_spec = importlib.util.spec_from_file_location(name, dependency)
+            dep_module = importlib.util.module_from_spec(dep_spec)
+            sys.modules[name] = dep_module
+            dep_spec.loader.exec_module(dep_module)
     spec = importlib.util.spec_from_file_location("evaluated_q4_runner", args.runner)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -47,6 +56,14 @@ def main():
                    max_wall_s=max(r["wall_s"] for r in rows),
                    source="offline geometry with bounded deterministic error; not official practice")
     args.output.with_suffix(".json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+    inputs = [args.runner, ROOT / "tests/test_q4_regressions.py", ROOT / "tests/test_q4_geomsim.py",
+              ROOT / "src/geometry.py", ROOT / "src/params.py", ROOT / "src/q4_cover.py",
+              ROOT / "data_preparation/parameters.csv"]
+    inputs += [Path(sys.modules[name].__file__) for name in ("q4_localize", "q4_state", "q4_policy")]
+    manifest = dict(runner=str(args.runner), seed_start=args.seed_start, cases=args.cases,
+                    error_mode=args.error_mode, python=sys.version,
+                    sha256={str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs})
+    args.output.with_suffix(".meta.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(summary), flush=True)
 
 

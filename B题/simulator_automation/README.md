@@ -1,5 +1,19 @@
 # B题模拟器自动化
 
+## Q4 完整求解入口（2026-09-11 更新）
+
+当前版本 `cumulative-optical-v2`，采用 81 点发现证书、全部测向累计定位和连续候选区光学清除兜底。在 B题目录运行：
+
+```powershell
+python simulator_automation/q4_practice.py
+```
+
+入口必须确认当前为问题4演练、队号正确且正在等待机器狗进入，才会发送动作；不会启动正式测试。若 UIA 启动误超时，但经 Inspect 确认已经进入正确演练的等待状态，可执行 `python simulator_automation/q4_practice.py --skip-ui-start`，该参数仍保留模式、队号、等待状态检查。
+
+求解器依赖 NumPy、SciPy。当前验证：60 场离线带误差场景全清，本轮 2 场真实演练分别清除 12/12、16/16；全部频道证书完成。详细指标与剩余限制见 [Q4完成情况与修复](../docs/Q4完成情况与修复-20260911.md)。下方 `run_practice.ps1` 是历史接口冒烟入口，只发送有限探测动作，不执行完整 Q4 求解。
+
+## 历史接口冒烟说明
+
 已于 2026-09-10 在本机模拟器 v1.1 实测成功。采用 **Windows UI Automation 操作界面 + 官方 HTTP/JSON 接口发送机器狗动作**。仅依赖 Windows PowerShell 5.1、Python 3 标准库，不需要安装 Playwright、浏览器驱动或 pywinauto。
 
 ## 快速使用

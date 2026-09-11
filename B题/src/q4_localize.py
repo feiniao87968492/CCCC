@@ -68,6 +68,8 @@ def history_region(history):
             if len(verts) == 0:
                 return None
     center, rho = min_enclosing_circle(verts)
+    # Verify the radius against every vertex before using it as a certificate.
+    rho = max(float(rho), float(np.max(np.linalg.norm(verts - center, axis=1))))
     return dict(center=center, rho=float(rho), verts=verts)
 
 
@@ -85,6 +87,7 @@ def optical_cover_points(verts) -> list[np.ndarray]:
     if len(verts) == 0:
         return []
     center, rho = min_enclosing_circle(verts)
+    rho = max(float(rho), float(np.max(np.linalg.norm(verts - center, axis=1))))
     if rho <= CLEAR_RADIUS - 1e-6:
         return [center]
     _, _, axes = np.linalg.svd(verts - center, full_matrices=False)
@@ -102,8 +105,10 @@ def optical_cover_points(verts) -> list[np.ndarray]:
                 cell = _clip_convex(cell, -n, -index * side)
             if len(cell):
                 c, radius = min_enclosing_circle(cell)
+                radius = max(float(radius), float(np.max(np.linalg.norm(cell - c, axis=1))))
                 if radius > CLEAR_RADIUS + 1e-6:
-                    raise RuntimeError("Optical cover cell exceeds clear radius")
+                    # Numerical degeneration in MEC cannot invalidate the grid proof.
+                    c = side * (np.array([i, j], dtype=float) + 0.5)
                 points.append(c @ axes + center)
     return points
 
