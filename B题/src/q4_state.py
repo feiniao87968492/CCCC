@@ -5,11 +5,17 @@ from dataclasses import dataclass, field
 
 import numpy as np
 
-from params import CLEAR_RADIUS, COORD_ABS_LIMIT, NEAR_RADIUS
+from params import CLEAR_RADIUS, COORD_ABS_LIMIT, NEAR_RADIUS, SOURCE_COUNT_MAX
 from q4_cover import cover_index, cover_n, cover_points
 
 CHANNELS = list(range(1, 21))
 Q4_STATUSES = ("unseen", "detected", "cleared", "certified_absent")
+COUNT_CERTIFY_N16 = True
+
+
+def set_count_certify_n16(enabled: bool) -> None:
+    global COUNT_CERTIFY_N16
+    COUNT_CERTIFY_N16 = bool(enabled)
 
 
 def _legal_pos(p) -> bool:
@@ -78,6 +84,22 @@ class Q4State:
     def unseen_channels(self) -> list[int]:
         return [k for k, ch in self.channels.items() if ch.status == "unseen"]
 
+    def n_detected(self) -> int:
+        return sum(ch.ever_detected for ch in self.channels.values())
+
+    def maybe_count_certify_n_max(self) -> int:
+        """If 16 distinct channels are detected, remaining unseen channels are empty."""
+        if not COUNT_CERTIFY_N16:
+            return 0
+        if self.n_detected() < SOURCE_COUNT_MAX:
+            return 0
+        n = 0
+        for ch in self.channels.values():
+            if ch.status == "unseen":
+                ch.status = "certified_absent"
+                n += 1
+        return n
+
     def apply_measure(self, k: int, pos, result: str, svd_deg: float | None = None) -> None:
         if k not in self.channels:
             raise ValueError(f"channel {k} not in 1..20")
@@ -114,6 +136,7 @@ class Q4State:
             ch.status = "detected"
             if ch.first_site is None:
                 ch.first_site = q.copy()
+            self.maybe_count_certify_n_max()
             return
         ch.ever_detected = True
         ch.status = "detected"
@@ -124,6 +147,7 @@ class Q4State:
         elif ch.second_site is None and float(np.linalg.norm(q - ch.first_site)) >= 50.0:
             ch.second_site = q.copy()
             ch.second_bearing = ang
+        self.maybe_count_certify_n_max()
 
     def apply_clear(self, k: int, pos, success: bool) -> None:
         if k not in self.channels:
