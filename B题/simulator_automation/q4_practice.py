@@ -102,7 +102,7 @@ def main() -> None:
     parser.add_argument("--port", type=int, default=2026)
     parser.add_argument("--skip-ui-start", action="store_true")
     parser.add_argument("--cover-mode", default="HEX37", help="SQUARE81 or HEX37; practice challenger default is HEX37")
-    parser.add_argument("--route-mode", default="ROUTE_INSERT_V1", help="OLD_HEX37 or ROUTE_INSERT_V1")
+    parser.add_argument("--route-mode", default="ROUTE_INSERT_V2", help="OLD_HEX37, ROUTE_INSERT_V1, or ROUTE_INSERT_V2")
     args = parser.parse_args()
     _assert_no_oracle()
     if args.cover_mode:

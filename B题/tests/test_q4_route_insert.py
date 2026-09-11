@@ -23,10 +23,13 @@ from q4_cover import (  # noqa: E402
 from q4_policy import (  # noqa: E402
     INSERT_MAX_M,
     ROUTE_INSERT_V1,
+    ROUTE_INSERT_V2,
     ROUTE_OLD,
     choose_insert_or_cover,
     insertion_extra,
     next_route_cover,
+    pending_batch_order,
+    probe_detected_worthwhile,
     set_route_mode,
 )
 from q4_runner import Q4Runner  # noqa: E402
@@ -143,6 +146,92 @@ class HamiltonSkeletonTests(unittest.TestCase):
         self.assertIn("n_insert", summary)
         self.assertIn("localization_move", summary)
         self.assertIn("pending_max", summary)
+
+
+class PendingBatchOrderTests(unittest.TestCase):
+    def test_line_order_visits_nearest_first(self):
+        x = np.array([0.0, 0.0])
+        items = [(3, np.array([300.0, 0.0])), (1, np.array([100.0, 0.0])), (2, np.array([200.0, 0.0]))]
+        self.assertEqual(pending_batch_order(x, items, u=None), [1, 2, 3])
+
+    def test_returns_to_next_cover(self):
+        x = np.array([0.0, 0.0])
+        u = np.array([800.0, 0.0])
+        items = [(1, np.array([700.0, 50.0])), (2, np.array([100.0, 50.0]))]
+        self.assertEqual(pending_batch_order(x, items, u), [2, 1])
+
+    def test_empty(self):
+        self.assertEqual(pending_batch_order(np.zeros(2), [], u=None), [])
+
+
+class ProbeDetectedTests(unittest.TestCase):
+    def test_skips_when_already_clearable(self):
+        p = np.array([800.0, 0.0])
+        region = {"center": np.array([10.0, 0.0]), "rho": 15.0}
+        self.assertFalse(probe_detected_worthwhile(p, region, [np.zeros(2)], [0.0]))
+
+    def test_skips_nearby_repeat_site(self):
+        p = np.array([50.0, 0.0])
+        region = {"center": np.array([400.0, 0.0]), "rho": 200.0}
+        self.assertFalse(probe_detected_worthwhile(p, region, [np.zeros(2)], [0.0]))
+
+    def test_accepts_new_baseline_in_forward_halfplane(self):
+        p = np.array([800.0, 0.0])
+        region = {"center": np.array([400.0, 0.0]), "rho": 250.0}
+        self.assertTrue(probe_detected_worthwhile(p, region, [np.zeros(2)], [0.0]))
+
+    def test_skips_far_behind_the_wedge(self):
+        p = np.array([-800.0, 0.0])
+        region = {"center": np.array([400.0, 0.0]), "rho": 250.0}
+        self.assertFalse(probe_detected_worthwhile(p, region, [np.zeros(2)], [0.0]))
+
+
+class InsertV2Tests(unittest.TestCase):
+    def setUp(self):
+        set_cover_mode(COVER_HEX37)
+        set_route_mode(ROUTE_INSERT_V2)
+
+    def tearDown(self):
+        set_cover_mode(COVER_SQUARE81)
+        set_route_mode(ROUTE_OLD)
+
+    def test_fake_robot_still_visits_all_37(self):
+        summary = Q4Runner(FakeRobot()).run()
+        self.assertIsNone(summary["failure"])
+        self.assertTrue(summary["all_certified"])
+        self.assertEqual(summary["n_cover_visited"], 37)
+        self.assertEqual(summary["route_mode"], ROUTE_INSERT_V2)
+
+    def test_mixed_clears_and_certifies(self):
+        robot = GeomSim(
+            [
+                {"k": 1, "g": np.array([400.0, 0.0]), "r": 1200.0, "directional": False},
+                {"k": 5, "g": np.array([0.0, 500.0]), "r": 1200.0, "directional": True, "psi": np.deg2rad(-90.0)},
+                {"k": 9, "g": np.array([2.0, 2.0]), "r": 1000.0, "directional": False},
+            ]
+        )
+        summary = Q4Runner(robot).run()
+        self.assertEqual(summary["K"], 3)
+        self.assertTrue(summary["all_certified"])
+        self.assertEqual(summary["pending"], [])
+
+    def test_detected_not_measured_at_every_later_hex(self):
+        robot = GeomSim([{"k": 1, "g": np.array([400.0, 0.0]), "r": 1200.0, "directional": False}])
+        runner = Q4Runner(robot)
+        summary = runner.run()
+        self.assertEqual(summary["K"], 1)
+        self.assertTrue(summary["all_certified"])
+        cover_measures_after = 0
+        seen = False
+        for ev in runner.log:
+            if ev.get("op") != "measure" or ev.get("k") != 1:
+                continue
+            if ev.get("result") in ("direction", "near"):
+                seen = True
+                continue
+            if seen and cover_index([ev["x"], ev["y"]]) is not None:
+                cover_measures_after += 1
+        self.assertLess(cover_measures_after, 36)
 
 
 class InsertGeomLoopTests(unittest.TestCase):

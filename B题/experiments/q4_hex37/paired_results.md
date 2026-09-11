@@ -37,6 +37,28 @@ python experiments/q4_revision/compare.py --cover-mode HEX37 --route-mode ROUTE_
 
 Mean travel is inside the 35–38 km band. Extra measures come from still scanning detected channels at later HEX points; that is left for the next phase.
 
+## Route insert v2 (same seeds 0–29, HEX37 cover)
+
+Pending sources on the current edge are batched (enumerate if ≤7, else NN+2-opt) and localized before returning to the Hamilton skeleton. Detected channels are probed at a HEX site only when the site adds a ≥200 m baseline inside the current region.
+
+```powershell
+python experiments/q4_revision/compare.py --cover-mode HEX37 --route-mode ROUTE_INSERT_V2 --output experiments/q4_hex37/route_insert_v2.csv --cases 30
+```
+
+| metric | V1 | V2 | change |
+|---|---:|---:|---:|
+| full clear | 30/30 | 30/30 | same |
+| all_certified | 30/30 | 30/30 | same |
+| mean T/K (s) | 774.06 | **735.31** | −5.0% |
+| mean T (s) | 10533 | **9985** | −5.2% |
+| mean move_m | 36121 | 38342 | +6.1% |
+| mean n_measure | 545 | **375** | −31% |
+| mean n_clear | 15.1 | 22.4 | +48% |
+| mean n_probe | — | 24.8 | — |
+| mean n_batch | — | 10.3 | — |
+
+V2 trades a little travel for fewer RF measures; T/K is the contest metric after full clear.
+
 | metric | SQUARE81 | HEX37 | change |
 |---|---:|---:|---:|
 | full clear | 30/30 | 30/30 | same |

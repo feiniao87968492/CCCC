@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass
+from itertools import permutations
 
 import numpy as np
 
@@ -13,7 +14,8 @@ from q4_state import Q4State
 
 ROUTE_OLD = "OLD_HEX37"
 ROUTE_INSERT_V1 = "ROUTE_INSERT_V1"
-_VALID_ROUTE_MODES = (ROUTE_OLD, ROUTE_INSERT_V1)
+ROUTE_INSERT_V2 = "ROUTE_INSERT_V2"
+_VALID_ROUTE_MODES = (ROUTE_OLD, ROUTE_INSERT_V1, ROUTE_INSERT_V2)
 # Extra length allowed when inserting a pending site between x and the next HEX.
 # Keep this below one HEX step so inserts stay on-path; larger values bounce
 # off the skeleton too often.
@@ -71,6 +73,77 @@ def choose_insert_or_cover(x, u, candidates, max_extra: float = INSERT_MAX_M):
     if best_extra is not None and best_extra <= max_extra:
         return "insert", best_id
     return "cover", None
+
+
+PROBE_BASELINE_M = 200.0
+PROBE_REGION_M = 1500.0
+BATCH_ENUM_MAX = 7
+
+
+def pending_batch_order(x, items, u=None) -> list:
+    """Open path x → items → optional next cover u. Enumerate if small, else NN+2-opt."""
+    if not items:
+        return []
+    x = np.asarray(x, dtype=float).reshape(2)
+    ids = [item[0] for item in items]
+    pts = [np.asarray(item[1], dtype=float).reshape(2) for item in items]
+    n = len(pts)
+    u_arr = None if u is None else np.asarray(u, dtype=float).reshape(2)
+
+    def path_len(order) -> float:
+        cur = x
+        total = 0.0
+        for i in order:
+            total += float(np.linalg.norm(pts[i] - cur))
+            cur = pts[i]
+        if u_arr is not None:
+            total += float(np.linalg.norm(u_arr - cur))
+        return total
+
+    if n <= BATCH_ENUM_MAX:
+        best = min(permutations(range(n)), key=path_len)
+        return [ids[i] for i in best]
+    remaining = set(range(n))
+    order = []
+    cur = x
+    while remaining:
+        j = min(remaining, key=lambda i: float(np.linalg.norm(pts[i] - cur)))
+        order.append(j)
+        remaining.remove(j)
+        cur = pts[j]
+    improved = True
+    while improved:
+        improved = False
+        for i in range(n - 1):
+            for k in range(i + 1, n):
+                trial = order[:i] + list(reversed(order[i : k + 1])) + order[k + 1 :]
+                if path_len(trial) + 1e-9 < path_len(order):
+                    order = trial
+                    improved = True
+                    break
+            if improved:
+                break
+    return [ids[i] for i in order]
+
+
+def probe_detected_worthwhile(p, region, bearing_sites, bearing_degs) -> bool:
+    """True only if a HEX probe would add a new baseline inside the current region."""
+    if region is None or float(region["rho"]) <= 20.0:
+        return False
+    p = np.asarray(p, dtype=float).reshape(2)
+    center = np.asarray(region["center"], dtype=float).reshape(2)
+    if float(np.linalg.norm(p - center)) > PROBE_REGION_M:
+        return False
+    sites = [np.asarray(s, dtype=float).reshape(2) for s in bearing_sites]
+    if any(float(np.linalg.norm(p - s)) < PROBE_BASELINE_M for s in sites):
+        return False
+    if not sites:
+        return True
+    last = sites[-1]
+    last_deg = float(bearing_degs[-1])
+    if in_bearing_halfplane(p, last, last_deg):
+        return True
+    return False
 
 
 def next_route_cover(visited, need):

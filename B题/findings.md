@@ -52,6 +52,16 @@ Detected channels are still measured at later HEX points (`certificate_mode=True
 which raised n_measure 337→545. Next phase: opportunistic detected measure and
 pending batching.
 
+## ROUTE_INSERT_V2 (2026-09-11)
+
+On-path pending (`ΔL≤400`) are batched: enumerate if ≤7 else NN+2-opt, then
+localized before returning to the Hamilton point. Optical fallback remains
+drain-only. Detected HEX probes require a new ≥200 m baseline inside the
+current region and the forward half-plane.
+
+Offline 30/30. Mean T/K 774→735, n_measure 545→375, mean move 36.1→38.3 km.
+Contest metric is T/K after full clear, so V2 is the live scheduler.
+
 ## Decision rule
 
 If HEX37 misses a source, fails absence certification, or `K<N`, revert to SQUARE81 immediately.

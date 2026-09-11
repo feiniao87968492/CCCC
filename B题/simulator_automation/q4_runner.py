@@ -16,12 +16,16 @@ from params import CLEAR_RADIUS
 from q4_cover import cover_index, current_cover_mode
 from q4_localize import history_region, legal_xy, optical_cover_points, second_measure_points
 from q4_policy import (
+    INSERT_MAX_M,
     ROUTE_INSERT_V1,
+    ROUTE_INSERT_V2,
     choose_insert_or_cover,
     current_route_mode,
     insertion_extra,
     next_route_cover,
     next_snake_point,
+    pending_batch_order,
+    probe_detected_worthwhile,
 )
 from q4_state import Q4State
 
@@ -61,6 +65,8 @@ class Q4Runner:
         self.localization_move = 0.0
         self.n_insert = 0
         self.n_defer = 0
+        self.n_batch = 0
+        self.n_probe = 0
         self.pending_max = 0
         self._loc_leg = False
 
@@ -182,7 +188,7 @@ class Q4Runner:
                 return
         raise RuntimeError(f"channel {k}: optical cover exhausted without success")
 
-    def _try_localize(self, k: int) -> None:
+    def _try_localize(self, k: int, *, allow_optical: bool = True) -> None:
         ch = self.state.channels[k]
         if ch.status != "detected":
             return
@@ -196,7 +202,8 @@ class Q4Runner:
             if region["rho"] <= CLEAR_RADIUS - 1e-6:
                 if self._try_clear_at(k, region["center"]):
                     return
-                self._optical_fallback(k, region)
+                if allow_optical:
+                    self._optical_fallback(k, region)
                 return
             # At most two center trials; further clearing uses a coverage proof.
             if region["rho"] <= 80 and len(self.failed_clear_points[k]) < 2:
@@ -221,7 +228,8 @@ class Q4Runner:
                     break
             if not progressed:
                 break
-        self._optical_fallback(k, self._region(k))
+        if allow_optical:
+            self._optical_fallback(k, self._region(k))
 
     def process_pending(self) -> None:
         pending = list(self.state.pending_detected())
@@ -373,6 +381,117 @@ class Q4Runner:
         if not self.done():
             self.failure = "iteration_limit"
 
+    def _probe_detected_at(self, p) -> None:
+        p = np.asarray(p, dtype=float).reshape(2)
+        idx = cover_index(p)
+        for k, ch in self.state.channels.items():
+            if ch.status != "detected":
+                continue
+            if idx is not None and idx in ch.visited_p4:
+                continue
+            bearings = [h for h in ch.history if h["result"] == "direction"]
+            sites = [h["pos"] for h in bearings]
+            degs = [h["svd"] for h in bearings]
+            if not probe_detected_worthwhile(p, self._region(k), sites, degs):
+                continue
+            self.n_probe += 1
+            resp = self.measure(*p, k)
+            if resp.get("measure_result") == "near":
+                self.clear(*p, k)
+
+    def _on_path_pending(self, x, u, cands):
+        return [(k, q, kind) for k, q, kind in cands if insertion_extra(x, q, u) <= INSERT_MAX_M]
+
+    def _process_batch(self, x, u, group) -> None:
+        items = [(k, q) for k, q, _kind in group]
+        order = pending_batch_order(x, items, u)
+        self.n_batch += 1
+        self._loc_leg = True
+        try:
+            for k in order:
+                if self.state.channels[k].status != "detected":
+                    continue
+                self.n_insert += 1
+                self._note(op="batch_localize", k=int(k), t=self.virtual_time)
+                self._try_localize(k, allow_optical=False)
+        finally:
+            self._loc_leg = False
+
+    def _drain_pending_v2(self) -> None:
+        self._loc_leg = True
+        try:
+            items = []
+            for k in self.state.pending_detected():
+                q, _kind = self._pending_task_site(k)
+                if q is None:
+                    region = self._region(k)
+                    q = region["center"] if region is not None else self.state.pos
+                items.append((k, q))
+            order = pending_batch_order(self.state.pos, items, None)
+            self.n_batch += 1
+            for k in order:
+                if self.state.channels[k].status == "detected":
+                    self._try_localize(k, allow_optical=True)
+            for k in list(self.state.pending_detected()):
+                if self.state.channels[k].status == "detected":
+                    self._try_localize(k, allow_optical=True)
+        finally:
+            self._loc_leg = False
+
+    def _step_insert_v2(self) -> str:
+        if self.done():
+            return "done"
+        self._note_pending()
+        x = self.state.pos
+        u = self._next_cover_xy()
+        cands = []
+        for k in self.state.pending_detected():
+            q, kind = self._pending_task_site(k)
+            if q is None or kind == "optical":
+                continue
+            cands.append((k, q, kind))
+        pairs = [(k, q) for k, q, _kind in cands]
+        if u is None:
+            if self.state.pending_detected():
+                self._drain_pending_v2()
+                return "ok" if not self.done() else "done"
+            if self._cover_need():
+                return "pending_unresolved"
+            return "done" if self.done() else "pending_unresolved"
+        kind, ident = choose_insert_or_cover(x, u, pairs)
+        if kind == "insert" and ident is not None:
+            group = self._on_path_pending(x, u, cands)
+            if not group:
+                group = [c for c in cands if c[0] == ident]
+            self._note(op="insert_batch", n=len(group), t=self.virtual_time)
+            self._process_batch(x, u, group)
+            self._note_pending()
+            return "ok"
+        if pairs:
+            self.n_defer += 1
+            self._note(op="defer", n_pending=len(pairs), t=self.virtual_time)
+        before = self.n_measure
+        self.scan_at(u, certificate_mode=False)
+        self._probe_detected_at(u)
+        self._note_pending()
+        if self.n_measure == before and not self.done():
+            return "no_progress"
+        return "ok"
+
+    def _run_insert_v2(self) -> None:
+        self.scan_at(np.zeros(2), certificate_mode=False)
+        self._probe_detected_at(np.zeros(2))
+        self._note_pending()
+        for _ in range(800):
+            status = self._step_insert_v2()
+            if status == "done":
+                return
+            if status != "ok":
+                self.failure = status
+                return
+        if not self.done():
+            self.failure = "iteration_limit"
+
     def done(self) -> bool:
         return all(ch.status in ("cleared", "certified_absent") for ch in self.state.channels.values())
 
@@ -383,7 +502,9 @@ class Q4Runner:
             if enter.get("accepted") is not True:
                 raise RuntimeError("enter rejected")
             self.virtual_time = float(enter.get("virtual_time_s", 0.0))
-            if self.route_mode == ROUTE_INSERT_V1:
+            if self.route_mode == ROUTE_INSERT_V2:
+                self._run_insert_v2()
+            elif self.route_mode == ROUTE_INSERT_V1:
                 self._run_insert_v1()
             else:
                 self._run_old()
@@ -411,6 +532,7 @@ class Q4Runner:
                     n_optical_fallback=self.n_optical_fallback,
                     n_cover_visited=len(self.cover_visited),
                     n_insert=self.n_insert, n_defer=self.n_defer, pending_max=self.pending_max,
+                    n_batch=self.n_batch, n_probe=self.n_probe,
                     detected=sum(ch.ever_detected for ch in self.state.channels.values()),
                     certified_absent=[k for k, ch in self.state.channels.items() if ch.status == "certified_absent"],
                     cleared_channels=[k for k, ch in self.state.channels.items() if ch.status == "cleared"],

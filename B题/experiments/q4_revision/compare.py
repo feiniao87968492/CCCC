@@ -49,7 +49,8 @@ def main():
         result = runner.run()
         keys = ("K", "T", "T_over_K", "move_m", "localization_move", "n_measure", "n_clear", "n_clear_ok",
                 "all_certified", "failure", "wall_s", "cover_mode", "route_mode",
-                "n_optical_fallback", "n_cover_visited", "n_insert", "n_defer", "pending_max")
+                "n_optical_fallback", "n_cover_visited", "n_insert", "n_defer", "pending_max",
+                "n_batch", "n_probe")
         row = {key: result.get(key) for key in keys}
         row.update(seed=seed, N=len(sources), error_mode=args.error_mode)
         rows.append(row)
@@ -77,6 +78,8 @@ def main():
                    mean_n_insert=_mean("n_insert"),
                    mean_n_defer=_mean("n_defer"),
                    mean_pending_max=_mean("pending_max"),
+                   mean_n_batch=_mean("n_batch"),
+                   mean_n_probe=_mean("n_probe"),
                    max_wall_s=max(r["wall_s"] for r in rows),
                    source="offline geometry with bounded deterministic error; not official practice")
     args.output.with_suffix(".json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
