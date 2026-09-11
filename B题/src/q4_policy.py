@@ -7,7 +7,7 @@ import numpy as np
 
 from active import route_length_estimate
 from params import SPEED
-from q4_cover import in_bearing_halfplane, p4_index, p4_points, p4_snake_indices
+from q4_cover import cover_index, cover_points, cover_route, in_bearing_halfplane
 from q4_state import Q4State
 
 # Implementation weights, not contest constants.
@@ -46,7 +46,7 @@ def _channel_progress(state: Q4State, idx: int) -> float:
     for ch in state.channels.values():
         if ch.status not in ("unseen", "detected"):
             continue
-        rem = ch.remaining_p4()
+        rem = ch.remaining_cover()
         if idx not in rem:
             continue
         best = max(best, 1.0 / max(len(rem), 1))
@@ -70,23 +70,23 @@ def _clear_priority(state: Q4State, q: np.ndarray) -> float:
 
 
 def _candidate_points(state: Q4State, *, certificate_mode: bool = False) -> list[np.ndarray]:
-    pts = p4_points()
+    pts = cover_points()
     need: set[int] = set()
     for ch in state.channels.values():
         if ch.status == "unseen":
-            need.update(ch.remaining_p4())
+            need.update(ch.remaining_cover())
         elif ch.status == "detected" and (certificate_mode or ch.halfplane_failed):
-            need.update(ch.remaining_p4())
+            need.update(ch.remaining_cover())
     if not need:
         return []
-    snake = [i for i in p4_snake_indices() if i in need]
-    return [pts[i].copy() for i in snake]
+    route = [i for i in cover_route() if i in need]
+    return [pts[i].copy() for i in route]
 
 
 def score_point(state: Q4State, q, remain: list[np.ndarray]) -> Q4Choice:
     q = np.asarray(q, dtype=float).reshape(2)
     travel = float(np.linalg.norm(q - state.pos) / SPEED)
-    idx = p4_index(q)
+    idx = cover_index(q)
     newly = float(_unseen_need_index(state, idx) if idx is not None else 0)
     progress = float(_channel_progress(state, idx) if idx is not None else 0.0)
     pri = float(_clear_priority(state, q))
@@ -109,11 +109,11 @@ def next_snake_point(state: Q4State, *, certificate_mode: bool = False) -> np.nd
     """Next remaining cover site in snake order from the nearest entry. Visits every leftover P4."""
     cands = _candidate_points(state, certificate_mode=certificate_mode)
     if not cands:
-        pts = p4_points()
+        pts = cover_points()
         for ch in state.channels.values():
             if ch.status not in ("unseen", "detected"):
                 continue
-            rem = ch.remaining_p4()
+            rem = ch.remaining_cover()
             if rem:
                 return pts[rem[0]].copy()
         return None
@@ -130,11 +130,11 @@ def select_next_p4(state: Q4State, *, certificate_mode: bool = False) -> Q4Choic
     """
     cands = _candidate_points(state, certificate_mode=certificate_mode)
     if not cands:
-        pts = p4_points()
+        pts = cover_points()
         for ch in state.channels.values():
             if ch.status not in ("unseen", "detected"):
                 continue
-            rem = ch.remaining_p4()
+            rem = ch.remaining_cover()
             if rem:
                 q = pts[rem[0]].copy()
                 return score_point(state, q, [q])

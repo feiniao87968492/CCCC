@@ -13,7 +13,7 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(HERE))
 
 from params import CLEAR_RADIUS
-from q4_cover import p4_index
+from q4_cover import cover_index, current_cover_mode
 from q4_localize import history_region, legal_xy, optical_cover_points, second_measure_points
 from q4_policy import next_snake_point
 from q4_state import Q4State
@@ -47,6 +47,9 @@ class Q4Runner:
         self.failed_clear_points = {k: [] for k in self.state.channels}
         self._regions = {}
         self._last_processed = {}
+        self.n_optical_fallback = 0
+        self.cover_visited = set()
+        self.cover_mode = current_cover_mode()
 
     def _note(self, **kw) -> None:
         self.log.append(kw)
@@ -86,7 +89,7 @@ class Q4Runner:
         return ok
 
     def _channels_to_scan(self, p, *, certificate_mode: bool) -> list[int]:
-        idx = p4_index(p)
+        idx = cover_index(p)
         out = []
         for k, ch in self.state.channels.items():
             if ch.status in ("cleared", "certified_absent"):
@@ -100,6 +103,9 @@ class Q4Runner:
 
     def scan_at(self, p, *, certificate_mode: bool = False) -> None:
         p = np.asarray(p, dtype=float).reshape(2)
+        idx = cover_index(p)
+        if idx is not None:
+            self.cover_visited.add(idx)
         for k in self._channels_to_scan(p, certificate_mode=certificate_mode):
             resp = self.measure(*p, k)
             if resp.get("measure_result") == "near":
@@ -146,6 +152,7 @@ class Q4Runner:
                 all(np.linalg.norm(p - q) > 1.0 for q in measured)]
 
     def _optical_fallback(self, k, region):
+        self.n_optical_fallback += 1
         candidates = optical_cover_points(region["verts"])
         self._note(op="optical_cover", k=k, count=len(candidates), rho=region["rho"], t=self.virtual_time)
         while candidates:
@@ -252,9 +259,11 @@ class Q4Runner:
         K = sum(ch.status == "cleared" for ch in self.state.channels.values())
         T = self.virtual_time
         return dict(strategy="Q4_P4", revision="cumulative-optical-v2", failure=self.failure,
-                    K=K, T=T, T_over_K=(T / K) if K else None,
+                    cover_mode=self.cover_mode, K=K, T=T, T_over_K=(T / K) if K else None,
                     wall_s=time.perf_counter() - self.t0, move_m=self.move_m,
                     n_measure=self.n_measure, n_clear=self.n_clear, n_clear_ok=self.n_clear_ok,
+                    n_optical_fallback=self.n_optical_fallback,
+                    n_cover_visited=len(self.cover_visited),
                     detected=sum(ch.ever_detected for ch in self.state.channels.values()),
                     certified_absent=[k for k, ch in self.state.channels.items() if ch.status == "certified_absent"],
                     cleared_channels=[k for k, ch in self.state.channels.items() if ch.status == "cleared"],

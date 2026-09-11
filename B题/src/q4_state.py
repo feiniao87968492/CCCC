@@ -6,11 +6,10 @@ from dataclasses import dataclass, field
 import numpy as np
 
 from params import CLEAR_RADIUS, COORD_ABS_LIMIT, NEAR_RADIUS
-from q4_cover import P4_N, p4_index, p4_points
+from q4_cover import cover_index, cover_n, cover_points
 
 CHANNELS = list(range(1, 21))
 Q4_STATUSES = ("unseen", "detected", "cleared", "certified_absent")
-P4_INDEX_SET = frozenset(range(P4_N))
 
 
 def _legal_pos(p) -> bool:
@@ -49,12 +48,15 @@ class Q4Channel:
     n_clear_try: int = 0
     halfplane_failed: bool = False
 
+    def remaining_cover(self) -> list[int]:
+        return [i for i in range(cover_n()) if i not in self.visited_p4]
+
     def remaining_p4(self) -> list[int]:
-        return [i for i in range(P4_N) if i not in self.visited_p4]
+        return self.remaining_cover()
 
     def remaining_p4_points(self) -> np.ndarray:
-        pts = p4_points()
-        idx = self.remaining_p4()
+        pts = cover_points()
+        idx = self.remaining_cover()
         if not idx:
             return np.zeros((0, 2))
         return pts[idx]
@@ -62,7 +64,7 @@ class Q4Channel:
     def can_certify_absent(self) -> bool:
         if self.ever_detected or self.cleared or self.status == "cleared":
             return False
-        return self.no_signal_p4 == P4_INDEX_SET
+        return self.no_signal_p4 == set(range(cover_n()))
 
 
 @dataclass
@@ -96,7 +98,7 @@ class Q4State:
             return
         q = np.asarray(pos, dtype=float).reshape(2)
         self.pos = q.copy()
-        idx = p4_index(q)
+        idx = cover_index(q)
         if idx is not None:
             ch.visited_p4.add(idx)
         rec_svd = float(svd_deg) if rec == "direction" else svd_deg

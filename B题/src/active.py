@@ -113,19 +113,19 @@ def _two_opt(x: np.ndarray, tour: list[np.ndarray]) -> list[np.ndarray]:
 
 
 def _p4_snake_path(x: np.ndarray, arr: list[np.ndarray]) -> list[np.ndarray] | None:
-    from q4_cover import p4_distance_matrix, p4_index, p4_points, p4_snake_indices
+    from q4_cover import cover_distance_matrix, cover_index, cover_points, cover_route
 
     idxs = []
     for p in arr:
-        idx = p4_index(p)
+        idx = cover_index(p)
         if idx is None:
             return None
         idxs.append(idx)
     remaining = set(idxs)
-    snake = [i for i in p4_snake_indices() if i in remaining]
+    snake = [i for i in cover_route() if i in remaining]
     if not snake:
         return None
-    pts = p4_points()
+    pts = cover_points()
     i0 = min(range(len(snake)), key=lambda t: float(np.linalg.norm(pts[snake[t]] - x)))
     candidates = [
         snake[i0:] + snake[:i0],
@@ -133,7 +133,7 @@ def _p4_snake_path(x: np.ndarray, arr: list[np.ndarray]) -> list[np.ndarray] | N
         snake[i0::-1] + snake[:i0:-1],
         list(reversed(snake[: i0 + 1])) + snake[i0 + 1 :],
     ]
-    dist = p4_distance_matrix()
+    dist = cover_distance_matrix()
 
     def _len(order: list[int]) -> float:
         L = float(np.linalg.norm(pts[order[0]] - x))

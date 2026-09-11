@@ -1,0 +1,58 @@
+{
+  "cases": 30,
+  "square81_all_cleared": 30,
+  "hex37_all_cleared": 30,
+  "square81_all_certified": 30,
+  "hex37_all_certified": 30,
+  "n16_seeds": [
+    7,
+    13,
+    15,
+    18,
+    20,
+    26,
+    29
+  ],
+  "T": {
+    "square81_mean": 17844.983387222215,
+    "hex37_mean": 11417.35660417502,
+    "abs_drop": 6427.626783047195,
+    "pct_drop": 36.01923657519152
+  },
+  "T_over_K": {
+    "square81_mean": 1313.160522935798,
+    "hex37_mean": 836.9129462514154,
+    "abs_drop": 476.2475766843827,
+    "pct_drop": 36.26727794250535
+  },
+  "move_m": {
+    "square81_mean": 68250.75026944441,
+    "hex37_mean": 46196.449687541746,
+    "abs_drop": 22054.300581902666,
+    "pct_drop": 32.31363830409977
+  },
+  "n_measure": {
+    "square81_mean": 679.7333333333333,
+    "hex37_mean": 337.1,
+    "abs_drop": 342.6333333333333,
+    "pct_drop": 50.407022361710474
+  },
+  "n_clear": {
+    "square81_mean": 60.56666666666667,
+    "hex37_mean": 58.5,
+    "abs_drop": 2.06666666666667,
+    "pct_drop": 3.4122179416620857
+  },
+  "n_optical_fallback": {
+    "square81_mean": 1.0666666666666667,
+    "hex37_mean": 1.1666666666666667,
+    "abs_drop": -0.10000000000000009,
+    "pct_drop": -9.375000000000009
+  },
+  "n_cover_visited": {
+    "square81_mean": 81.0,
+    "hex37_mean": 37.0,
+    "abs_drop": 44.0,
+    "pct_drop": 54.32098765432099
+  }
+}

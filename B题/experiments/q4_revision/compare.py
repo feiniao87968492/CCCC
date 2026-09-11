@@ -21,7 +21,11 @@ def main():
     parser.add_argument("--cases", type=int, default=30)
     parser.add_argument("--seed-start", type=int, default=0)
     parser.add_argument("--error-mode", choices=["smooth", "endpoint"], default="smooth")
+    parser.add_argument("--cover-mode", default=None, help="SQUARE81 or HEX37; default is the runner's current mode")
     args = parser.parse_args()
+    if args.cover_mode:
+        from q4_cover import set_cover_mode
+        set_cover_mode(args.cover_mode)
     if (args.runner.parent / "q4_localize.py").exists():
         # A snapshot runner must use its own localization, state and policy.
         for name in ("q4_localize", "q4_state", "q4_policy"):
@@ -39,7 +43,9 @@ def main():
         sim = NoisyGeomSim(sources, seed, args.error_mode)
         runner = module.Q4Runner(sim)
         result = runner.run()
-        row = {key: result[key] for key in ("K", "T", "T_over_K", "move_m", "n_measure", "n_clear", "all_certified", "failure", "wall_s")}
+        keys = ("K", "T", "T_over_K", "move_m", "n_measure", "n_clear", "n_clear_ok",
+                "all_certified", "failure", "wall_s", "cover_mode", "n_optical_fallback", "n_cover_visited")
+        row = {key: result.get(key) for key in keys}
         row.update(seed=seed, N=len(sources), error_mode=args.error_mode)
         rows.append(row)
         print(json.dumps(row), flush=True)
@@ -48,11 +54,20 @@ def main():
         writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
-    summary = dict(cases=len(rows), all_cleared=sum(r["K"] == r["N"] for r in rows),
-                   all_certified=sum(r["all_certified"] for r in rows),
-                   mean_T=float(np.mean([r["T"] for r in rows])),
-                   mean_T_over_K=float(np.mean([r["T_over_K"] for r in rows if r["T_over_K"] is not None])),
-                   mean_move_m=float(np.mean([r["move_m"] for r in rows])),
+    def _mean(key):
+        vals = [r[key] for r in rows if r.get(key) is not None]
+        return float(np.mean(vals)) if vals else None
+
+    summary = dict(cases=len(rows), cover_mode=args.cover_mode,
+                   all_cleared=sum(r["K"] == r["N"] for r in rows),
+                   all_certified=sum(bool(r["all_certified"]) for r in rows),
+                   mean_T=_mean("T"),
+                   mean_T_over_K=_mean("T_over_K"),
+                   mean_move_m=_mean("move_m"),
+                   mean_n_measure=_mean("n_measure"),
+                   mean_n_clear=_mean("n_clear"),
+                   mean_n_optical_fallback=_mean("n_optical_fallback"),
+                   mean_n_cover_visited=_mean("n_cover_visited"),
                    max_wall_s=max(r["wall_s"] for r in rows),
                    source="offline geometry with bounded deterministic error; not official practice")
     args.output.with_suffix(".json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
@@ -61,7 +76,7 @@ def main():
               ROOT / "data_preparation/parameters.csv"]
     inputs += [Path(sys.modules[name].__file__) for name in ("q4_localize", "q4_state", "q4_policy")]
     manifest = dict(runner=str(args.runner), seed_start=args.seed_start, cases=args.cases,
-                    error_mode=args.error_mode, python=sys.version,
+                    error_mode=args.error_mode, cover_mode=args.cover_mode, python=sys.version,
                     sha256={str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs})
     args.output.with_suffix(".meta.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(summary), flush=True)

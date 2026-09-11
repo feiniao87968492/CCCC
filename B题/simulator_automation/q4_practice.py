@@ -101,8 +101,12 @@ def main() -> None:
     parser.add_argument("--team", default="202611102016")
     parser.add_argument("--port", type=int, default=2026)
     parser.add_argument("--skip-ui-start", action="store_true")
+    parser.add_argument("--cover-mode", default="HEX37", help="SQUARE81 or HEX37; practice challenger default is HEX37")
     args = parser.parse_args()
     _assert_no_oracle()
+    if args.cover_mode:
+        from q4_cover import set_cover_mode
+        set_cover_mode(args.cover_mode)
     if not args.skip_ui_start:
         start_q4_practice(args.team)
     ui_before = assert_q4_practice_ready(args.team)
@@ -122,6 +126,8 @@ def main() -> None:
     summary["K_over_N"] = (summary["K"] / N) if N else None
     summary["mode"] = "practice"
     summary["problem"] = 4
+    if args.cover_mode:
+        summary["cover_mode"] = args.cover_mode
     summary["evidence"] = str(out)
     (out / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (out / "events.json").write_text(json.dumps(runner.log, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

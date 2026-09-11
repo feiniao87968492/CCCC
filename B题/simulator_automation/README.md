@@ -2,10 +2,10 @@
 
 ## Q4 完整求解入口（2026-09-11 更新）
 
-当前版本 `cumulative-optical-v2`，采用 81 点发现证书、全部测向累计定位和连续候选区光学清除兜底。在 B题目录运行：
+当前版本 `cumulative-optical-v2`，发现覆盖默认用 HEX37（37 点三角晶格证书）；SQUARE81 仍可通过 `--cover-mode SQUARE81` 回退。定位仍是全部测向累计与连续候选区光学清除兜底。在 B题目录运行：
 
 ```powershell
-python simulator_automation/q4_practice.py
+python simulator_automation/q4_practice.py --cover-mode HEX37
 ```
 
 入口必须确认当前为问题4演练、队号正确且正在等待机器狗进入，才会发送动作；不会启动正式测试。若 UIA 启动误超时，但经 Inspect 确认已经进入正确演练的等待状态，可执行 `python simulator_automation/q4_practice.py --skip-ui-start`，该参数仍保留模式、队号、等待状态检查。
