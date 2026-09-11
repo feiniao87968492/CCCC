@@ -15,7 +15,14 @@ sys.path.insert(0, str(HERE))
 from params import CLEAR_RADIUS
 from q4_cover import cover_index, current_cover_mode
 from q4_localize import history_region, legal_xy, optical_cover_points, second_measure_points
-from q4_policy import next_snake_point
+from q4_policy import (
+    ROUTE_INSERT_V1,
+    choose_insert_or_cover,
+    current_route_mode,
+    insertion_extra,
+    next_route_cover,
+    next_snake_point,
+)
 from q4_state import Q4State
 
 # Only cap heuristic refinement. The optical coverage certificate has no such cap.
@@ -50,14 +57,28 @@ class Q4Runner:
         self.n_optical_fallback = 0
         self.cover_visited = set()
         self.cover_mode = current_cover_mode()
+        self.route_mode = current_route_mode()
+        self.localization_move = 0.0
+        self.n_insert = 0
+        self.n_defer = 0
+        self.pending_max = 0
+        self._loc_leg = False
 
     def _note(self, **kw) -> None:
         self.log.append(kw)
 
     def _move_to(self, pos) -> None:
         q = np.asarray(pos, dtype=float).reshape(2)
-        self.move_m += float(np.linalg.norm(q - self.state.pos))
+        dist = float(np.linalg.norm(q - self.state.pos))
+        self.move_m += dist
+        if self._loc_leg:
+            self.localization_move += dist
         self.state.pos = q.copy()
+
+    def _note_pending(self) -> None:
+        n = len(self.state.pending_detected())
+        if n > self.pending_max:
+            self.pending_max = n
 
     def measure(self, x, y, k: int) -> dict:
         resp = self.robot.measure(float(x), float(y), int(k))
@@ -216,6 +237,142 @@ class Q4Runner:
             self._try_localize(k)
             self._last_processed[k] = len(ch.history)
 
+    def _cover_need(self) -> set[int]:
+        need: set[int] = set()
+        for ch in self.state.channels.values():
+            if ch.status == "unseen":
+                need.update(ch.remaining_cover())
+        return need
+
+    def _next_cover_xy(self):
+        return next_route_cover(self.cover_visited, self._cover_need())
+
+    def _pending_task_site(self, k: int):
+        ch = self.state.channels[k]
+        if ch.status != "detected":
+            return None, None
+        region = self._region(k)
+        if region is None:
+            return None, "optical"
+        center = region["center"]
+        already = any(np.linalg.norm(center - prev) < 1e-7 for prev in self.failed_clear_points[k])
+        if region["rho"] <= CLEAR_RADIUS - 1e-6:
+            if already:
+                return None, "optical"
+            return center, "clear"
+        if region["rho"] <= 80 and len(self.failed_clear_points[k]) < 2 and not already:
+            return center, "clear"
+        if ch.extra_measures >= MAX_MEASURE:
+            return None, "optical"
+        candidates = self._refinement_points(k, region)
+        if not candidates:
+            return None, "optical"
+        u = self._next_cover_xy()
+        q = min(candidates, key=lambda p: insertion_extra(self.state.pos, p, u))
+        return q, "measure"
+
+    def _do_insert(self, k: int, q, kind: str) -> None:
+        self._loc_leg = True
+        try:
+            if kind == "clear":
+                self._try_clear_at(k, q)
+                return
+            ch = self.state.channels[k]
+            if ch.extra_measures >= MAX_MEASURE:
+                return
+            ch.extra_measures += 1
+            resp = self.measure(*np.asarray(q, dtype=float).reshape(2), k)
+            if resp.get("measure_result") == "near":
+                self._try_clear_at(k, q)
+        finally:
+            self._loc_leg = False
+
+    def _drain_pending(self) -> None:
+        self._loc_leg = True
+        try:
+            self.process_pending()
+            leftover = list(self.state.pending_detected())
+            for k in leftover:
+                ch = self.state.channels[k]
+                if ch.status == "detected":
+                    self._try_localize(k)
+        finally:
+            self._loc_leg = False
+
+    def _step_insert_v1(self) -> str:
+        """One scheduler step. Returns 'ok', 'done', or a failure token."""
+        if self.done():
+            return "done"
+        self._note_pending()
+        x = self.state.pos
+        u = self._next_cover_xy()
+        cands = []
+        for k in self.state.pending_detected():
+            q, kind = self._pending_task_site(k)
+            if q is None or kind == "optical":
+                continue
+            cands.append((k, q, kind))
+        pairs = [(k, q) for k, q, _kind in cands]
+        if u is None:
+            if self.state.pending_detected():
+                self._drain_pending()
+                return "ok" if not self.done() else "done"
+            if self._cover_need():
+                return "pending_unresolved"
+            return "done" if self.done() else "pending_unresolved"
+        kind, ident = choose_insert_or_cover(x, u, pairs)
+        if kind == "insert" and ident is not None:
+            self.n_insert += 1
+            q, task_kind = next((q, knd) for k, q, knd in cands if k == ident)
+            self._note(op="insert", k=int(ident), kind=task_kind,
+                       extra=insertion_extra(x, q, u), t=self.virtual_time)
+            self._do_insert(ident, q, task_kind)
+            self._note_pending()
+            return "ok"
+        if pairs:
+            self.n_defer += 1
+            self._note(op="defer", n_pending=len(pairs), t=self.virtual_time)
+        before = self.n_measure
+        self.scan_at(u, certificate_mode=True)
+        self._note_pending()
+        if self.n_measure == before and not self.done():
+            return "no_progress"
+        return "ok"
+
+    def _run_old(self) -> None:
+        self.scan_at(np.zeros(2))
+        self.process_pending()
+        self._note_pending()
+        for _ in range(400):
+            if self.done():
+                return
+            nxt = next_snake_point(self.state, certificate_mode=True)
+            if nxt is None:
+                self.failure = "pending_unresolved"
+                return
+            before = self.n_measure
+            self.scan_at(nxt, certificate_mode=True)
+            self.process_pending()
+            self._note_pending()
+            if self.n_measure == before:
+                self.failure = "no_progress"
+                return
+        if not self.done():
+            self.failure = "iteration_limit"
+
+    def _run_insert_v1(self) -> None:
+        self.scan_at(np.zeros(2))
+        self._note_pending()
+        for _ in range(800):
+            status = self._step_insert_v1()
+            if status == "done":
+                return
+            if status != "ok":
+                self.failure = status
+                return
+        if not self.done():
+            self.failure = "iteration_limit"
+
     def done(self) -> bool:
         return all(ch.status in ("cleared", "certified_absent") for ch in self.state.channels.values())
 
@@ -226,23 +383,10 @@ class Q4Runner:
             if enter.get("accepted") is not True:
                 raise RuntimeError("enter rejected")
             self.virtual_time = float(enter.get("virtual_time_s", 0.0))
-            self.scan_at(np.zeros(2))
-            self.process_pending()
-            for _ in range(400):
-                if self.done():
-                    break
-                nxt = next_snake_point(self.state, certificate_mode=True)
-                if nxt is None:
-                    self.failure = "pending_unresolved"
-                    break
-                before = self.n_measure
-                self.scan_at(nxt, certificate_mode=True)
-                self.process_pending()
-                if self.n_measure == before:
-                    self.failure = "no_progress"
-                    break
-            if not self.done() and self.failure is None:
-                self.failure = "iteration_limit"
+            if self.route_mode == ROUTE_INSERT_V1:
+                self._run_insert_v1()
+            else:
+                self._run_old()
         except TimeoutError as exc:
             self.failure = "budget_exhausted"
             self._note(op="timeout", err=str(exc))
@@ -259,11 +403,14 @@ class Q4Runner:
         K = sum(ch.status == "cleared" for ch in self.state.channels.values())
         T = self.virtual_time
         return dict(strategy="Q4_P4", revision="cumulative-optical-v2", failure=self.failure,
-                    cover_mode=self.cover_mode, K=K, T=T, T_over_K=(T / K) if K else None,
+                    cover_mode=self.cover_mode, route_mode=self.route_mode,
+                    K=K, T=T, T_over_K=(T / K) if K else None,
                     wall_s=time.perf_counter() - self.t0, move_m=self.move_m,
+                    localization_move=self.localization_move,
                     n_measure=self.n_measure, n_clear=self.n_clear, n_clear_ok=self.n_clear_ok,
                     n_optical_fallback=self.n_optical_fallback,
                     n_cover_visited=len(self.cover_visited),
+                    n_insert=self.n_insert, n_defer=self.n_defer, pending_max=self.pending_max,
                     detected=sum(ch.ever_detected for ch in self.state.channels.values()),
                     certified_absent=[k for k, ch in self.state.channels.items() if ch.status == "certified_absent"],
                     cleared_channels=[k for k, ch in self.state.channels.items() if ch.status == "cleared"],

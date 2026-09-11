@@ -41,6 +41,17 @@ Observed leftover discovery after the 16th detection (still visiting remaining c
 
 This is a counting certificate, not the geometric HEX37/SQUARE81 certificate. Do not change termination in this round.
 
+## ROUTE_INSERT_V1 (2026-09-11)
+
+Fixed HEX37 Hamilton order. Pending sources are one-step inserted only when
+`ΔL = d(x,q)+d(q,u)-d(x,u) ≤ 400 m`. Optical fallback stays a drain-time SAFE
+path. `INSERT_MAX_M=1000` still 30/30 but mean move stayed ~44.2 km because
+inserts bounced off the skeleton; 400 m hit 36.1 km.
+
+Detected channels are still measured at later HEX points (`certificate_mode=True`),
+which raised n_measure 337→545. Next phase: opportunistic detected measure and
+pending batching.
+
 ## Decision rule
 
 If HEX37 misses a source, fails absence certification, or `K<N`, revert to SQUARE81 immediately.

@@ -17,6 +17,8 @@ def pytest_runtest_setup(item) -> None:
             sys.path.insert(0, src)
         try:
             from q4_cover import COVER_SQUARE81, set_cover_mode
+            from q4_policy import ROUTE_OLD, set_route_mode
         except ImportError:
             return
         set_cover_mode(COVER_SQUARE81)
+        set_route_mode(ROUTE_OLD)

@@ -1,0 +1,20 @@
+{
+  "cases": 30,
+  "cover_mode": "HEX37",
+  "route_mode": "ROUTE_INSERT_V1",
+  "all_cleared": 30,
+  "all_certified": 30,
+  "mean_T": 10533.425348452309,
+  "mean_T_over_K": 774.0577465645299,
+  "mean_move_m": 36120.96007559488,
+  "mean_localization_move": 12838.771798779499,
+  "mean_n_measure": 545.4,
+  "mean_n_clear": 15.133333333333333,
+  "mean_n_optical_fallback": 0.0,
+  "mean_n_cover_visited": 37.0,
+  "mean_n_insert": 18.766666666666666,
+  "mean_n_defer": 36.0,
+  "mean_pending_max": 8.5,
+  "max_wall_s": 0.4565257000067504,
+  "source": "offline geometry with bounded deterministic error; not official practice"
+}

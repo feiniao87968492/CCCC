@@ -1,6 +1,7 @@
 """Q4 online cover routing. Uses P4 certificate + incremental snake cost, not k! TSP."""
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass
 
 import numpy as np
@@ -9,6 +10,78 @@ from active import route_length_estimate
 from params import SPEED
 from q4_cover import cover_index, cover_points, cover_route, in_bearing_halfplane
 from q4_state import Q4State
+
+ROUTE_OLD = "OLD_HEX37"
+ROUTE_INSERT_V1 = "ROUTE_INSERT_V1"
+_VALID_ROUTE_MODES = (ROUTE_OLD, ROUTE_INSERT_V1)
+# Extra length allowed when inserting a pending site between x and the next HEX.
+# Keep this below one HEX step so inserts stay on-path; larger values bounce
+# off the skeleton too often.
+INSERT_MAX_M = 400.0
+
+
+def _initial_route_mode() -> str:
+    raw = os.environ.get("Q4_ROUTE_MODE", ROUTE_OLD).strip().upper()
+    if raw in _VALID_ROUTE_MODES:
+        return raw
+    return ROUTE_OLD
+
+
+_ROUTE_MODE = _initial_route_mode()
+
+
+def current_route_mode() -> str:
+    return _ROUTE_MODE
+
+
+def set_route_mode(mode: str) -> None:
+    global _ROUTE_MODE
+    name = str(mode).strip().upper()
+    if name not in _VALID_ROUTE_MODES:
+        raise ValueError(f"unknown route mode {mode!r}")
+    _ROUTE_MODE = name
+
+
+def insertion_extra(x, q, u) -> float:
+    """Detour length for visiting q between x and next cover u. If u is None, d(x,q)."""
+    x = np.asarray(x, dtype=float).reshape(2)
+    q = np.asarray(q, dtype=float).reshape(2)
+    if u is None:
+        return float(np.linalg.norm(q - x))
+    u = np.asarray(u, dtype=float).reshape(2)
+    return float(np.linalg.norm(q - x) + np.linalg.norm(u - q) - np.linalg.norm(u - x))
+
+
+def choose_insert_or_cover(x, u, candidates, max_extra: float = INSERT_MAX_M):
+    """Pick pending insert vs next cover. candidates are (id, q) pairs."""
+    if not candidates:
+        return "cover", None
+    if u is None:
+        ident, _q = min(candidates, key=lambda item: float(np.linalg.norm(
+            np.asarray(item[1], dtype=float).reshape(2) - np.asarray(x, dtype=float).reshape(2)
+        )))
+        return "insert", ident
+    best_id = None
+    best_extra = None
+    for ident, q in candidates:
+        extra = insertion_extra(x, q, u)
+        if best_extra is None or extra < best_extra:
+            best_extra = extra
+            best_id = ident
+    if best_extra is not None and best_extra <= max_extra:
+        return "insert", best_id
+    return "cover", None
+
+
+def next_route_cover(visited, need):
+    """Next Hamilton/snake cover index that is still needed and not visited."""
+    pts = cover_points()
+    visited = set(visited)
+    need = set(need)
+    for i in cover_route():
+        if i in need and i not in visited:
+            return pts[i].copy()
+    return None
 
 # Implementation weights, not contest constants.
 # travel_time: seconds to the candidate at 5 m/s.
