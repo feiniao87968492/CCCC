@@ -59,6 +59,25 @@ python experiments/q4_revision/compare.py --cover-mode HEX37 --route-mode ROUTE_
 
 V2 trades a little travel for fewer RF measures; T/K is the contest metric after full clear.
 
+## Route insert v3 (same seeds 0–29, HEX37 cover)
+
+Frozen params after a 10-seed grid: `CLEAR_INSERT_MAX=600`, `MEASURE_INSERT_MAX=250`, `AGGRESSIVE_CLEAR_RHO=80`. Clear is allowed with a larger detour than measure. A 3-step HEX lookahead defers tasks that will be cheaper later.
+
+| metric | V2 | V3 | change |
+|---|---:|---:|---:|
+| full clear | 30/30 | 30/30 | same |
+| all_certified | 30/30 | 30/30 | same |
+| mean T/K (s) | 735.31 | **711.20** | −3.3% |
+| mean T (s) | 9985 | **9646** | −3.4% |
+| mean move_m | 38342 | **36870** | −3.8% |
+| mean n_measure | 375 | **367** | −2.1% |
+| mean n_clear | 22.4 | 22.4 | ~0 |
+| mean n_probe | 24.8 | 19.6 | −21% |
+| mean aggressive_clear | — | 11.3 | — |
+| aggressive_clear success | — | 5.87 / 11.3 = 52% | — |
+
+V3 beats V2 on T/K and travel, with 30/30 certificates. The gain is under 5%, so further threshold search is not the next lever; a later HEX37 prefix-route stage is reserved and not implemented here.
+
 | metric | SQUARE81 | HEX37 | change |
 |---|---:|---:|---:|
 | full clear | 30/30 | 30/30 | same |

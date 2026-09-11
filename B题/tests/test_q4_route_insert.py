@@ -24,13 +24,18 @@ from q4_policy import (  # noqa: E402
     INSERT_MAX_M,
     ROUTE_INSERT_V1,
     ROUTE_INSERT_V2,
+    ROUTE_INSERT_V3,
     ROUTE_OLD,
+    act_now_vs_lookahead,
     choose_insert_or_cover,
     insertion_extra,
+    intersection_not_degenerate,
     next_route_cover,
     pending_batch_order,
     probe_detected_worthwhile,
+    probe_detected_worthwhile_v3,
     set_route_mode,
+    set_v3_params,
 )
 from q4_runner import Q4Runner  # noqa: E402
 from q4_state import Q4State  # noqa: E402
@@ -218,6 +223,88 @@ class InsertV2Tests(unittest.TestCase):
     def test_detected_not_measured_at_every_later_hex(self):
         robot = GeomSim([{"k": 1, "g": np.array([400.0, 0.0]), "r": 1200.0, "directional": False}])
         runner = Q4Runner(robot)
+        summary = runner.run()
+        self.assertEqual(summary["K"], 1)
+        self.assertTrue(summary["all_certified"])
+        cover_measures_after = 0
+        seen = False
+        for ev in runner.log:
+            if ev.get("op") != "measure" or ev.get("k") != 1:
+                continue
+            if ev.get("result") in ("direction", "near"):
+                seen = True
+                continue
+            if seen and cover_index([ev["x"], ev["y"]]) is not None:
+                cover_measures_after += 1
+        self.assertLess(cover_measures_after, 36)
+
+
+class LookaheadTests(unittest.TestCase):
+    def test_acts_now_when_on_current_edge(self):
+        x = np.array([0.0, 0.0])
+        q = np.array([400.0, 20.0])
+        future = [np.array([800.0, 0.0]), np.array([1600.0, 0.0]), np.array([2400.0, 0.0])]
+        self.assertTrue(act_now_vs_lookahead(x, q, future))
+
+    def test_defers_when_later_hex_is_closer(self):
+        x = np.array([0.0, 0.0])
+        q = np.array([2400.0, 30.0])
+        future = [np.array([800.0, 0.0]), np.array([1600.0, 0.0]), np.array([2400.0, 0.0])]
+        self.assertFalse(act_now_vs_lookahead(x, q, future))
+
+
+class ProbeV3Tests(unittest.TestCase):
+    def test_skips_when_rho_already_small(self):
+        p = np.array([800.0, 0.0])
+        region = {"center": np.array([400.0, 0.0]), "rho": 50.0}
+        self.assertFalse(probe_detected_worthwhile_v3(p, region, [np.zeros(2)], [0.0]))
+
+    def test_skips_degenerate_parallel_cut(self):
+        p = np.array([800.0, 10.0])
+        center = np.array([400.0, 0.0])
+        last = np.array([0.0, 0.0])
+        self.assertFalse(intersection_not_degenerate(p, center, last, min_sin=0.34))
+
+    def test_accepts_wide_angle_when_rho_large(self):
+        p = np.array([400.0, 800.0])
+        region = {"center": np.array([400.0, 0.0]), "rho": 250.0}
+        self.assertTrue(probe_detected_worthwhile_v3(p, region, [np.zeros(2)], [90.0]))
+
+
+class InsertV3Tests(unittest.TestCase):
+    def setUp(self):
+        set_cover_mode(COVER_HEX37)
+        set_route_mode(ROUTE_INSERT_V3)
+        set_v3_params(clear_insert_max=600.0, measure_insert_max=250.0, aggressive_clear_rho=120.0)
+
+    def tearDown(self):
+        set_cover_mode(COVER_SQUARE81)
+        set_route_mode(ROUTE_OLD)
+        set_v3_params()
+
+    def test_fake_robot_still_visits_all_37(self):
+        summary = Q4Runner(FakeRobot()).run()
+        self.assertIsNone(summary["failure"])
+        self.assertTrue(summary["all_certified"])
+        self.assertEqual(summary["n_cover_visited"], 37)
+        self.assertEqual(summary["route_mode"], ROUTE_INSERT_V3)
+
+    def test_mixed_clears_and_certifies(self):
+        robot = GeomSim(
+            [
+                {"k": 1, "g": np.array([400.0, 0.0]), "r": 1200.0, "directional": False},
+                {"k": 5, "g": np.array([0.0, 500.0]), "r": 1200.0, "directional": True, "psi": np.deg2rad(-90.0)},
+                {"k": 9, "g": np.array([2.0, 2.0]), "r": 1000.0, "directional": False},
+            ]
+        )
+        summary = Q4Runner(robot).run()
+        self.assertEqual(summary["K"], 3)
+        self.assertTrue(summary["all_certified"])
+        self.assertEqual(summary["pending"], [])
+        self.assertIn("n_aggressive_clear", summary)
+
+    def test_detected_not_measured_at_every_later_hex(self):
+        runner = Q4Runner(GeomSim([{"k": 1, "g": np.array([400.0, 0.0]), "r": 1200.0, "directional": False}]))
         summary = runner.run()
         self.assertEqual(summary["K"], 1)
         self.assertTrue(summary["all_certified"])

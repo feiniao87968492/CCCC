@@ -22,7 +22,10 @@ def main():
     parser.add_argument("--seed-start", type=int, default=0)
     parser.add_argument("--error-mode", choices=["smooth", "endpoint"], default="smooth")
     parser.add_argument("--cover-mode", default=None, help="SQUARE81 or HEX37; default is the runner's current mode")
-    parser.add_argument("--route-mode", default=None, help="OLD_HEX37 or ROUTE_INSERT_V1")
+    parser.add_argument("--route-mode", default=None, help="OLD_HEX37, ROUTE_INSERT_V1, V2, or V3")
+    parser.add_argument("--v3-clear-insert", type=float, default=None)
+    parser.add_argument("--v3-measure-insert", type=float, default=None)
+    parser.add_argument("--v3-agg-rho", type=float, default=None)
     args = parser.parse_args()
     if args.cover_mode:
         from q4_cover import set_cover_mode
@@ -30,6 +33,16 @@ def main():
     if args.route_mode:
         from q4_policy import set_route_mode
         set_route_mode(args.route_mode)
+    if any(v is not None for v in (args.v3_clear_insert, args.v3_measure_insert, args.v3_agg_rho)):
+        from q4_policy import set_v3_params
+        kw = {}
+        if args.v3_clear_insert is not None:
+            kw["clear_insert_max"] = args.v3_clear_insert
+        if args.v3_measure_insert is not None:
+            kw["measure_insert_max"] = args.v3_measure_insert
+        if args.v3_agg_rho is not None:
+            kw["aggressive_clear_rho"] = args.v3_agg_rho
+        set_v3_params(**kw)
     if (args.runner.parent / "q4_localize.py").exists():
         # A snapshot runner must use its own localization, state and policy.
         for name in ("q4_localize", "q4_state", "q4_policy"):
@@ -50,7 +63,7 @@ def main():
         keys = ("K", "T", "T_over_K", "move_m", "localization_move", "n_measure", "n_clear", "n_clear_ok",
                 "all_certified", "failure", "wall_s", "cover_mode", "route_mode",
                 "n_optical_fallback", "n_cover_visited", "n_insert", "n_defer", "pending_max",
-                "n_batch", "n_probe")
+                "n_batch", "n_probe", "n_aggressive_clear", "n_aggressive_clear_ok")
         row = {key: result.get(key) for key in keys}
         row.update(seed=seed, N=len(sources), error_mode=args.error_mode)
         rows.append(row)
@@ -80,6 +93,8 @@ def main():
                    mean_pending_max=_mean("pending_max"),
                    mean_n_batch=_mean("n_batch"),
                    mean_n_probe=_mean("n_probe"),
+                   mean_n_aggressive_clear=_mean("n_aggressive_clear"),
+                   mean_n_aggressive_clear_ok=_mean("n_aggressive_clear_ok"),
                    max_wall_s=max(r["wall_s"] for r in rows),
                    source="offline geometry with bounded deterministic error; not official practice")
     args.output.with_suffix(".json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")

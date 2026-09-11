@@ -17,15 +17,25 @@ from q4_cover import cover_index, current_cover_mode
 from q4_localize import history_region, legal_xy, optical_cover_points, second_measure_points
 from q4_policy import (
     INSERT_MAX_M,
+    PRIORITY_AGGR_CLEAR,
+    PRIORITY_CERT_CLEAR,
+    PRIORITY_MEASURE,
+    PRIORITY_STRONG_CLEAR,
     ROUTE_INSERT_V1,
     ROUTE_INSERT_V2,
+    ROUTE_INSERT_V3,
+    act_now_vs_lookahead,
     choose_insert_or_cover,
+    clear_time_cost,
     current_route_mode,
+    current_v3_params,
     insertion_extra,
     next_route_cover,
     next_snake_point,
     pending_batch_order,
     probe_detected_worthwhile,
+    probe_detected_worthwhile_v3,
+    remaining_route_covers,
 )
 from q4_state import Q4State
 
@@ -67,6 +77,9 @@ class Q4Runner:
         self.n_defer = 0
         self.n_batch = 0
         self.n_probe = 0
+        self.n_aggressive_clear = 0
+        self.n_aggressive_clear_ok = 0
+        self._aggressive_tries = {k: 0 for k in self.state.channels}
         self.pending_max = 0
         self._loc_leg = False
 
@@ -492,6 +505,167 @@ class Q4Runner:
         if not self.done():
             self.failure = "iteration_limit"
 
+    def _future_covers(self, limit: int | None = None):
+        n = current_v3_params().lookahead if limit is None else limit
+        return remaining_route_covers(self.cover_visited, self._cover_need(), n)
+
+    def _probe_detected_at_v3(self, p) -> None:
+        p = np.asarray(p, dtype=float).reshape(2)
+        idx = cover_index(p)
+        for k, ch in self.state.channels.items():
+            if ch.status != "detected":
+                continue
+            if idx is not None and idx in ch.visited_p4:
+                continue
+            bearings = [h for h in ch.history if h["result"] == "direction"]
+            sites = [h["pos"] for h in bearings]
+            degs = [h["svd"] for h in bearings]
+            if not probe_detected_worthwhile_v3(p, self._region(k), sites, degs):
+                continue
+            self.n_probe += 1
+            resp = self.measure(*p, k)
+            if resp.get("measure_result") == "near":
+                self.clear(*p, k)
+
+    def _classify_v3(self, k, x, u):
+        ch = self.state.channels[k]
+        if ch.status != "detected":
+            return None
+        region = self._region(k)
+        if region is None:
+            return None
+        center = region["center"]
+        extra_c = insertion_extra(x, center, u)
+        already = any(np.linalg.norm(center - prev) < 1e-7 for prev in self.failed_clear_points[k])
+        rho = float(region["rho"])
+        params = current_v3_params()
+        if rho <= CLEAR_RADIUS - 1e-6:
+            if already:
+                return None
+            return (k, center, "cert_clear", PRIORITY_CERT_CLEAR, extra_c)
+        if rho <= params.strong_clear_rho and not already:
+            return (k, center, "strong_clear", PRIORITY_STRONG_CLEAR, extra_c)
+        if (
+            rho <= params.aggressive_clear_rho
+            and self._aggressive_tries[k] < params.aggressive_clear_max
+            and not already
+        ):
+            return (k, center, "aggr_clear", PRIORITY_AGGR_CLEAR, extra_c)
+        if ch.extra_measures >= MAX_MEASURE:
+            return None
+        candidates = self._refinement_points(k, region)
+        if not candidates:
+            return None
+        q = min(candidates, key=lambda p: insertion_extra(x, p, u))
+        extra_m = insertion_extra(x, q, u)
+        return (k, q, "measure", PRIORITY_MEASURE, extra_m)
+
+    def _select_v3_now(self, x, u, future):
+        params = current_v3_params()
+        selected = []
+        deferred = 0
+        for k in self.state.pending_detected():
+            task = self._classify_v3(k, x, u)
+            if task is None:
+                continue
+            _k, q, kind, _pr, extra = task
+            cap = params.measure_insert_max if kind == "measure" else params.clear_insert_max
+            if extra > cap:
+                deferred += 1
+                continue
+            if future and not act_now_vs_lookahead(x, q, future, params.lookahead_slack):
+                deferred += 1
+                continue
+            selected.append(task)
+        return selected, deferred
+
+    def _do_v3_action(self, k, q, kind) -> None:
+        region = self._region(k)
+        rho = float(region["rho"]) if region is not None else 1e9
+        if kind in ("cert_clear", "strong_clear", "aggr_clear"):
+            if rho > 20:
+                self.n_aggressive_clear += 1
+            if rho > 60:
+                self._aggressive_tries[k] += 1
+            ok = self._try_clear_at(k, q)
+            if rho > 20 and ok:
+                self.n_aggressive_clear_ok += 1
+            return
+        ch = self.state.channels[k]
+        if ch.extra_measures >= MAX_MEASURE:
+            return
+        ch.extra_measures += 1
+        resp = self.measure(*np.asarray(q, dtype=float).reshape(2), k)
+        if resp.get("measure_result") == "near":
+            self._try_clear_at(k, q)
+
+    def _process_v3_tasks(self, x, u, tasks) -> None:
+        if not tasks:
+            return
+        cert = [t for t in tasks if t[3] == PRIORITY_CERT_CLEAR]
+        rest = [t for t in tasks if t[3] != PRIORITY_CERT_CLEAR]
+        rest.sort(key=lambda t: (t[3], clear_time_cost(t[4]) if t[2].endswith("clear") else t[4]))
+        ordered = [t[0] for t in cert]
+        if rest:
+            ordered.extend(pending_batch_order(x, [(t[0], t[1]) for t in rest], u))
+        by_id = {t[0]: t for t in tasks}
+        self.n_batch += 1
+        self._loc_leg = True
+        try:
+            for k in ordered:
+                task = by_id.get(k)
+                if task is None or self.state.channels[k].status != "detected":
+                    continue
+                self.n_insert += 1
+                self._note(op="v3_action", k=int(k), kind=task[2], extra=task[4], t=self.virtual_time)
+                self._do_v3_action(k, task[1], task[2])
+        finally:
+            self._loc_leg = False
+
+    def _step_insert_v3(self) -> str:
+        if self.done():
+            return "done"
+        self._note_pending()
+        x = self.state.pos
+        future = self._future_covers()
+        u = future[0] if future else None
+        selected, n_skip = self._select_v3_now(x, u, future)
+        if u is None:
+            if self.state.pending_detected():
+                self._drain_pending_v2()
+                return "ok" if not self.done() else "done"
+            if self._cover_need():
+                return "pending_unresolved"
+            return "done" if self.done() else "pending_unresolved"
+        if selected:
+            self._process_v3_tasks(x, u, selected)
+            self._note_pending()
+            return "ok"
+        if n_skip or self.state.pending_detected():
+            self.n_defer += 1
+            self._note(op="defer", n_pending=len(self.state.pending_detected()), t=self.virtual_time)
+        before = self.n_measure
+        self.scan_at(u, certificate_mode=False)
+        self._probe_detected_at_v3(u)
+        self._note_pending()
+        if self.n_measure == before and not self.done():
+            return "no_progress"
+        return "ok"
+
+    def _run_insert_v3(self) -> None:
+        self.scan_at(np.zeros(2), certificate_mode=False)
+        self._probe_detected_at_v3(np.zeros(2))
+        self._note_pending()
+        for _ in range(800):
+            status = self._step_insert_v3()
+            if status == "done":
+                return
+            if status != "ok":
+                self.failure = status
+                return
+        if not self.done():
+            self.failure = "iteration_limit"
+
     def done(self) -> bool:
         return all(ch.status in ("cleared", "certified_absent") for ch in self.state.channels.values())
 
@@ -502,7 +676,9 @@ class Q4Runner:
             if enter.get("accepted") is not True:
                 raise RuntimeError("enter rejected")
             self.virtual_time = float(enter.get("virtual_time_s", 0.0))
-            if self.route_mode == ROUTE_INSERT_V2:
+            if self.route_mode == ROUTE_INSERT_V3:
+                self._run_insert_v3()
+            elif self.route_mode == ROUTE_INSERT_V2:
                 self._run_insert_v2()
             elif self.route_mode == ROUTE_INSERT_V1:
                 self._run_insert_v1()
@@ -533,6 +709,8 @@ class Q4Runner:
                     n_cover_visited=len(self.cover_visited),
                     n_insert=self.n_insert, n_defer=self.n_defer, pending_max=self.pending_max,
                     n_batch=self.n_batch, n_probe=self.n_probe,
+                    n_aggressive_clear=self.n_aggressive_clear,
+                    n_aggressive_clear_ok=self.n_aggressive_clear_ok,
                     detected=sum(ch.ever_detected for ch in self.state.channels.values()),
                     certified_absent=[k for k, ch in self.state.channels.items() if ch.status == "certified_absent"],
                     cleared_channels=[k for k, ch in self.state.channels.items() if ch.status == "cleared"],

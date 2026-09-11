@@ -62,6 +62,14 @@ current region and the forward half-plane.
 Offline 30/30. Mean T/K 774→735, n_measure 545→375, mean move 36.1→38.3 km.
 Contest metric is T/K after full clear, so V2 is the live scheduler.
 
+## ROUTE_INSERT_V3 (2026-09-11)
+
+Frozen after 18-cell 10-seed grid then two 30-seed finals:
+`CLEAR_INSERT_MAX=600`, `MEASURE_INSERT_MAX=250`, `AGGRESSIVE_CLEAR_RHO=80`.
+3-step HEX lookahead; rho>60 at most 2 heuristic clears per channel.
+Offline 30/30. Mean T/K 735.31→711.20 (−3.3%). Gain <5%, so do not keep tuning thresholds;
+the reserved next lever is HEX37 equal-length prefix routes, not implemented this round.
+
 ## Decision rule
 
 If HEX37 misses a source, fails absence certification, or `K<N`, revert to SQUARE81 immediately.

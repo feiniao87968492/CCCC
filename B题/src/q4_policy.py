@@ -15,7 +15,8 @@ from q4_state import Q4State
 ROUTE_OLD = "OLD_HEX37"
 ROUTE_INSERT_V1 = "ROUTE_INSERT_V1"
 ROUTE_INSERT_V2 = "ROUTE_INSERT_V2"
-_VALID_ROUTE_MODES = (ROUTE_OLD, ROUTE_INSERT_V1, ROUTE_INSERT_V2)
+ROUTE_INSERT_V3 = "ROUTE_INSERT_V3"
+_VALID_ROUTE_MODES = (ROUTE_OLD, ROUTE_INSERT_V1, ROUTE_INSERT_V2, ROUTE_INSERT_V3)
 # Extra length allowed when inserting a pending site between x and the next HEX.
 # Keep this below one HEX step so inserts stay on-path; larger values bounce
 # off the skeleton too often.
@@ -78,6 +79,93 @@ def choose_insert_or_cover(x, u, candidates, max_extra: float = INSERT_MAX_M):
 PROBE_BASELINE_M = 200.0
 PROBE_REGION_M = 1500.0
 BATCH_ENUM_MAX = 7
+LOOKAHEAD_SLACK_M = 50.0
+PRIORITY_CERT_CLEAR = 0
+PRIORITY_STRONG_CLEAR = 1
+PRIORITY_AGGR_CLEAR = 2
+PRIORITY_MEASURE = 4
+PRIORITY_OPTICAL = 5
+
+
+@dataclass
+class V3Params:
+    clear_insert_max: float = 600.0
+    measure_insert_max: float = 250.0
+    aggressive_clear_rho: float = 80.0
+    strong_clear_rho: float = 60.0
+    probe_rho_min: float = 80.0
+    lookahead: int = 3
+    lookahead_slack: float = LOOKAHEAD_SLACK_M
+    aggressive_clear_max: int = 2
+
+
+_V3_PARAMS = V3Params()
+
+
+def current_v3_params() -> V3Params:
+    return _V3_PARAMS
+
+
+def set_v3_params(**kwargs) -> V3Params:
+    global _V3_PARAMS
+    if not kwargs:
+        _V3_PARAMS = V3Params()
+        return _V3_PARAMS
+    data = {**_V3_PARAMS.__dict__, **kwargs}
+    _V3_PARAMS = V3Params(**{k: data[k] for k in V3Params.__dataclass_fields__})
+    return _V3_PARAMS
+
+
+def remaining_route_covers(visited, need, limit: int = 3) -> list[np.ndarray]:
+    pts = cover_points()
+    visited = set(visited)
+    need = set(need)
+    out = []
+    for i in cover_route():
+        if i in need and i not in visited:
+            out.append(pts[i].copy())
+            if len(out) >= limit:
+                break
+    return out
+
+
+def lookahead_extras(x, q, future_us) -> list[float]:
+    """Now extra plus extras if we wait until each future HEX node."""
+    future_us = [np.asarray(u, dtype=float).reshape(2) for u in future_us]
+    now_u = future_us[0] if future_us else None
+    extras = [insertion_extra(x, q, now_u)]
+    for i, ui in enumerate(future_us):
+        nxt = future_us[i + 1] if i + 1 < len(future_us) else None
+        extras.append(insertion_extra(ui, q, nxt))
+    return extras
+
+
+def act_now_vs_lookahead(x, q, future_us, slack: float = LOOKAHEAD_SLACK_M) -> bool:
+    extras = lookahead_extras(x, q, future_us)
+    current = extras[0]
+    future = extras[1:]
+    if not future:
+        return True
+    return current <= min(future) + slack
+
+
+def clear_time_cost(extra: float, speed: float = SPEED, clear_s: float = 3.0) -> float:
+    return float(extra) / float(speed) + float(clear_s)
+
+
+def intersection_not_degenerate(p, center, last_site, min_sin: float = 0.34) -> bool:
+    """Reject nearly parallel cuts (angle ≲ 20°)."""
+    p = np.asarray(p, dtype=float).reshape(2)
+    c = np.asarray(center, dtype=float).reshape(2)
+    s = np.asarray(last_site, dtype=float).reshape(2)
+    v1 = c - s
+    v2 = c - p
+    n1 = float(np.linalg.norm(v1))
+    n2 = float(np.linalg.norm(v2))
+    if n1 < 50.0 or n2 < 50.0:
+        return False
+    cross = abs(float(v1[0] * v2[1] - v1[1] * v2[0])) / (n1 * n2)
+    return cross >= min_sin
 
 
 def pending_batch_order(x, items, u=None) -> list:
@@ -144,6 +232,18 @@ def probe_detected_worthwhile(p, region, bearing_sites, bearing_degs) -> bool:
     if in_bearing_halfplane(p, last, last_deg):
         return True
     return False
+
+
+def probe_detected_worthwhile_v3(p, region, bearing_sites, bearing_degs, *, min_rho: float | None = None) -> bool:
+    params = current_v3_params()
+    rho_min = params.probe_rho_min if min_rho is None else min_rho
+    if region is None or float(region["rho"]) <= rho_min:
+        return False
+    if not probe_detected_worthwhile(p, region, bearing_sites, bearing_degs):
+        return False
+    if not bearing_sites:
+        return True
+    return intersection_not_degenerate(p, region["center"], bearing_sites[-1])
 
 
 def next_route_cover(visited, need):
