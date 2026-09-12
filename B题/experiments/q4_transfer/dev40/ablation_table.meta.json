@@ -1,0 +1,18 @@
+{
+  "source": "summary.csv",
+  "source_sha256": "5e32ac14c65ca410927e0e9fddb8620d33c7597abd074822f8b9c4ce85fcfffe",
+  "script_sha256": "153b47f646678ff6d5d0faff424779fb7bb9eef87a9278be4310d44cab5d8484",
+  "variants": [
+    "baseline",
+    "previous_best",
+    "JSO",
+    "JSO_compact",
+    "S",
+    "O",
+    "doptimal",
+    "aligned",
+    "optical4",
+    "insert80"
+  ],
+  "claim_level": "offline exploratory comparison; baseline not adopted"
+}

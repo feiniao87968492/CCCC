@@ -1,0 +1,258 @@
+{
+  "strategy": "GREEDY_FAST",
+  "failure": null,
+  "K": 15,
+  "T": 2888.172885,
+  "T_over_K": 192.544859,
+  "wall_s": 2.843694700015476,
+  "move_m": 11095.864424963293,
+  "global_move_distance": 2366.3899315467074,
+  "localization_move_distance": 8729.474493416586,
+  "safe_move_distance": 0.0,
+  "measure_time": 1505.8907099999994,
+  "clear_time": 1382.2821750000005,
+  "n_measure": 98,
+  "n_clear": 19,
+  "n_clear_ok": 15,
+  "n_safe": 0,
+  "n_full_225": 0,
+  "n_reuse": 0,
+  "n_active_measure": 10,
+  "same_position_repeat_count": 0,
+  "detected": 15,
+  "R_left": 0,
+  "P_left": [],
+  "all_certified": true,
+  "channel_status": {
+    "1": "cleared",
+    "2": "cleared",
+    "3": "cleared",
+    "4": "cleared",
+    "5": "certified_absent",
+    "6": "cleared",
+    "7": "certified_absent",
+    "8": "certified_absent",
+    "9": "cleared",
+    "10": "cleared",
+    "11": "cleared",
+    "12": "cleared",
+    "13": "certified_absent",
+    "14": "certified_absent",
+    "15": "cleared",
+    "16": "cleared",
+    "17": "cleared",
+    "18": "cleared",
+    "19": "cleared",
+    "20": "cleared"
+  },
+  "per_source": {
+    "1": {
+      "status": "cleared",
+      "first_detection_virtual_time": 432.373002,
+      "clear_success_virtual_time": 705.392153,
+      "localize_clear_time": 273.019151,
+      "active_positions": [
+        [
+          1241.5931799051905,
+          235.53019316664054
+        ],
+        [
+          1411.3237972971822,
+          478.2652996253005
+        ],
+        [
+          1476.1626671150213,
+          672.7418177286901
+        ]
+      ],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 3,
+      "safe_attempted": false
+    },
+    "2": {
+      "status": "cleared",
+      "first_detection_virtual_time": 1867.85169,
+      "clear_success_virtual_time": 2357.87344,
+      "localize_clear_time": 490.0217499999999,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    },
+    "3": {
+      "status": "cleared",
+      "first_detection_virtual_time": 1873.85169,
+      "clear_success_virtual_time": 2194.23554,
+      "localize_clear_time": 320.38385000000017,
+      "active_positions": [
+        [
+          -1528.7432744074845,
+          -385.53112968899524
+        ]
+      ],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 1,
+      "safe_attempted": false
+    },
+    "4": {
+      "status": "cleared",
+      "first_detection_virtual_time": 23.0,
+      "clear_success_virtual_time": 2575.698416,
+      "localize_clear_time": 2552.698416,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    },
+    "6": {
+      "status": "cleared",
+      "first_detection_virtual_time": 2500.732072,
+      "clear_success_virtual_time": 2641.553312,
+      "localize_clear_time": 140.82124000000022,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    },
+    "9": {
+      "status": "cleared",
+      "first_detection_virtual_time": 1903.85169,
+      "clear_success_virtual_time": 2065.748576,
+      "localize_clear_time": 161.896886,
+      "active_positions": [
+        [
+          -1323.67531299027,
+          138.7309699446722
+        ]
+      ],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 1,
+      "safe_attempted": false
+    },
+    "10": {
+      "status": "cleared",
+      "first_detection_virtual_time": 59.0,
+      "clear_success_virtual_time": 302.593351,
+      "localize_clear_time": 243.59335099999998,
+      "active_positions": [
+        [
+          532.6764951567405,
+          -191.0069158751905
+        ]
+      ],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 1,
+      "safe_attempted": false
+    },
+    "11": {
+      "status": "cleared",
+      "first_detection_virtual_time": 65.0,
+      "clear_success_virtual_time": 914.663394,
+      "localize_clear_time": 849.663394,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    },
+    "12": {
+      "status": "cleared",
+      "first_detection_virtual_time": 71.0,
+      "clear_success_virtual_time": 839.866629,
+      "localize_clear_time": 768.866629,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    },
+    "15": {
+      "status": "cleared",
+      "first_detection_virtual_time": 1462.836379,
+      "clear_success_virtual_time": 1607.66093,
+      "localize_clear_time": 144.82455099999993,
+      "active_positions": [
+        [
+          -894.7224743396,
+          880.2391767008
+        ],
+        [
+          -1046.073814324414,
+          866.7762353260075
+        ]
+      ],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 2,
+      "safe_attempted": false
+    },
+    "16": {
+      "status": "cleared",
+      "first_detection_virtual_time": 95.0,
+      "clear_success_virtual_time": 1789.60801,
+      "localize_clear_time": 1694.60801,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    },
+    "17": {
+      "status": "cleared",
+      "first_detection_virtual_time": 101.0,
+      "clear_success_virtual_time": 1698.543438,
+      "localize_clear_time": 1597.543438,
+      "active_positions": [
+        [
+          -1029.5174106673758,
+          766.7783603948882
+        ]
+      ],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 1,
+      "safe_attempted": false
+    },
+    "18": {
+      "status": "cleared",
+      "first_detection_virtual_time": 107.0,
+      "clear_success_virtual_time": 1380.60701,
+      "localize_clear_time": 1273.60701,
+      "active_positions": [
+        [
+          -382.07913095650383,
+          1050.7289489493985
+        ]
+      ],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 1,
+      "safe_attempted": false
+    },
+    "19": {
+      "status": "cleared",
+      "first_detection_virtual_time": 113.0,
+      "clear_success_virtual_time": 2752.81353,
+      "localize_clear_time": 2639.81353,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    },
+    "20": {
+      "status": "cleared",
+      "first_detection_virtual_time": 119.0,
+      "clear_success_virtual_time": 2455.261483,
+      "localize_clear_time": 2336.261483,
+      "active_positions": [],
+      "safe_move_distance": 0.0,
+      "active_measure_count": 0,
+      "safe_attempted": false
+    }
+  },
+  "source_budget_s": 0.0,
+  "abandoned_channels": [],
+  "uncleared_detected_channels": [],
+  "experimental_incomplete_allowed": false,
+  "variant": "JSO",
+  "joint_jobs": 15,
+  "N": 15,
+  "K_over_N": 1.0,
+  "mode": "practice",
+  "problem": 3,
+  "evidence": "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\simulator_automation\\evidence\\20260912-152510-q3-jso"
+}

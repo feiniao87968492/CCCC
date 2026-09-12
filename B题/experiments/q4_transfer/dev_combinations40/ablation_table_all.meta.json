@@ -1,0 +1,13 @@
+{
+  "source": "summary.csv",
+  "source_sha256": "d7ecfbb7c6208e02ffe7fefb3ace76407530d45c890daf9399c958a689e3efa9",
+  "script_sha256": "153b47f646678ff6d5d0faff424779fb7bb9eef87a9278be4310d44cab5d8484",
+  "variants": [
+    "baseline",
+    "S_doptimal",
+    "SO_doptimal",
+    "S_dopt_short",
+    "JSO_compact_dopt"
+  ],
+  "claim_level": "offline exploratory comparison; baseline not adopted"
+}

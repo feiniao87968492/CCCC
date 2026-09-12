@@ -1,0 +1,6 @@
+variant,min_stratum_improvement_pct,all_strata_mean_nonworse,both_walk_and_probes_improved
+baseline,0.0,True,False
+S_doptimal,1.0773627276054132,True,False
+SO_doptimal,1.8557566950541782,True,True
+S_dopt_short,1.5696640878609225,True,True
+JSO_compact_dopt,-2.951065285856469,False,False

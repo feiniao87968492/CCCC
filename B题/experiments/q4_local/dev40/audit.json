@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "audit_type": "automated event/truth replay, not independent expert review",
+  "audited_runs": 520,
+  "expected_runs": 520,
+  "operations": 167162,
+  "failed_runs": [],
+  "max_event_time_residual_s": 1.8189894035458565e-12,
+  "verified_start_code_files": 22,
+  "frozen_file_mismatches": 0,
+  "source_changes_after_completion": [
+    "experiments\\q4_local\\q4_local_policies.py",
+    "experiments\\q4_local\\design.md",
+    "experiments\\q4_local\\test_local.py"
+  ],
+  "results_sha256": "8e09a246f43e2865ee130a2c4f504e0b66c58d89849dfe7ef451eebf1483296d",
+  "scenarios_sha256": "002fd7159ec4ab8ba768022a60e53244da60f732630a6e531f6325a574e1db09",
+  "audit_script_sha256": "10706100043c528d042f88da03c991bd5ce2b1a3aa4fc6b2591512561f11fa9c",
+  "local_audit_script_sha256": "166e5f4456f019b15d155a537c6f4402f6f88ae4ee6b0144e901575284a53314",
+  "local_mechanisms": "stop budget, mass threshold/version/cap, nonrecursive two-action burst, optical cost gates"
+}

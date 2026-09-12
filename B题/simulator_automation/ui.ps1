@@ -88,19 +88,25 @@ switch ($Action) {
     'StartPractice' {
         WaitText "队号 $Team"
         if (@(Elements | Where-Object {$_.Current.Name -eq '关闭公告'}).Count) { Click '关闭公告'; Start-Sleep -Milliseconds 400 }
+        $title = "问题${Problem} 演练 测试"
+        if ((@(Elements | Where-Object {$_.Current.Name -eq $title}).Count) -and (@(Elements | Where-Object {$_.Current.Name -eq '等待机器狗进入'}).Count)) {
+            Write-Output "Problem $Problem practice is ready for the robot API."
+            return
+        }
         $completed=@(Elements | Where-Object {$_.Current.ControlType -eq [System.Windows.Automation.ControlType]::Window -and $_.Current.Name -match '^问题[34]演练测试完成$'})
-        if ($completed.Count -eq 1) { Click '确认' }
+        if ($completed.Count -eq 1) { Click '确认'; Start-Sleep -Milliseconds 400 }
         $back=@(Elements | Where-Object {$_.Current.ControlType -eq [System.Windows.Automation.ControlType]::Button -and $_.Current.Name -like '*返回演练*'})
         if ($back.Count -ge 1) {
             $back[0].GetCurrentPattern([System.Windows.Automation.InvokePattern]::Pattern).Invoke()
-            Start-Sleep -Milliseconds 500
+            Start-Sleep -Seconds 2
         }
-        if (@(Elements | Where-Object {$_.Current.Name -eq '开始问题'+$Problem+'演练测试'}).Count -eq 0) {
-            Click '演练测试'
+        if (@(Elements | Where-Object {$_.Current.Name -eq "开始问题${Problem}演练测试"}).Count -eq 0) {
+            $drill = @(Elements | Where-Object {$_.Current.ControlType -eq [System.Windows.Automation.ControlType]::Button -and $_.Current.Name -eq '演练测试'})
+            if ($drill.Count -eq 1 -and $drill[0].Current.IsEnabled) { Click '演练测试' }
         }
-        WaitText "开始问题${Problem}演练测试"
+        WaitText "开始问题${Problem}演练测试" 60
         Click "开始问题${Problem}演练测试"
-        WaitText '等待机器狗进入' 60
+        WaitText '等待机器狗进入' 90
         Write-Output "Problem $Problem practice is ready for the robot API."
     }
 }

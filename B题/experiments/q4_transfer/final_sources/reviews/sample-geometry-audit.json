@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "selection": "First two seeds of each of the five source/error strata, fixed five variants",
+  "variants": [
+    "O",
+    "JSO_r160",
+    "SO_doptimal",
+    "short_clear",
+    "S_dopt_short"
+  ],
+  "scene_ids": [
+    "boundary_endpoint_30000",
+    "boundary_endpoint_30001",
+    "directional_endpoint_30000",
+    "directional_endpoint_30001",
+    "mixed_endpoint_30000",
+    "mixed_endpoint_30001",
+    "mixed_smooth_30000",
+    "mixed_smooth_30001",
+    "omni_endpoint_30000",
+    "omni_endpoint_30001"
+  ],
+  "checks": {
+    "traces": 50,
+    "positive_truth_inside": 2567,
+    "independent_certified_vertices": 634,
+    "optimistic_ls_and_region": 229
+  },
+  "method": "Independent halfplane construction; SciPy Chebyshev-center LP and HalfspaceIntersection; independent LS solve",
+  "max_ls_coordinate_error_m": 0.0,
+  "max_sample_certified_vertex_distance_m": 19.99999000000038,
+  "failures": [],
+  "result_sha256": "a4b40d092a8f2963de295b0292a3e9cfc585316d91011638a4a3a590b0980f54",
+  "script_sha256": "0cb348839a238d51c1f55df44aa2748036ec23f57357645e064897b7e3c95fd2"
+}

@@ -1,0 +1,14 @@
+{
+  "command": "python -m pytest tests experiments/q4_ablation/test_ablation.py experiments/q4_transfer/test_transfer.py experiments/q4_local/test_local.py -q",
+  "passed": 290,
+  "failed": 0,
+  "elapsed_s": 34.52,
+  "test_source_sha256": "bc955390d77f0c2394b0334e87d7a9523d43cf563f3dcbad12a333527f34ca92",
+  "scope": "final 16-arm registry; all frozen regressions; no policy mutation during primary run",
+  "existing_dev_baseline_repetition_check": {
+    "rows": 40,
+    "event_hash_matches": 40,
+    "max_T_over_K_difference": 0.0,
+    "note": "Read-only comparison of already completed dev batches; no extra simulation"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "audit_type": "automated event/truth replay, not independent expert review",
+  "audited_runs": 11200,
+  "expected_runs": 11200,
+  "operations": 3438321,
+  "failed_runs": [],
+  "max_event_time_residual_s": 1.8189894035458565e-12,
+  "verified_start_code_files": 22,
+  "frozen_file_mismatches": 0,
+  "source_changes_after_completion": [],
+  "results_sha256": "a4b40d092a8f2963de295b0292a3e9cfc585316d91011638a4a3a590b0980f54",
+  "scenarios_sha256": "5571eea31e875442447f84e2f4dd84d3c810298c1a15708b7159e96f4483007b",
+  "audit_script_sha256": "10706100043c528d042f88da03c991bd5ce2b1a3aa4fc6b2591512561f11fa9c"
+}

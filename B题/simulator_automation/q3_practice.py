@@ -85,7 +85,7 @@ def parse_n_from_ui(text: str) -> int | None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Q3 official PRACTICE runner; never starts formal.")
-    parser.add_argument("--strategy", default="SAFE", choices=("SAFE", "FAST", "HYBRID", "ROBUST", "GREEDY", "GREEDY_FAST", "GREEDY_ABORT"))
+    parser.add_argument("--strategy", default="SAFE", choices=("SAFE", "FAST", "HYBRID", "ROBUST", "GREEDY", "GREEDY_FAST", "GREEDY_ABORT", "JSO"))
     parser.add_argument("--source-budget-s", type=float, default=0,
                         help="GREEDY_FAST only: per-source virtual time cap; 0 retains full fallback")
     parser.add_argument("--team", default="202611102016")
@@ -105,7 +105,11 @@ def main() -> None:
     out.mkdir(parents=True, exist_ok=False)
     (out / "ui-before.txt").write_text(ui_before, encoding="utf-8")
     client = RobotClient(args.team, args.port, out / "requests.jsonl")
-    if args.strategy == "GREEDY_FAST":
+    if args.strategy == "JSO":
+        sys.path.insert(0, str(ROOT / "experiments" / "q3_ablation"))
+        from policies import make_runner
+        runner = make_runner(client, "JSO")
+    elif args.strategy == "GREEDY_FAST":
         from q3_fast_mode import GreedyFastRunner
         runner = GreedyFastRunner(client, source_budget_s=args.source_budget_s)
     elif args.strategy == "GREEDY_ABORT":

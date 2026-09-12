@@ -1,0 +1,8 @@
+{
+  "command": "python -m pytest tests experiments/q4_ablation/test_ablation.py experiments/q4_transfer/test_transfer.py -q",
+  "passed": 272,
+  "failed": 0,
+  "elapsed_s": 55.23,
+  "scope": "final 28-arm registry plus frozen tests; no policy changes during primary run",
+  "test_source_sha256": "c8752ddfcd6a2aee99910dba7df5fd51529742a3fea2042e55c8eb04e0c3c268"
+}

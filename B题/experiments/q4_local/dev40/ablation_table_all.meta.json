@@ -1,0 +1,22 @@
+{
+  "source": "summary.csv",
+  "source_sha256": "58b28d6a84628003d1a4c01044dcc6dc92eaf720ec14c6ef7d00ae9e905f37a0",
+  "script_sha256": "13991e052bf4adc43265ff11687c0a5eda5f923ded1f820dde40c5351e300099",
+  "variants": [
+    "baseline",
+    "previous_best",
+    "S_all",
+    "L30",
+    "L90",
+    "P1",
+    "P2",
+    "F60",
+    "F120",
+    "C1",
+    "C15",
+    "M50",
+    "M75"
+  ],
+  "highlight": "lowest observed mean among new local candidates",
+  "claim_level": "offline exploratory analysis; no baseline adoption"
+}

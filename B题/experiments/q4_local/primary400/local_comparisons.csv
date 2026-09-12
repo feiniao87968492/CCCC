@@ -1,0 +1,12 @@
+anchor,challenger,mean_delta_T_over_K,ci95_low,ci95_high,delta_probes,note
+S_all,P1,-1.6019529725403925,-3.6031057065825403,0.37772163442963197,-3.725,descriptive selected comparison; marginal interval
+S_all,P2,-1.9113642982756727,-3.612112305279054,-0.5851423818632552,-1.285,descriptive selected comparison; marginal interval
+L30,LC,-7.27191025538508,-8.534102485935467,-6.141392773685579,-4.33,descriptive selected comparison; marginal interval
+C15,LC,-6.2916216032064805,-10.804356155115897,-2.1056937991231153,-4.195,descriptive selected comparison; marginal interval
+C15,PC,-6.272040282784258,-9.80843484920351,-2.9227634871195525,1.4025,descriptive selected comparison; marginal interval
+P1,PC,-8.115144452033187,-9.594990756526766,-6.636071860661956,-6.36,descriptive selected comparison; marginal interval
+LC,LPC,-4.2789504931301385,-7.48624137861531,-1.2388699925963598,0.8975,descriptive selected comparison; marginal interval
+PC,LPC,-4.298531813552361,-7.747937345746359,-0.5706048565889367,-4.7,descriptive selected comparison; marginal interval
+previous_best,LC,6.408077891392451,2.0503126733629475,10.912511747488471,-4.9675,descriptive selected comparison; marginal interval
+previous_best,PC,6.427659211814674,2.6390266700864036,10.316593647072485,0.63,descriptive selected comparison; marginal interval
+previous_best,LPC,2.129127398262313,-2.1257719449707984,6.660901930103553,-4.07,descriptive selected comparison; marginal interval

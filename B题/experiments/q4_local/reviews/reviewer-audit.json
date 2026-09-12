@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "checks": {
+    "mechanism_traces": 3230,
+    "burst_steps": 5605,
+    "optical_sample_traces": 50,
+    "optical_cost_proposals": 2061,
+    "budget_tokens": 20810,
+    "budget_linked_selective": 20810,
+    "budget_linked_measure": 20810,
+    "mass_sample_traces": 20,
+    "mass_attempts": 4461,
+    "mass_sample_attempts": 133
+  },
+  "max_mass_error": 0.0,
+  "max_candidate_distance_error_m": 0.0,
+  "max_optical_cost_error_s": 0.0,
+  "sample": "M50/M75, first two seeds in each available source/error stratum",
+  "sample_seeds": [
+    50000,
+    50001
+  ],
+  "independence": "Production positive polygon/center and optical cells reused; RF weights, LS/mass ranking, positive halfplane inclusion and NN optical route/charging independently reconstructed; RF cost surrogate not independently reconstructed; no policy/simulator executed",
+  "results_sha256": "ae5c559b53c283f026d0c4ad20aea1f71ca17c42c599fa94b52a543ee7f38d69",
+  "script_sha256": "3cc32519df4642652d96b8d39567b5887c3fe026566d0268a8f10d0965344561",
+  "failures": []
+}

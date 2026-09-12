@@ -1,0 +1,12 @@
+{
+  "affected_variant": "previous_best",
+  "issue": "Original configuration fields incomplete; actual runner delegated to frozen first-round champion.",
+  "effective_config": {
+    "route": "center",
+    "reuse": true,
+    "clear_rho": 160,
+    "outer_radius": 1900
+  },
+  "execution_changed": false,
+  "evidence": "source_snapshot/experiments/q4_transfer/q4_transfer_policies.py::make_runner and source_snapshot/experiments/q4_ablation/q4_ablation_policies.py::VARIANTS"
+}
