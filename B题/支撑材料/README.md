@@ -1,6 +1,6 @@
 # CUMCM 2026 B 题支撑材料（Q3 / Q4 离线结果）
 
-日期：2026-09-12。本包冻结于 **Q3 JSO 254.05 s / Q4 第 1 轮 529.29 s**。其后第 2、3 轮消融与 JSO 20 局演练在仓库 `experiments/q4_transfer/`、`experiments/q4_local/`、`experiments/q3_simulator/`，不在本 zip。当前入口见 `docs/当前算法与消融状态.md`。
+日期：2026-09-12。本包冻结于 **Q3 JSO 254.05 s / Q4 第 1 轮 529.29 s**。其后第 2、3、4 轮消融与 JSO 20 局演练在仓库 `experiments/q4_transfer/`、`experiments/q4_local/`、`experiments/q4_aggressive/`、`experiments/q3_simulator/`，不在本 zip。当前入口见 `docs/当前算法与消融状态.md`。Q3 没有第二轮离线消融目录。
 
 本包只整理当时代码与结果，不改论文章节。
 

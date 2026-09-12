@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "rows": 7600,
+  "settings": 400,
+  "arms": 19,
+  "general_settings": 350,
+  "stress_settings": 50,
+  "independent_seed_blocks": 200,
+  "source_total_per_arm": 5275,
+  "general_sources_per_arm": 4611,
+  "verified_dependency_snapshots": 32,
+  "verified_frozen_files": 13,
+  "current_changes": [
+    "experiments\\q4_aggressive\\summary_aggressive.py"
+  ],
+  "reporting_change": "render_table highlighting/text/meta plus exactly two shared-seed wording edits; statistical and policy AST unchanged",
+  "locked_configs_unchanged": true,
+  "selection_unchanged": true,
+  "development_seed_overlap": false,
+  "results_sha256": "c9733c2eae447866917933ab439f89ee6e52f9084f9a32e7ed508ea233a0c4f1",
+  "scenarios_sha256": "13423a4c238e9a2c4d1947be4124410a39d9a277e33907d8743d2556def4c38d",
+  "script_sha256": "cd724f61ef87de05301dc0bfaf39635a8cb15ea915c56ce4855e45d3e999cadc"
+}

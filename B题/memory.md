@@ -27,6 +27,9 @@
 - Q4 local primary (16 x 400, seeds 50000+): LPC improves frozen V4 537.376003 -> 515.618001 s/source, walking -5.343%, probes -3.231%; all five subgroup means improve, but 92/400 settings lose (worst +84.942 s/source). Global route/radius stay fixed for new local arms. Prior JSO_compact_dopt reruns at 513.488873; LPC-minus-prior block CI [-2.126, +6.661] does not establish superiority.
 - Local P1/P2 reduce probes against unlimited S_all but increase them against frozen V4. P1-minus-S_all time CI [-3.603, +0.378] crosses zero. Adding P1 to LC saves 4.279 s/source while adding 0.898 probes/setting; do not attribute all LPC savings to its budget.
 - Local C15 gives a smaller 2.082% mean time gain with 379/400 wins; F60/F120/M50/M75 give no mean time gain. M50 and M75 mass thresholds are not calibrated success rates (764/2428 and 702/2033 successful trials).
+- Q4 aggressive primary_valid400 (19 x400, fresh70000+): every arm clears5275/5275 and certifies; general350 mean baseline513.190019, LC496.926222, LPC495.884668, previous JSO488.846688, new best G15=489.642686. G15-minus-LC=-7.283536 (block CI[-10.601256,-4.122192]); versus previous=+0.795998 (CI[-2.825514,+4.395607]). G15 does not establish superiority over previous on the user's primary general cohort. All400 G15=496.695441 vs previous501.496258, driven partly by boundary546.064724 vs590.043252.
+- Aggressive G15 saves general walking105.701s/setting versus LC while adding0.162857 probes; T/K decomposes into -8.107309 walking +0.823773 other costs. General E1/B20/H200 mean deltas vs LC are +3.676558/+3.373128/+0.878256; gains vs frozen baseline alone are inherited LC gains, not positive mechanism evidence. R2=-0.727379; N50=-0.020912; GN and GRN are slightly worse than G and GR. No G15+R or G-on-previous-JSO combination was tested.
+- Aggressive invalid trials dev_smoke/dev_smoke2/dev_smoke3/dev40/dev40b/primary400 used incorrect implementations/seeds; excluded permanently. Valid development640+400 runs,280 repeated event hashes match. Original ER/EN/ERN selection withdrawn; corrected G075/R2/N20 lock yields GR/GN/GRN.
 
 - Holdout seeds 1065, 1092, 1093 (all N=16) have higher T/K under TRI25/V4 than HEX37/V3.
 
@@ -35,6 +38,7 @@
 - Rank only complete scenes; failed clears and all measurement charges remain in T.
 - Compact seven-station covers require separate station identity and per-channel no-signal evidence.
 - Screenshot aggregates do not identify reproducible scenes and cannot be claimed as reproduced.
+- Q3 20-game official-practice T/K falls with N (N=10: 287–312; N=16: 190–211). Do not average those 20 games with the 420-scene offline 254.05 s matrix, and do not treat min/max as a new ablation.
 
 ## Q3 ablation counterexample
 
@@ -44,6 +48,7 @@
 
 ## User Preferences
 
+- 2026-09-12: user explicitly clarified "T/K优先". Rank eligible arms by general-case mean(T/K); walking and probes explain the result and are not independent non-regression constraints.
 - 2026-09-12: user explicitly permits aggressive Q4 strategies and extreme-case cost regression, prioritizing general-case efficiency while requiring complete clearing. New experiments rank the declared general cohort, report stress separately, and never omit stress failures or replace the frozen baseline automatically.
 - 2026-09-12: user requested more Q4 ablations emphasizing local decisions and giving less weight to global-route optimization. Isolated local experiments are authorized; frozen-baseline adoption was not requested.
 - 2026-09-12: user requested additional Q4 algorithm families and tuning, learning from Q3 J+S+O; isolated q4_transfer experiments are authorized without baseline adoption.

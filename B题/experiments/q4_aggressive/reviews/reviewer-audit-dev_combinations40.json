@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "counts": {
+    "traces": 46,
+    "G_reconstructed": 718,
+    "G_full_candidate_selection": 280,
+    "N_mass_gate": 10,
+    "R_gate": 3
+  },
+  "fixtures": {
+    "E_overlap_skip_reset_empty": 4,
+    "B_coincident_certified_illegal_virtual": 3,
+    "B_zero_heard": 1
+  },
+  "max_error": {
+    "G_score": 3.3306690738754696e-16
+  },
+  "sample_seeds": [
+    60000,
+    60001
+  ],
+  "scope": "Fixed first two seeds across every available source/error stratum and all new arms plus every N activation trace; production positive-region and optical-cell geometry reused; RF weights/E first-hit cost/B and G full candidate selections independently reconstructed",
+  "results_sha256": "1c334868baada358431153c99e4555c25de9153c00eac769b6e8c78c80c94c59",
+  "script_sha256": "a8ab0c92be82d4ea2be33c94852d23329179b9632181ac1d42f1b550d58cbbad",
+  "violations": []
+}

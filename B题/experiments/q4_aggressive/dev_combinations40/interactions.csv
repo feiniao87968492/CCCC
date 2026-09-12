@@ -1,0 +1,13 @@
+cohort,control,candidate,delta_T_over_K,ci95_low,ci95_high,delta_probes,note
+general,G075,GR,0.1882047781113954,-1.0041966149521047,1.5175667659615952,1.5,marginal descriptive interval
+all,G075,GR,0.07751895967583522,-0.9180739625138937,1.1137835083434993,1.1,marginal descriptive interval
+stress,G075,GR,-0.2545384956308453,-0.763615486892536,0.0,-0.1,marginal descriptive interval
+general,G075,GN,0.0,0.0,0.0,0.0,marginal descriptive interval
+all,G075,GN,-0.002497137568167318,-0.005682415662381469,0.0,0.0,marginal descriptive interval
+stress,G075,GN,-0.009988550272669271,-0.02227467817280058,0.0,0.0,marginal descriptive interval
+general,GR,GRN,0.0,0.0,0.0,0.0,marginal descriptive interval
+all,GR,GRN,-0.002497137568167318,-0.005682415662381469,0.0,0.0,marginal descriptive interval
+stress,GR,GRN,-0.009988550272669271,-0.02227467817280058,0.0,0.0,marginal descriptive interval
+general,GN,GRN,0.1882047781113954,-1.0041966149521047,1.5175667659615952,1.5,marginal descriptive interval
+all,GN,GRN,0.07751895967583522,-0.9180739625138937,1.1137835083434993,1.1,marginal descriptive interval
+stress,GN,GRN,-0.2545384956308453,-0.763615486892536,0.0,-0.1,marginal descriptive interval

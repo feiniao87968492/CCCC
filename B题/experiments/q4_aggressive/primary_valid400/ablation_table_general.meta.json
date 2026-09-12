@@ -1,0 +1,8 @@
+{
+  "source": "summary_general.csv",
+  "source_sha256": "d7aa1c5e08ba0cf11e02df5a6319d94c657aed1327d694ae4c42aa5bd477937b",
+  "script_sha256": "eb5752e7646e9dceabc15de87693a3365889a564e9181cf8a0fb0842af49c1e0",
+  "ranking": "all-setting eligibility then general non-boundary settings",
+  "highlight": "previous_best",
+  "highlight_basis": "minimum eligible mean within the displayed cohort; primary ranking remains general"
+}

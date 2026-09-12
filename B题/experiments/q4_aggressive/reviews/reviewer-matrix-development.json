@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "cohorts": {
+    "dev_valid40": {
+      "status": "PASS",
+      "rows": 640,
+      "settings": 40,
+      "source_total_per_arm": 522,
+      "general_settings": 30,
+      "seed_blocks": 20,
+      "means": {
+        "baseline": 515.8397261775168,
+        "LC": 498.0780549308726,
+        "LPC": 493.2755569732456,
+        "previous_best": 498.062194741146,
+        "E1": 499.7700305248788,
+        "E2": 501.1049866086417,
+        "B20": 503.1379987112365,
+        "B60": 505.7257329322339,
+        "G075": 492.6483401211872,
+        "G15": 493.387193200018,
+        "R2": 497.4599369991377,
+        "R4": 498.0629405632927,
+        "H200": 498.483913212128,
+        "H400": 500.69736368348646,
+        "N20": 498.06161750767274,
+        "N50": 498.06161750767274
+      },
+      "results_sha256": "b3255e70367e52eff1bc497f068d0f364b220bf4f3ed894b999ea6f6f9064d0a",
+      "current_changes": [
+        "experiments\\q4_aggressive\\q4_aggressive_policies.py",
+        "experiments\\q4_aggressive\\run_aggressive.py",
+        "experiments\\q4_aggressive\\design.md",
+        "experiments\\q4_aggressive\\test_aggressive.py"
+      ],
+      "verified_snapshot_files": 27
+    },
+    "dev_combinations40": {
+      "status": "PASS",
+      "rows": 400,
+      "settings": 40,
+      "source_total_per_arm": 522,
+      "general_settings": 30,
+      "seed_blocks": 20,
+      "means": {
+        "baseline": 515.8397261775168,
+        "LC": 498.0780549308726,
+        "LPC": 493.2755569732456,
+        "previous_best": 498.062194741146,
+        "G075": 492.6483401211872,
+        "R2": 497.4599369991377,
+        "N20": 498.06161750767274,
+        "GR": 492.83654489929864,
+        "GN": 492.6483401211872,
+        "GRN": 492.83654489929864
+      },
+      "results_sha256": "1c334868baada358431153c99e4555c25de9153c00eac769b6e8c78c80c94c59",
+      "current_changes": [
+        "experiments\\q4_aggressive\\run_aggressive.py"
+      ],
+      "verified_snapshot_files": 29
+    }
+  },
+  "identical_shared_physical_and_event_rows": 280,
+  "selection_verified": true,
+  "policy_change": "AST identical after removing exactly GR/GN/GRN registry entries",
+  "frozen_files_verified": 13,
+  "current_policy_sha256": "c033a3dc8ee4c7024ae84b28a2cf78774cef2a9b946f5c663b94486feac4a47d",
+  "script_sha256": "a8ab0c92be82d4ea2be33c94852d23329179b9632181ac1d42f1b550d58cbbad"
+}

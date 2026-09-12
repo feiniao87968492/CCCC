@@ -1,0 +1,163 @@
+{
+  "source": "dev_valid40/results.csv",
+  "results_sha256": "b3255e70367e52eff1bc497f068d0f364b220bf4f3ed894b999ea6f6f9064d0a",
+  "summary_sha256": "26c4212e1832e91fc5c99cb5e8b8ec588be4b5d8baa0917328840de3272c935e",
+  "families": [
+    {
+      "family": "E",
+      "variant": "E1",
+      "delta": 1.6919755940062942
+    },
+    {
+      "family": "B",
+      "variant": "B20",
+      "delta": 5.059943780363994
+    },
+    {
+      "family": "G",
+      "variant": "G075",
+      "delta": -5.429714809685379
+    },
+    {
+      "family": "R",
+      "variant": "R2",
+      "delta": -0.6181179317349006
+    },
+    {
+      "family": "H",
+      "variant": "H200",
+      "delta": 0.40585828125568923
+    },
+    {
+      "family": "N",
+      "variant": "N20",
+      "delta": -0.016437423199704426
+    }
+  ],
+  "selected_families": [
+    {
+      "family": "G",
+      "variant": "G075",
+      "delta": -5.429714809685379
+    },
+    {
+      "family": "R",
+      "variant": "R2",
+      "delta": -0.6181179317349006
+    },
+    {
+      "family": "N",
+      "variant": "N20",
+      "delta": -0.016437423199704426
+    }
+  ],
+  "combinations": {
+    "GR": {
+      "components": [
+        "G075",
+        "R2"
+      ],
+      "config": {
+        "name": "GR",
+        "route": "tour",
+        "reuse": false,
+        "clear_rho": 80.0,
+        "probe": "baseline",
+        "outer_radius": 1950.0,
+        "every_stop": false,
+        "selective": false,
+        "optimistic": false,
+        "optimistic_rho": 80.0,
+        "reception_gate": 0.7,
+        "insert_cap": 0.0,
+        "viewpoint": "baseline",
+        "recovery": false,
+        "optical_cells": 0,
+        "shorten": false,
+        "local_penalty": 30,
+        "stop_budget": 0,
+        "burst_radius": 0.0,
+        "optical_ratio": 1.5,
+        "mass_gate": 0.0,
+        "e_ratio": 0.0,
+        "b_radius": 0.0,
+        "g_ratio": 0.75,
+        "r_count": 2,
+        "h_rho": 0.0,
+        "n_mass": 0.0
+      }
+    },
+    "GN": {
+      "components": [
+        "G075",
+        "N20"
+      ],
+      "config": {
+        "name": "GN",
+        "route": "tour",
+        "reuse": false,
+        "clear_rho": 80.0,
+        "probe": "baseline",
+        "outer_radius": 1950.0,
+        "every_stop": false,
+        "selective": false,
+        "optimistic": false,
+        "optimistic_rho": 80.0,
+        "reception_gate": 0.7,
+        "insert_cap": 0.0,
+        "viewpoint": "baseline",
+        "recovery": false,
+        "optical_cells": 0,
+        "shorten": false,
+        "local_penalty": 30,
+        "stop_budget": 0,
+        "burst_radius": 0.0,
+        "optical_ratio": 1.5,
+        "mass_gate": 0.0,
+        "e_ratio": 0.0,
+        "b_radius": 0.0,
+        "g_ratio": 0.75,
+        "r_count": 0,
+        "h_rho": 0.0,
+        "n_mass": 0.2
+      }
+    },
+    "GRN": {
+      "components": [
+        "G075",
+        "R2",
+        "N20"
+      ],
+      "config": {
+        "name": "GRN",
+        "route": "tour",
+        "reuse": false,
+        "clear_rho": 80.0,
+        "probe": "baseline",
+        "outer_radius": 1950.0,
+        "every_stop": false,
+        "selective": false,
+        "optimistic": false,
+        "optimistic_rho": 80.0,
+        "reception_gate": 0.7,
+        "insert_cap": 0.0,
+        "viewpoint": "baseline",
+        "recovery": false,
+        "optical_cells": 0,
+        "shorten": false,
+        "local_penalty": 30,
+        "stop_budget": 0,
+        "burst_radius": 0.0,
+        "optical_ratio": 1.5,
+        "mass_gate": 0.0,
+        "e_ratio": 0.0,
+        "b_radius": 0.0,
+        "g_ratio": 0.75,
+        "r_count": 2,
+        "h_rho": 0.0,
+        "n_mass": 0.2
+      }
+    }
+  },
+  "rule": "eligible all40; mean general T/K delta vs LC < -1e-7; best per family; lexicographic ties; top3"
+}

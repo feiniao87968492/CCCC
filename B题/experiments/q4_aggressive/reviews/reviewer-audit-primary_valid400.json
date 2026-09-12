@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "counts": {
+    "traces": 313,
+    "expected_optical_choice": 1219,
+    "expected_optical_execution": 147,
+    "E_executed_order": 443,
+    "G_reconstructed": 5315,
+    "G_full_candidate_selection": 1681,
+    "H_gate": 45,
+    "N_mass_gate": 186,
+    "R_gate": 53,
+    "B_full_candidate_selection": 422,
+    "B_recovery": 36
+  },
+  "fixtures": {
+    "E_overlap_skip_reset_empty": 4,
+    "B_coincident_certified_illegal_virtual": 3,
+    "B_zero_heard": 1
+  },
+  "max_error": {
+    "E_cost": 3.410605131648481e-13,
+    "G_score": 4.440892098500626e-16,
+    "B_score": 0
+  },
+  "sample_seeds": [
+    70000,
+    70001
+  ],
+  "scope": "Fixed first two seeds across every available source/error stratum and all new arms plus every N activation trace; production positive-region and optical-cell geometry reused; RF weights/E first-hit cost/B and G full candidate selections independently reconstructed",
+  "results_sha256": "c9733c2eae447866917933ab439f89ee6e52f9084f9a32e7ed508ea233a0c4f1",
+  "script_sha256": "a8ab0c92be82d4ea2be33c94852d23329179b9632181ac1d42f1b550d58cbbad",
+  "violations": []
+}
