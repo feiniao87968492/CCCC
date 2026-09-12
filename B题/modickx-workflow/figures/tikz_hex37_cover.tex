@@ -1,0 +1,62 @@
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta}
+\begin{document}
+\adjustbox{max width=\textwidth}{%
+\begin{tikzpicture}[scale=0.22, >=Stealth]
+  % 1 unit = 100 m. Omega radius 18 = 1800 m; hex step 8 = 800 m.
+  \def\Om{18}
+  \def\hs{8}
+  \pgfmathsetmacro{\hy}{\hs*sqrt(3)/2}
+  \pgfmathsetmacro{\hx}{\hs}
+  \pgfmathsetmacro{\delta}{\hs/sqrt(3)}
+
+  \fill[fill={rgb,255:red,237;green,241;blue,245}] (0,0) circle (\Om);
+  \draw[blue!70!black, line width=1.1pt] (0,0) circle (\Om);
+
+  \coordinate (S) at (9.0, 2.2);
+  \begin{scope}
+    \clip (0,0) circle (\Om);
+    \fill[fill={rgb,255:red,218;green,232;blue,252}, fill opacity=0.62]
+      (S) -- ++(0,20) -- ++(25,0) -- ++(0,-40) -- ++(-25,0) -- cycle;
+  \end{scope}
+  \draw[blue!70!black, line width=0.85pt] ($(S)+(0,-14)$) -- ($(S)+(0,14)$);
+  \draw[blue!70!black, -{Stealth[length=5pt]}, line width=0.9pt] (S) -- ++(5.2,0);
+
+  \foreach \q in {-3,...,3} {
+    \foreach \r in {-3,...,3} {
+      \pgfmathtruncatemacro{\s}{\q+\r}
+      \ifnum\s>-4
+        \ifnum\s<4
+          \pgfmathsetmacro{\px}{\hx*\q + \hx*0.5*\r}
+          \pgfmathsetmacro{\py}{\hy*\r}
+          \fill[black] (\px,\py) circle (1.5pt);
+        \fi
+      \fi
+    }
+  }
+
+  \draw[red!70!black, line width=1.15pt]
+    ({\delta*cos(30)},{\delta*sin(30)})
+    \foreach \a in {90,150,210,270,330} { -- ({\delta*cos(\a)},{\delta*sin(\a)}) }
+    -- cycle;
+  \draw[gray!55, dashed, line width=0.7pt] (0,0) circle (\delta);
+  \draw[black, line width=0.8pt] (0,0) -- ({\delta*cos(30)},{\delta*sin(30)});
+
+  \fill[red!70!black] (S) circle (2.0pt);
+  \fill[black] (0,0) circle (1.8pt);
+
+  \draw[gray!60, thin] (0,0) -- ++(-6.2, 4.2)
+    node[left, font=\footnotesize, text=black] {原点测点};
+  \draw[gray!60, thin] (S) -- ++(3.8, 2.8)
+    node[right, font=\footnotesize, text=black] {定向源};
+  \draw[gray!60, thin] ({\delta*cos(30)},{\delta*sin(30)}) -- ++(5.2, 0.8)
+    node[right, font=\footnotesize, text=black] {$\delta=800/\sqrt{3}$};
+  \node[font=\footnotesize, text=black] at (0, -20.5) {源所在圆 $\Omega$（半径 $1800\,\mathrm{m}$）};
+  \node[font=\footnotesize, text=black] at (21.0, 9.0) {$180^\circ$ 射频半平面};
+\end{tikzpicture}
+}%
+\end{document}

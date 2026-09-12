@@ -1,0 +1,750 @@
+# 研究项目: 国赛 (CUMCM) B题 - 当前工作区注入（跳过至写作）
+
+## 项目说明
+这是一个自动化研究管理的工作流引擎，当前正在执行「国赛数学建模 (CUMCM)」流水线。
+
+## 流水线步骤
+  1. 赛题分析 (comp-prob-analysis)
+  2. 建模求解 (comp-modeling)
+  3. 编程实现 (comp-code)
+  4. 图表生成 (paper-figure)
+  5. 流程与架构图绘制 (paper-figure-drawio)
+  6. 竞赛论文撰写 (comp-paper-zh)
+  7. 编译与合规检查 (comp-compile-zh)
+
+## 重要规则
+- 所有产出文件都写入当前工作目录（不要写到其他位置）
+- 使用 Write 工具创建文件，如果文件太长则用 Bash 的 cat << 'EOF' > file 方式
+- 每个步骤完成后至少产出一个文件
+- 读取工作区中已有的文件，在前步骤的基础上继续工作
+- 使用中文撰写论文（除非是 LaTeX 代码）
+
+## 用户上传的文件
+- _tmp/_cited_keys.txt
+- _tmp/_verified_refs.txt
+- _tmp/abstract_draft.txt
+- _tmp/count_hanzi.py
+- _tmp/drawio_electron.log
+- _tmp/drawio_err.txt
+- _tmp/drawio_out.txt
+- _tmp/export_mxgraph.py
+- _tmp/gen_drawio.py
+- _tmp/gen_flows.py
+- _tmp/refs_raw.jsonl
+- _writing_context.md
+- AUDIT_REPORT.md
+- code/active.py
+- code/geometry.py
+- code/localization.py
+- code/params.py
+- code/q2_metrics.py
+- code/q2_scenario.py
+- code/q2_validation.py
+- code/q3_abort_safe.py
+- code/q3_fast_mode.py
+- code/q3_greedy_policy.py
+- code/q3_practice.py
+- code/q3_runner.py
+- code/q3_safe.py
+- code/q3_state.py
+- code/q4_bench.py
+- code/q4_cover.py
+- code/q4_localize.py
+- code/q4_policy.py
+- code/q4_practice.py
+- code/q4_prefix.py
+- code/q4_runner.py
+- code/q4_state.py
+- code/robot_client.py
+- code/run_q1_q2.py
+- code/run_q2_seed_study.py
+- code/smoke.py
+- DRAWIO_REPORT.md
+- FIGURE_REPORT.md
+- figures/_nature_common.py
+- figures/fig_flow_q1.drawio
+- figures/fig_flow_q1.pdf
+- figures/fig_flow_q1.png
+- figures/fig_flow_q2.drawio
+- figures/fig_flow_q2.pdf
+- figures/fig_flow_q2.png
+- figures/fig_flow_q3.drawio
+- figures/fig_flow_q3.pdf
+- figures/fig_flow_q3.png
+- figures/fig_flow_q4.drawio
+- figures/fig_flow_q4.pdf
+- figures/fig_flow_q4.png
+- figures/fig_q1_diameter.pdf
+- figures/fig_q2_candidate.pdf
+- figures/fig_q3_practice_tk.pdf
+- figures/fig_q3_strategy.pdf
+- figures/fig_q4_cover_compare.pdf
+- figures/fig_q4_hex37.pdf
+- figures/fig_q4_paired_tk.pdf
+- figures/fig_roadmap.drawio
+- figures/fig_roadmap.pdf
+- figures/fig_roadmap.png
+- figures/gen_fig_q1_diameter.py
+- figures/gen_fig_q2_candidate.py
+- figures/gen_fig_q3_practice_tk.py
+- figures/gen_fig_q3_strategy.py
+- figures/gen_fig_q4_cover_compare.py
+- figures/gen_fig_q4_hex37.py
+- figures/gen_fig_q4_paired_tk.py
+- figures/latex_includes.tex
+- figures/tikz_hex37_cover.aux
+- figures/tikz_hex37_cover.log
+- figures/tikz_hex37_cover.pdf
+- figures/tikz_hex37_cover.tex
+- figures/tikz_wedge_q1.aux
+- figures/tikz_wedge_q1.log
+- figures/tikz_wedge_q1.pdf
+- figures/tikz_wedge_q1.tex
+- MODELING_REPORT.md
+- paper/cumcmthesis.cls
+- paper/main.tex
+- paper/references.bib
+- paper/sections/1_restatement.tex
+- paper/sections/2_analysis.tex
+- paper/sections/3_assumptions.tex
+- paper/sections/4_symbols.tex
+- paper/sections/5_problem1.tex
+- paper/sections/6_problem2.tex
+- paper/sections/7_problem3.tex
+- paper/sections/7_problem4.tex
+- paper/sections/8_sensitivity.tex
+- paper/sections/9_evaluation.tex
+- paper/sections/A_code.tex
+- paper/simkai.ttf
+- paper/simsun.ttc
+- PAPER_REPORT.md
+- PROBLEM_ANALYSIS.md
+- RESULTS.md
+- SKIPPED_STAGES.md
+- user_data/B题.pdf
+- user_data/B题_extracted.txt
+- user_data/data_preparation/output/audit_summary.json
+- user_data/data_preparation/output/issues.json
+- user_data/data_preparation/output/observations_clean.csv
+- user_data/data_preparation/output/q1_q2_demo.json
+- user_data/data_preparation/output/q2_seed_metrics_dev.csv
+- user_data/data_preparation/output/q2_seed_metrics_dev.summary.json
+- user_data/data_preparation/output/sessions_clean.csv
+- user_data/data_preparation/output/source_manifest.json
+- user_data/data_preparation/output/source_text/B题.txt
+- user_data/data_preparation/output/source_text/附件1.txt
+- user_data/data_preparation/output/source_text/附件2.txt
+- user_data/data_preparation/parameters.csv
+- user_data/data_preparation/prepare.py
+- user_data/data_preparation/test_prepare.py
+- user_data/data_preparation/语义辨析与数据清理.md
+- user_data/docs/B题-统一建模口径.md
+- user_data/docs/B题-题意逐句翻译.md
+- user_data/docs/GREEDY_ABORT实验说明.md
+- user_data/docs/GREEDY_FAST实验说明.md
+- user_data/docs/Q2验证框架.md
+- user_data/docs/Q3主线-GREEDY_FAST.md
+- user_data/docs/Q3模拟器测试说明.md
+- user_data/docs/Q4-N16计数判空.md
+- user_data/docs/Q4完成情况与修复-20260911.md
+- user_data/docs/Q4建模入口.md
+- user_data/docs/Q4状态与no_signal.md
+- user_data/docs/Q4策略分层.md
+- user_data/docs/Q4覆盖命题.md
+- user_data/experiments/q4_hex37/grid_v3.json
+- user_data/experiments/q4_hex37/grid_v3.py
+- user_data/experiments/q4_hex37/hex37.csv
+- user_data/experiments/q4_hex37/hex37.json
+- user_data/experiments/q4_hex37/hex37.meta.json
+- user_data/experiments/q4_hex37/old_hex37_route.csv
+- user_data/experiments/q4_hex37/old_hex37_route.json
+- user_data/experiments/q4_hex37/old_hex37_route.meta.json
+- user_data/experiments/q4_hex37/paired_results.md
+- user_data/experiments/q4_hex37/paired_summary.json
+- user_data/experiments/q4_hex37/prefix_routes.json
+- user_data/experiments/q4_hex37/route_insert_v1.csv
+- user_data/experiments/q4_hex37/route_insert_v1.json
+- user_data/experiments/q4_hex37/route_insert_v1.meta.json
+- user_data/experiments/q4_hex37/route_insert_v2.csv
+- user_data/experiments/q4_hex37/route_insert_v2.json
+- user_data/experiments/q4_hex37/route_insert_v2.meta.json
+- user_data/experiments/q4_hex37/route_insert_v3.csv
+- user_data/experiments/q4_hex37/route_insert_v3.json
+- user_data/experiments/q4_hex37/route_insert_v3.meta.json
+- user_data/experiments/q4_hex37/route_insert_v3_a.csv
+- user_data/experiments/q4_hex37/route_insert_v3_a.json
+- user_data/experiments/q4_hex37/route_insert_v3_a.meta.json
+- user_data/experiments/q4_hex37/route_insert_v3_b.csv
+- user_data/experiments/q4_hex37/route_insert_v3_b.json
+- user_data/experiments/q4_hex37/route_insert_v3_b.meta.json
+- user_data/experiments/q4_hex37/search_prefix_routes.py
+- user_data/experiments/q4_hex37/square81.csv
+- user_data/experiments/q4_hex37/square81.json
+- user_data/experiments/q4_hex37/square81.meta.json
+- user_data/experiments/q4_hex37/v3_current_route.csv
+- user_data/experiments/q4_hex37/v3_current_route.json
+- user_data/experiments/q4_hex37/v3_current_route.meta.json
+- user_data/experiments/q4_hex37/v3_prefix_a.csv
+- user_data/experiments/q4_hex37/v3_prefix_a.json
+- user_data/experiments/q4_hex37/v3_prefix_a.meta.json
+- user_data/experiments/q4_revision/audit_practice.py
+- user_data/experiments/q4_revision/baseline/q4_localize.py
+- user_data/experiments/q4_revision/baseline/q4_policy.py
+- user_data/experiments/q4_revision/baseline/q4_runner.py
+- user_data/experiments/q4_revision/baseline/q4_state.py
+- user_data/experiments/q4_revision/baseline.csv
+- user_data/experiments/q4_revision/baseline.json
+- user_data/experiments/q4_revision/baseline_final.csv
+- user_data/experiments/q4_revision/baseline_final.json
+- user_data/experiments/q4_revision/baseline_final.meta.json
+- user_data/experiments/q4_revision/compare.py
+- user_data/experiments/q4_revision/holdout_endpoint.csv
+- user_data/experiments/q4_revision/holdout_endpoint.json
+- user_data/experiments/q4_revision/holdout_endpoint.meta.json
+- user_data/experiments/q4_revision/official_practice.csv
+- user_data/experiments/q4_revision/revised_final.csv
+- user_data/experiments/q4_revision/revised_final.json
+- user_data/experiments/q4_revision/revised_final.meta.json
+- user_data/experiments/q4_simulator/practice_results.md
+- user_data/findings.md
+- user_data/handoff/HANDOFF.md
+- user_data/handoff/q3-algorithm-handoff-20260911/docs/B题-统一建模口径.md
+- user_data/handoff/q3-algorithm-handoff-20260911/docs/GREEDY_FAST实验说明.md
+- user_data/handoff/q3-algorithm-handoff-20260911/docs/Q3模拟器测试说明.md
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162333-q3-greedy/events.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162333-q3-greedy/requests.jsonl
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162333-q3-greedy/summary.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162333-q3-greedy/ui-after.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162333-q3-greedy/ui-before.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162539-q3-greedy/events.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162539-q3-greedy/requests.jsonl
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162539-q3-greedy/summary.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162539-q3-greedy/ui-after.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162539-q3-greedy/ui-before.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162636-q3-greedy/events.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162636-q3-greedy/requests.jsonl
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162636-q3-greedy/summary.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162636-q3-greedy/ui-after.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162636-q3-greedy/ui-before.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162806-q3-greedy/events.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162806-q3-greedy/requests.jsonl
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162806-q3-greedy/summary.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162806-q3-greedy/ui-after.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162806-q3-greedy/ui-before.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162914-q3-greedy/events.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162914-q3-greedy/requests.jsonl
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162914-q3-greedy/summary.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162914-q3-greedy/ui-after.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-162914-q3-greedy/ui-before.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163743-q3-greedy_fast/events.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163743-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163743-q3-greedy_fast/summary.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163743-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163743-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163823-q3-greedy_fast/events.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163823-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163823-q3-greedy_fast/summary.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163823-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163823-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163931-q3-greedy_fast/events.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163931-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163931-q3-greedy_fast/summary.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163931-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-163931-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-164019-q3-greedy_fast/events.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-164019-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-164019-q3-greedy_fast/summary.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-164019-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-164019-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-164153-q3-greedy_fast/events.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-164153-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-164153-q3-greedy_fast/summary.json
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-164153-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/evidence/20260911-164153-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-algorithm-handoff-20260911/HANDOFF.md
+- user_data/handoff/q3-algorithm-handoff-20260911/simulator_automation/q3_fast_mode.py
+- user_data/handoff/q3-algorithm-handoff-20260911/simulator_automation/q3_greedy_policy.py
+- user_data/handoff/q3-algorithm-handoff-20260911/simulator_automation/q3_practice.py
+- user_data/handoff/q3-algorithm-handoff-20260911/simulator_automation/q3_runner.py
+- user_data/handoff/q3-algorithm-handoff-20260911/simulator_automation/q3_safe.py
+- user_data/handoff/q3-algorithm-handoff-20260911/simulator_automation/q3_state.py
+- user_data/handoff/q3-algorithm-handoff-20260911/simulator_automation/README.md
+- user_data/handoff/q3-algorithm-handoff-20260911/simulator_automation/robot_client.py
+- user_data/handoff/q3-algorithm-handoff-20260911/simulator_automation/run_practice.ps1
+- user_data/handoff/q3-algorithm-handoff-20260911/simulator_automation/run_q3_practice.ps1
+- user_data/handoff/q3-algorithm-handoff-20260911/simulator_automation/smoke.py
+- user_data/handoff/q3-algorithm-handoff-20260911/simulator_automation/ui.ps1
+- user_data/handoff/q3-algorithm-handoff-20260911/src/active.py
+- user_data/handoff/q3-algorithm-handoff-20260911/src/geometry.py
+- user_data/handoff/q3-algorithm-handoff-20260911/src/localization.py
+- user_data/handoff/q3-algorithm-handoff-20260911/src/params.py
+- user_data/handoff/q3-algorithm-handoff-20260911/src/q2_metrics.py
+- user_data/handoff/q3-algorithm-handoff-20260911/src/q2_scenario.py
+- user_data/handoff/q3-algorithm-handoff-20260911/src/q2_validation.py
+- user_data/handoff/q3-algorithm-handoff-20260911/src/run_q1_q2.py
+- user_data/handoff/q3-algorithm-handoff-20260911/src/run_q2_seed_study.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/q3_greedy_policy.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/q3_practice.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/q3_runner.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/q3_safe.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/q3_state.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/README.md
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/robot_client.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/run_practice.ps1
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/run_q3_practice.ps1
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/smoke.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/ui.ps1
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/src/active.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/src/geometry.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/src/localization.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/src/params.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/src/q2_metrics.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/src/q2_scenario.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/src/q2_validation.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/src/run_q1_q2.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/src/run_q2_seed_study.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/STABLE.md
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_action_filter.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_certified_queue.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_fast_mode.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_fixes.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_greedy_policy.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_greedy_schedule.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_offline.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_tail.py
+- user_data/handoff/q3-algorithm-handoff-20260911/stable/README.md
+- user_data/handoff/q3-algorithm-handoff-20260911/tests/test_q3_action_filter.py
+- user_data/handoff/q3-algorithm-handoff-20260911/tests/test_q3_certified_queue.py
+- user_data/handoff/q3-algorithm-handoff-20260911/tests/test_q3_fast_mode.py
+- user_data/handoff/q3-algorithm-handoff-20260911/tests/test_q3_fixes.py
+- user_data/handoff/q3-algorithm-handoff-20260911/tests/test_q3_greedy_policy.py
+- user_data/handoff/q3-algorithm-handoff-20260911/tests/test_q3_greedy_schedule.py
+- user_data/handoff/q3-algorithm-handoff-20260911/tests/test_q3_offline.py
+- user_data/handoff/q3-algorithm-handoff-20260911/tests/test_q3_tail.py
+- user_data/handoff/q3-q4-handoff-20260911/data_preparation/parameters.csv
+- user_data/handoff/q3-q4-handoff-20260911/docs/B题-统一建模口径.md
+- user_data/handoff/q3-q4-handoff-20260911/docs/B题-题意逐句翻译.md
+- user_data/handoff/q3-q4-handoff-20260911/docs/GREEDY_ABORT实验说明.md
+- user_data/handoff/q3-q4-handoff-20260911/docs/GREEDY_FAST实验说明.md
+- user_data/handoff/q3-q4-handoff-20260911/docs/Q2验证框架.md
+- user_data/handoff/q3-q4-handoff-20260911/docs/Q3主线-GREEDY_FAST.md
+- user_data/handoff/q3-q4-handoff-20260911/docs/Q3模拟器测试说明.md
+- user_data/handoff/q3-q4-handoff-20260911/docs/Q4建模入口.md
+- user_data/handoff/q3-q4-handoff-20260911/docs/Q4状态与no_signal.md
+- user_data/handoff/q3-q4-handoff-20260911/docs/Q4策略分层.md
+- user_data/handoff/q3-q4-handoff-20260911/docs/Q4覆盖命题.md
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184114-q3-greedy_fast/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184114-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184114-q3-greedy_fast/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184114-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184114-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184227-q3-greedy_fast/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184227-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184227-q3-greedy_fast/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184227-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184227-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184308-q3-greedy_fast/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184308-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184308-q3-greedy_fast/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184308-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184308-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184401-q3-greedy_fast/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184401-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184401-q3-greedy_fast/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184401-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184401-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184436-q3-greedy_fast/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184436-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184436-q3-greedy_fast/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184436-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184436-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184524-q3-greedy_fast/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184524-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184524-q3-greedy_fast/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184524-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184524-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184614-q3-greedy_fast/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184614-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184614-q3-greedy_fast/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184614-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184614-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184659-q3-greedy_fast/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184659-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184659-q3-greedy_fast/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184659-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184659-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184753-q3-greedy_fast/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184753-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184753-q3-greedy_fast/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184753-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184753-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184905-q3-greedy_fast/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184905-q3-greedy_fast/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184905-q3-greedy_fast/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184905-q3-greedy_fast/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-184905-q3-greedy_fast/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195041-q4-p4/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195041-q4-p4/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195041-q4-p4/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195041-q4-p4/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195041-q4-p4/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195413-q4-p4/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195413-q4-p4/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195413-q4-p4/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195413-q4-p4/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195413-q4-p4/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195707-q4-p4/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195707-q4-p4/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195707-q4-p4/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195707-q4-p4/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195707-q4-p4/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195953-q4-p4/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195953-q4-p4/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195953-q4-p4/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195953-q4-p4/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-195953-q4-p4/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-200740-q4-p4/events.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-200740-q4-p4/requests.jsonl
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-200740-q4-p4/summary.json
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-200740-q4-p4/ui-after.txt
+- user_data/handoff/q3-q4-handoff-20260911/evidence/20260911-200740-q4-p4/ui-before.txt
+- user_data/handoff/q3-q4-handoff-20260911/experiments/q4_simulator/practice_results.md
+- user_data/handoff/q3-q4-handoff-20260911/HANDOFF.md
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/_batch_30.ps1
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/q3_abort_safe.py
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/q3_fast_mode.py
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/q3_greedy_policy.py
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/q3_practice.py
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/q3_runner.py
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/q3_safe.py
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/q3_state.py
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/q4_practice.py
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/q4_runner.py
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/README.md
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/robot_client.py
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/run_practice.ps1
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/run_q3_practice.ps1
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/run_q4_practice.ps1
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/smoke.py
+- user_data/handoff/q3-q4-handoff-20260911/simulator_automation/ui.ps1
+- user_data/handoff/q3-q4-handoff-20260911/src/active.py
+- user_data/handoff/q3-q4-handoff-20260911/src/geometry.py
+- user_data/handoff/q3-q4-handoff-20260911/src/localization.py
+- user_data/handoff/q3-q4-handoff-20260911/src/params.py
+- user_data/handoff/q3-q4-handoff-20260911/src/q2_metrics.py
+- user_data/handoff/q3-q4-handoff-20260911/src/q2_scenario.py
+- user_data/handoff/q3-q4-handoff-20260911/src/q2_validation.py
+- user_data/handoff/q3-q4-handoff-20260911/src/q4_bench.py
+- user_data/handoff/q3-q4-handoff-20260911/src/q4_cover.py
+- user_data/handoff/q3-q4-handoff-20260911/src/q4_policy.py
+- user_data/handoff/q3-q4-handoff-20260911/src/q4_state.py
+- user_data/handoff/q3-q4-handoff-20260911/src/run_q1_q2.py
+- user_data/handoff/q3-q4-handoff-20260911/src/run_q2_seed_study.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/q3_greedy_policy.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/q3_practice.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/q3_runner.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/q3_safe.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/q3_state.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/README.md
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/robot_client.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/run_practice.ps1
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/run_q3_practice.ps1
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/smoke.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/simulator_automation/ui.ps1
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/src/active.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/src/geometry.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/src/localization.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/src/params.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/src/q2_metrics.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/src/q2_scenario.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/src/q2_validation.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/src/run_q1_q2.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/src/run_q2_seed_study.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/STABLE.md
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_action_filter.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_certified_queue.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_fast_mode.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_fixes.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_greedy_policy.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_greedy_schedule.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_offline.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/q3-greedy-20260911/tests/test_q3_tail.py
+- user_data/handoff/q3-q4-handoff-20260911/stable/README.md
+- user_data/handoff/q3-q4-handoff-20260911/tests/conftest.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_active.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_geometry.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_localization.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q2_baselines.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q2_boundaries.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q2_invariants.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q2_robustness.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q2_seed_metrics.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q3_abort_safe.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q3_action_filter.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q3_certified_queue.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q3_fast_mode.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q3_fixes.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q3_greedy_policy.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q3_greedy_schedule.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q3_offline.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q3_tail.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q4_cover.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q4_path.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q4_runner.py
+- user_data/handoff/q3-q4-handoff-20260911/tests/test_q4_state.py
+- user_data/papers/_download_more.ps1
+- user_data/papers/_download_more.py
+- user_data/papers/_land_Dogancay2012_UAV_Path_Planning_Passive_Emitter_pdf.html
+- user_data/papers/_land_Gholami2015_Worst_Case_Position_Error_Bearing_Only_pdf.html
+- user_data/papers/_land_Ruan2023_Multi_Stage_RF_Emitter_Search_Geolocation_pdf.html
+- user_data/papers/_land_Ruan2025_UAV_Directional_Emitter_Joint_Estimation_pdf.html
+- user_data/papers/_land_Stansfield1947_Statistical_theory_of_DF_fixing_pdf.html
+- user_data/papers/_land_Xu2017_Optimal_Sensor_Placement_3D_AOA_pdf.html
+- user_data/papers/_resolve_dois.py
+- user_data/papers/_resolved.json
+- user_data/papers/_s2.json
+- user_data/papers/_timeopt_dois.txt
+- user_data/papers/_unpay.json
+- user_data/papers/AOA_Cross_Geometric_Center_arXiv2302.10391.pdf
+- user_data/papers/Ausiello_2001_Algorithmica_Algorithms_for_the_On_Line_Travelling_Sa.pdf
+- user_data/papers/Bishop2009_ISSNIP_Sensor_Target_Geometries_RSS.pdf
+- user_data/papers/Bishop2010_Optimality_analysis_sensor_target_geometries.pdf
+- user_data/papers/direct_urls.txt
+- user_data/papers/Dogancay2005_Bearings_Only_TLS.pdf
+- user_data/papers/Dogancay2022_Optimal_Geometries_AOA_Bayesian.pdf
+- user_data/papers/dois.txt
+- user_data/papers/Dumitrescu_2001_ASSDA_Approximation_algorithms_for_TSP_with_ne.pdf
+- user_data/papers/Dumitrescu_2012_The_traveling_salesman_problem_for_lines.pdf
+- user_data/papers/Galceran2013_RAS_Survey_CPP.pdf
+- user_data/papers/Gholami2012_Geometric_Upper_Bounds_Positioning_arXiv.pdf
+- user_data/papers/Gunawan_2016_EJOR_Orienteering_Problem_A_survey_of_recent_.pdf
+- user_data/papers/Hollinger_2013_RSSC_Sampling_based_Motion_Planning_for_Robot.pdf
+- user_data/papers/Jang_2016_ICCAS_Optimal_control_based_UAV_path_planning_.pdf
+- user_data/papers/Morris_2025_Spatially_Intelligent_Patrol_Routes_for_.pdf
+- user_data/papers/Shi_2023_ArXivOrg_Low_Complexity_Three_Dimensional_AOA_Cro.pdf
+- user_data/papers/ShuangJiAOA_GDOP_Dual_Platform.pdf
+- user_data/papers/Singh_2014_JAIR_Efficient_Informative_Sensing_using_Mult.pdf
+- user_data/papers/SpatiallyIntelligentPatrol_arXiv2510.14018.pdf
+- user_data/papers/VanderHook2014_Cautious_Greedy_Bearing_Only.pdf
+- user_data/papers/Vansteenwegen_2011_EJOR_The_orienteering_problem_A_survey.pdf
+- user_data/papers/Xing2024_Radio_Monitoring_Cross_Fixing.pdf
+- user_data/papers/Yin2023_GNSS_Multi_Jammer_DF_Localization.pdf
+- user_data/papers/Zhou2014_Weighted_Intersections_of_Bearing_Lines.pdf
+- user_data/progress.md
+- user_data/simulator_automation/_batch_30.ps1
+- user_data/simulator_automation/q3_abort_safe.py
+- user_data/simulator_automation/q3_fast_mode.py
+- user_data/simulator_automation/q3_greedy_policy.py
+- user_data/simulator_automation/q3_practice.py
+- user_data/simulator_automation/q3_runner.py
+- user_data/simulator_automation/q3_safe.py
+- user_data/simulator_automation/q3_state.py
+- user_data/simulator_automation/q4_practice.py
+- user_data/simulator_automation/q4_runner.py
+- user_data/simulator_automation/README.md
+- user_data/simulator_automation/robot_client.py
+- user_data/simulator_automation/run_practice.ps1
+- user_data/simulator_automation/run_q3_practice.ps1
+- user_data/simulator_automation/run_q4_practice.ps1
+- user_data/simulator_automation/smoke.py
+- user_data/simulator_automation/ui.ps1
+- user_data/src/active.py
+- user_data/src/geometry.py
+- user_data/src/localization.py
+- user_data/src/params.py
+- user_data/src/q2_metrics.py
+- user_data/src/q2_scenario.py
+- user_data/src/q2_validation.py
+- user_data/src/q4_bench.py
+- user_data/src/q4_cover.py
+- user_data/src/q4_localize.py
+- user_data/src/q4_policy.py
+- user_data/src/q4_prefix.py
+- user_data/src/q4_state.py
+- user_data/src/run_q1_q2.py
+- user_data/src/run_q2_seed_study.py
+- user_data/stable/q3-greedy-20260911/simulator_automation/q3_greedy_policy.py
+- user_data/stable/q3-greedy-20260911/simulator_automation/q3_practice.py
+- user_data/stable/q3-greedy-20260911/simulator_automation/q3_runner.py
+- user_data/stable/q3-greedy-20260911/simulator_automation/q3_safe.py
+- user_data/stable/q3-greedy-20260911/simulator_automation/q3_state.py
+- user_data/stable/q3-greedy-20260911/simulator_automation/README.md
+- user_data/stable/q3-greedy-20260911/simulator_automation/robot_client.py
+- user_data/stable/q3-greedy-20260911/simulator_automation/run_practice.ps1
+- user_data/stable/q3-greedy-20260911/simulator_automation/run_q3_practice.ps1
+- user_data/stable/q3-greedy-20260911/simulator_automation/smoke.py
+- user_data/stable/q3-greedy-20260911/simulator_automation/ui.ps1
+- user_data/stable/q3-greedy-20260911/src/active.py
+- user_data/stable/q3-greedy-20260911/src/geometry.py
+- user_data/stable/q3-greedy-20260911/src/localization.py
+- user_data/stable/q3-greedy-20260911/src/params.py
+- user_data/stable/q3-greedy-20260911/src/q2_metrics.py
+- user_data/stable/q3-greedy-20260911/src/q2_scenario.py
+- user_data/stable/q3-greedy-20260911/src/q2_validation.py
+- user_data/stable/q3-greedy-20260911/src/run_q1_q2.py
+- user_data/stable/q3-greedy-20260911/src/run_q2_seed_study.py
+- user_data/stable/q3-greedy-20260911/STABLE.md
+- user_data/stable/q3-greedy-20260911/tests/test_q3_action_filter.py
+- user_data/stable/q3-greedy-20260911/tests/test_q3_certified_queue.py
+- user_data/stable/q3-greedy-20260911/tests/test_q3_fast_mode.py
+- user_data/stable/q3-greedy-20260911/tests/test_q3_fixes.py
+- user_data/stable/q3-greedy-20260911/tests/test_q3_greedy_policy.py
+- user_data/stable/q3-greedy-20260911/tests/test_q3_greedy_schedule.py
+- user_data/stable/q3-greedy-20260911/tests/test_q3_offline.py
+- user_data/stable/q3-greedy-20260911/tests/test_q3_tail.py
+- user_data/stable/README.md
+- user_data/task_plan.md
+- user_data/tests/conftest.py
+- user_data/tests/test_active.py
+- user_data/tests/test_geometry.py
+- user_data/tests/test_localization.py
+- user_data/tests/test_paper_number_replay.py
+- user_data/tests/test_q2_baselines.py
+- user_data/tests/test_q2_boundaries.py
+- user_data/tests/test_q2_invariants.py
+- user_data/tests/test_q2_robustness.py
+- user_data/tests/test_q2_seed_metrics.py
+- user_data/tests/test_q3_abort_safe.py
+- user_data/tests/test_q3_action_filter.py
+- user_data/tests/test_q3_certified_queue.py
+- user_data/tests/test_q3_fast_mode.py
+- user_data/tests/test_q3_fixes.py
+- user_data/tests/test_q3_greedy_policy.py
+- user_data/tests/test_q3_greedy_schedule.py
+- user_data/tests/test_q3_offline.py
+- user_data/tests/test_q3_tail.py
+- user_data/tests/test_q4_cover.py
+- user_data/tests/test_q4_geomsim.py
+- user_data/tests/test_q4_hex37.py
+- user_data/tests/test_q4_localize.py
+- user_data/tests/test_q4_n16.py
+- user_data/tests/test_q4_path.py
+- user_data/tests/test_q4_prefix.py
+- user_data/tests/test_q4_regressions.py
+- user_data/tests/test_q4_route_insert.py
+- user_data/tests/test_q4_runner.py
+- user_data/tests/test_q4_state.py
+- user_data/附件/附件1.docx
+- user_data/附件/附件2.docx
+请仔细阅读并利用这些文件作为研究基础。
+
+## 参数
+- 研究主题: 国赛 (CUMCM) B题 - 当前工作区注入（跳过至写作）
+- template: comp_cumcm
+- competition: cumcm
+- language: zh
+- problem_id: B
+- tools: python
+- max_pages: 30
+- output_format: pdf
+- flowchart_engine: drawio
+- rich_mode: True
+- skip_improvement_loop: True
+- min_figures: auto
+- min_tables: auto
+- min_models: auto
+- figure_style: nature
+- injected_from: D:\Users\zty\数学建模\国赛\1\CUMCM2026Problems\B题
+- skip_completed_stages: ['comp-prob-analysis', 'comp-modeling', 'comp-code']
+- resume_from: paper-figure
+- _sub_steps_pruned: True
+
+## Bash 环境变量（页数/字数等检查脚本会用到）
+工作区已自动生成 `.env_skill`，含以下数值参数：
+
+```bash
+export MAX_PAGES=30
+```
+
+**说明**：这些数值是**目标参考值**，不是硬约束。SKILL.md 里若有页数/字数自检脚本，在 bash 块开头加一行 `source .env_skill 2>/dev/null || true` 就能让`$MAX_PAGES`、`$MIN_FIGURES` 等变量正确取到值（否则被当成空值，自检失效）。
+**最终以论文实际质量为准**，不要为了凑页数刻意注水。
+
+## ⛔ 流程图/架构图引擎 = DrawIO（用户选定，全程遵守）
+- 本工作流的流程图 / 架构图**用 DrawIO 绘制**（`paper-figure-drawio` skill：产出 .drawio 源文件 + .png/.pdf）。
+- 规划阶段 FIGURE_MANIFEST 的流程/架构图章节标题按「DrawIO 流程/架构图」写，与实际引擎一致。
+
+## 竞赛规则（全国大学生数学建模竞赛 (CUMCM)）
+- 语言: 中文
+- ⛔ **丰满模式 · 正文**页数目标区间: 40-60 页（目标 50 页中位数）— 短于 40 页 = 分析单薄高风险。
+  **正文** = 章节 1（绪论）到结论（含图表），**不含附录代码 / 参考文献 / 摘要 / 目录**。
+  鼓励过程图表化（建模/算法/推导流程图也算图表）；写完正文不到 40 页**必须扩展**
+  开启了「丰满模式」(rich_mode=true)，采用研究生级竞赛丰满标准：
+  - 摘要 1500-2200 字（可跨两页）+ 6 项展示要素 + 候选方法对比 + 附件预测代表值
+  - 30+ 张图表（过程图 + 数据图 + 算法流程图 + 推导示意图）
+  - 每子问题段：首先 / 再 / 接着 / 最后 过程式叙述骨架
+  - 自动触发 12 类章节扩展：数据预处理 / 多算法对比 / 超参敏感性 / 消融实验 / 复杂度分析 / 理论支撑 / 可解释性 / Pareto 前沿 / 鲁棒性 / 求解器对比 / 规模扩展 / 误差分解
+  ⛔ 注意：丰满模式只调整内容标准（页数 / 图表数 / 写作风格），**模板（LaTeX cls / 标题约束 / 封面）仍按本工作流的原赛事保持不变**。
+- LaTeX 模板: cumcmthesis
+- 论文不超过 30 页（含摘要、正文、附录和参考文献）
+- 必须有摘要项（约 1 页），含关键词
+- ⛔ 只需要中文摘要，不要英文摘要（国赛不要求英文摘要）
+- 论文结构：摘要 → 问题重述 → 问题分析 → 模型假设 → 符号说明 → 模型建立与求解 → 模型检验 → 模型评价与推广 → 参考文献 → 附录
+- 附录中必须包含完整代码
+- 使用 cumcmthesis 文档类，XeLaTeX 编译
+- 题号: B
+- 编程工具: python
+
+## ⛔ 核心原则：发现问题必须修正（不能只解释）
+优先级：物理/业务约束 > 数据忠实度 > 计算正确性
+
+如果计算结果违反了题目给定的物理/业务约束（如超出最大值、为负、不守恒）：
+- 禁止：发现超出后只写一句'这是因为XXX'然后继续使用超出的结果
+- 禁止：把不合理的值写进 JSON/报告，旁边加注释说明
+- 禁止：写'后续可改进'或'留给下一步处理'然后跳过
+- 禁止：说'数学上正确'或'纯数学解'来为不合理结果辩护
+- 禁止：说'这是题目数据的特性'来回避修正责任
+- 必须：分析原因 → 修正数据或模型（加物理约束）→ 重新计算 → 用修正后的合理值
+- 必须：在报告中写明'原始结果为X（不合理），修正后为Y，修正方法为Z'
+- 必须：修正后重新验证，确认结果在合理范围内
+- 必须：每个子问题代码末尾有 validate_constraints() 自动验证
+
+⛔ 关键认知：数学正确 ≠ 物理合理。ODE数值解超出物理边界时，
+不是'数据导致的正常结果'，而是模型缺少物理约束（接触约束/饱和/边界条件）。
+必须在代码中加入约束后重新求解，而不是解释为什么会超出。
+
+⛔ 几何/参数完整性：
+- 建模：禁止未声明的几何简化（矩形→线段、实体→质心点）
+- 代码：禁止用中间计算量替代物理实体参数（用完整尺寸，不用中心距代替全长）
+- 碰撞/约束检测必须用实体完整外轮廓，不能只用中心点距离
+
+⛔ 遮蔽/覆盖/碰撞判定的完整性（防止对象降维）：
+- 判定必须作用于目标的完整几何边界（所有边界点或等价的充要条件）
+- 函数签名必须包含几何参数（半径/高度/长宽/外轮廓），只传一个坐标点 = 反模式
+- 禁止用'中心被遮蔽 = 整体被遮蔽'的等价假设（除非证明等价性）
+- 离散采样近似时必须做收敛性验证（如 N=100→300→500 结果稳定才算收敛）
+- 代码注释必须说明：判定的是哪个几何体的哪些边界（如'圆柱体上下底面圆周 300 点'）
+
+⛔ 论文深度与求解精度（提升论文质量）：
+- 关键假设必须有数学证明或文献支撑（≥1个定理/引理），不能只写'为简化假设XXX'
+- 求解精度必须与方法匹配：连续问题用二分/牛顿（精度≥1e-6），禁止固定步长=0.01作为最终结果
+- 核心结果必做双算法交叉验证（几何解析+启发式 / DE+PSO / 精确+近似）
+- 高维优化（维度≥10）必须先做几何/物理降维，禁止直接喂黑箱算法
+
+⛔ 多资源协同优化（防止资源闲置陷阱）：
+- 多资源（多弹/多机/多点）必须用联合目标函数，不能独立优化后叠加
+- 检测到'某个资源T=0/覆盖=0/贡献=0' → 说明被误判放弃，必须修
+- 检测到'两个资源作用区间完全不重叠' → 没利用互补性，必须改
+- 启发式算法必须有几何/物理启动种子（≥5个），禁止纯随机初始化
+- 多阶段问题必须分层（任务分配+子任务优化），禁止把所有维度混在一起全量搜索
+
+⛔ 建模与优化有效性约束（通用）：
+- 资源单调性：更多决策资源→结果必须严格更优，否则建模降维失败
+- 解析基准下界：启发式优化解必须优于解析/几何/贪心基准，否则算法失败
+- 搜索空间健康度：维度≥6时先采样100点，有效解<30%则必须降维或启发式播种
+- 维度分层：决策变量≥10维时禁止单层黑箱优化，必须分层分解
+
+检测到问题 = 必须修复。解释原因 ≠ 处理完毕。
+发现不合理 → 必须行动修正 → 用修正后的值继续。
+任何步骤都不允许带着已知问题继续往下走。
+
+## 文档原文（已自动提取，按需读取）
+用户上传的文档已经在 `user_data/` 目录下提取为文本/markdown 文件，**用 Read 工具按需读取，不要尝试一次性读所有文件**。
+- `_extracted.md` 由 pandoc 提取（保留公式与表格）
+- `_extracted.txt` 由 PyPDF2 提取（纯文本，可能丢失公式）
+
+文件清单（按字符数排序）：
+
+- **B题** → `user_data/B题_extracted.txt` (4,652 字符)
+  - 开头: # B题.pdf 内容提取（Vision OCR） ## 第 1 页 2026 年高教社杯全国大学生数学建模竞赛题目 （请先阅读“全国大学生数学建模竞赛论文格式规范”） --- **B 题 无线电干扰源的快速自动定位与清除** 无线电干扰源…
+
+**用法示例**: 如果你需要某篇论文的内容, 用 `Read` 工具读对应的 `user_data/xxx_extracted.md` 文件。可以用 `Grep` 工具按关键词搜索定位特定信息。

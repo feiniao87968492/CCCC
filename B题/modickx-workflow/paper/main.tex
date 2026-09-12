@@ -1,0 +1,131 @@
+% 国赛 (CUMCM) 模板
+% 基于 cumcmthesis 文档类
+% 电子版提交使用 withoutpreface 去掉封面编号页，bwprint 黑白打印
+\documentclass[withoutpreface,bwprint]{cumcmthesis}
+
+% === 额外宏包（cumcmthesis 已内置 amsmath/graphicx/booktabs/listings/hyperref/tabularx/longtable 等）===
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage[section]{placeins}
+\usepackage{needspace}
+\usepackage{algorithm2e}
+\usepackage{float}
+\usepackage{makecell}
+
+% === 参考文献引用（数字型，配合 gbt7714-numerical.bst）===
+%  不要加载 cite 宏包 — 和 natbib 冲突导致编译错误。
+%  必须显式加载 natbib：gbt7714-numerical.bst 产出的是 natbib 风格条目
+%    （\bibitem[作者(年)]{key}），不加载 natbib 时标准 \cite 会把"作者-年"当引用标记
+%    上标出来（而非数字 [1]）。numbers 模式让 \cite 产出数字，cls 的 \upcite 再上标它。
+%    正文引用统一用 \upcite{key} 得数字上标 $^{[1]}$。
+\usepackage[numbers,sort&compress]{natbib}
+
+% === TikZ（cumcmthesis 已加载 tikz，这里只加额外库）===
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,calc}
+
+% === 代码高亮设置 ===
+\lstset{
+    language=Python,
+    basicstyle=\small\ttfamily,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+}
+
+% === 摘要后排版修复 ===
+%  不再重定义 \@cite —— 引用交给 natbib（上面已 numbers 模式加载），
+%    \upcite 会正确产出数字上标；旧的 \@cite hack 在 natbib 下无效且会干扰，已移除。
+\makeatletter
+% === 修复摘要后排版（cls 的 abstract 结束时有 \newpage\null，跟目录前的 \newpage 冲突产生空白页）===
+% 方案：abstract 结束时加 \newpage 确保目录另起一页，但不加 \null 避免空白页
+\renewenvironment{abstract}{%
+  \if@twocolumn\section*{\abstractname}%
+  \else\begin{center}{\zihao{4}\bfseries \abstractname\vspace{-.5em}\vspace{\z@}}\end{center}\quotation
+  \fi}{\if@twocolumn\else\endquotation\newpage\fi}
+\makeatother
+
+% === 竞赛信息（电子版匿名提交，封面字段留空且不写入正文）===
+% \tihao{B}
+% \baominghao{}
+% \schoolname{}
+% \membera{}
+% \memberb{}
+% \memberc{}
+% \supervisor{}
+% \yearinput{2026}
+% \monthinput{}
+% \dayinput{}
+
+\title{无线电干扰源的快速自动定位与清除}
+
+% MH-FLOAT-TUNE 受控浮动调参（防整页空白/一页一图）
+% placeins 已由模板/cls 加载，此处不重复注入（避免 Option clash）
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.9}
+\renewcommand{\textfraction}{0.06}
+\renewcommand{\floatpagefraction}{0.72}
+\renewcommand{\dbltopfraction}{0.92}
+\renewcommand{\dblfloatpagefraction}{0.72}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\begin{document}
+
+\maketitle
+
+% === 摘要 ===
+\begin{abstract}
+
+无线电干扰源的精准定位与清除，是频谱管理中最依赖现场经验的一段。题面把前期监测结果抽象为半径 $1800\,\mathrm{m}$ 的圆域，圆内干扰源个数未知，频道互异且时不变，编号取自 $20$ 个常见频道，并不存在“每频道必有源”的假设。拟用机器狗搭载单频道测向机、光学探测仪与激光装置代替人工进入危险环境。测向误差落在闭区间 $[-1^\circ,1^\circ]$，接口保留两位小数，同一点同一频道的误差不因重复检测而刷新；各源有效接收半径未知，介于 $1000$ 与 $1500\,\mathrm{m}$ 之间；近区 $5\,\mathrm{m}$ 内接口不再返回角度；光学清除成功当且仅当欧氏距离不超过 $20\,\mathrm{m}$，与射频朝向无关。机器狗直线速度 $5\,\mathrm{m/s}$，切换频道 $1\,\mathrm{s}$，检测 $5\,\mathrm{s}$，光学 $3\,\mathrm{s}$，激光成功再加 $2\,\mathrm{s}$。虚拟任务时间 $T$ 计入空扫与失败动作，上限 $360000\,\mathrm{s}$，效率指标为 $T/K$；$K=0$ 时该比值未定义，应留空而不是填零。程序运行时间是 $\mathtt{/enter}$ 至结束的墙钟，上限 $1200\,\mathrm{s}$，对应成绩表第四列；测试窗口另有 $1500\,\mathrm{s}$。正式测试不返回源的总数，每问独立三次额度、中止也占次，且与演练测试额度独立。本文写作时问题3、问题4的正式测试均未执行，成绩表保持空缺，不以演练或离线几何模型的数字填入。全文把完备性证书放在启发式加速之前：先保证发现与判空，再在连续候选区上用光学网格清除，最后才用插入寻路缩短虚拟时间。
+
+针对问题1，定位区域定义为各检测点前向闭楔形（示向度 $\pm 1^\circ$）的交集，而不是示向度射线的最小二乘交点。直径取凸集顶点最远对，并同步计算最小包围圆半径。空集、无界楔、退化线段与有界多边形必须分类返回，无界时直径为无穷，任何有限直径圆都不能覆盖。等边三角形演示给出直径 $1.0000000000134766$、Jung 半径 $0.5773502691948129$，以直径为直径的圆不能覆盖第三顶点，从而否定“直径圆一定覆盖定位区”。两点楔形演示得到四边形，直径 $9.877085164818205$，包围半径 $4.938542582409102$，此时直径圆恰好由最长对角线生成。两种情形并列，说明覆盖性必须按顶点几何判定。后续若用定位区选择清除点，充分条件是包围半径不超过 $20\,\mathrm{m}$，不能用直径之半代替，也不能把直径小于 $40\,\mathrm{m}$ 写成可清。
+
+针对问题2，在未知源位与未知接收半径下构造第一点的凸外包多边形，外切圆域与 $1500\,\mathrm{m}$ 接收球，不把 $5\,\mathrm{m}$ 近区挖成非凸洞。理论扇半径为最大接收半径除以 $2\cos\varepsilon$，约 $750.114246\,\mathrm{m}$；演示外包半径约 $750.229\,\mathrm{m}$，核心可观测半径约 $249.771\,\mathrm{m}$。排序指标 $J(q)$ 是外包边界采样上对近区、无信号与示向度三支的最坏后验半径，只用于候选集内部排序，即使 $J\le 20$ 也不是清除证书。分层采样含核心层、保证环、探索环与局部加密。演示推荐点约 $(719.007,634.161)$，$J^\ast\approx 43.031\,\mathrm{m}$，行走约 $191.743\,\mathrm{s}$，候选 $191$ 个，层计数核心 $65$、保证环 $31$、探索环 $19$。开发集 $20$ 个种子上一级不变量全部通过，$J^\ast$ 中位数约 $42.760\,\mathrm{m}$，$90\%$ 分位约 $45.407\,\mathrm{m}$，最大值约 $46.205\,\mathrm{m}$，全部高于光学半径；真值后验半径不超过 $20\,\mathrm{m}$ 的比例为 $13/20$，保证第二点比例为 $7/20$，二十次第二反馈均为示向度。这些比例是生成器下的经验频率，不是竞赛概率。$J(q^\ast)$ 相对包围圆心取值的均值差为负，说明排序没有退化成走到圆心。
+
+针对问题3，干扰源全部为全向，总数介于 $10$ 与 $16$ 之间且在线未知。字典序目标为先保证全部清除，再缩短虚拟时间。发现层采用原点加半径 $1200\,\mathrm{m}$ 的正六边形共七点巡回，同站批量扫描未决频道，避免测到一个方向就离开再折返；该七点是发现网格，对接收半径落在 $[1000,1200)$ 的源不是单点可测证书。主线策略 GREEDY\_FAST 关闭发现期投机试清，源预算参数取 $0$，不以启发式耗尽作为停机条件；发现后沿示向度前进约 $500\,\mathrm{m}$ 并横向偏移 $150\,\mathrm{m}$ 取第二测点，尾部用 $225$ 点 SAFE 走廊或边长 $28\,\mathrm{m}$ 的光学方格覆盖连续后验，方格半对角线 $14\sqrt{2}<20\,\mathrm{m}$。非正式十局演练中该策略全清 $10/10$，平均 $T/K=341\,\mathrm{s}$，区间 $244$--$450$，SAFE 均值 $0.20$；对照 GREEDY 为 $390\,\mathrm{s}$、区间 $334$--$455$、SAFE 均值 $1.20$；GREEDY\_ABORT 全清仅 $1/10$，平均 $382\,\mathrm{s}$，不作正式候选。另十局轨迹均值 $340.98\,\mathrm{s}$，区间 $[243.74,449.50]$。演练非配对，不能写成竞赛期望。正式测试三次尚未执行，表中单元格保持空缺。
+
+针对问题4，定向源使无信号增加“扇外”分支，射频阴影里仍可能距离不超过 $20\,\mathrm{m}$，问题3的七点发现集不再构成证书。正方形网格 SQUARE81 共 $81$ 点、步长 $600\,\mathrm{m}$，对任意圆内源位与任意朝向，沿朝向走出 $500\,\mathrm{m}$ 后再取最近格点，距离上界小于 $925\,\mathrm{m}$，半平面间隙大于 $75\,\mathrm{m}$，可证该点同时落入 $1000\,\mathrm{m}$ 接收球与 $180^\circ$ 开半平面。三角晶格 HEX37 共 $37$ 点、步长 $800\,\mathrm{m}$，覆盖半径 $\delta=800/\sqrt{3}\approx 461.880\,\mathrm{m}$；相应距离上界约 $961.880\,\mathrm{m}$，半平面间隙约 $38.120\,\mathrm{m}$，第 $4$ 圈排除间隙约 $9.401\,\mathrm{m}$，代数上等价于 $\sqrt{3}<40/23$。在线求解器标识为累计光学第二版，累计全部正向观测构造外包定位域，光学方格覆盖连续候选区，不依赖再次收到射频；无信号始终不挖掉距离圆盘。离线配对种子 $0$--$29$ 上，修复后 SQUARE81 由 $13/30$ 升至 $30/30$ 全清且证书，平均 $T/K$ 由 $2298.44\,\mathrm{s}$ 降至 $1313.16\,\mathrm{s}$，路程由 $120722.01\,\mathrm{m}$ 降至 $68250.75\,\mathrm{m}$；HEX37 同期 $30/30$，均值 $836.91\,\mathrm{s}$，相对正方形网格下降 $36.267\%$，路程下降 $32.31\%$，测向次数下降 $50.41\%$，光学兜底次数几乎不变。寻路由旧顺序 $836.91\,\mathrm{s}$ 经插入降至 PREFIX\_A 的 $683.09\,\mathrm{s}$，全程 $30/30$，骨架长 $28800\,\mathrm{m}$。留出种子 $1000$--$1029$ 在 $\pm 1^\circ$ 端点误差下仍 $30/30$，均值 $1376.27\,\mathrm{s}$。非正式演练 PREFIX\_A 两场为 $11/11$、$T/K=822.38\,\mathrm{s}$ 与 $10/10$、$930.28\,\mathrm{s}$，均证书完成；更早 HEX37 另有 $12/12$、$899.04\,\mathrm{s}$ 与 $16/16$、$620.08\,\mathrm{s}$。问题4正式测试同样未执行。
+
+本文把完备性证书放在启发式加速之前，回归测试 $168$ 项通过。主要局限是正式成绩缺失、演练非配对、问题3七点并非一切接收半径下的单点可测证书，以及 HEX37 真子集是否仍覆盖一切朝向尚未另证。截止时间之后不能补做正式测试，文中非正式数字一律不得改名写入成绩表。
+
+\keywords{测向交会\quad 楔形可行域\quad 第二检测点\quad 覆盖路径\quad 定向干扰源\quad 光学清除\quad 频道判空\quad HEX37\quad 在线策略\quad 证书完备性\quad 单位清除时间\quad 机器狗}
+\end{abstract}
+
+% === 目录（摘要结束时已自动换页，这里不需要额外 \newpage）===
+\tableofcontents
+\clearpage
+
+% === 正文 ===
+\input{sections/1_restatement}
+\input{sections/2_analysis}
+\input{sections/3_assumptions}
+\input{sections/4_symbols}
+\input{sections/5_problem1}
+\input{sections/6_problem2}
+\input{sections/7_problem3}
+\input{sections/7_problem4}
+\input{sections/8_sensitivity}
+\input{sections/9_evaluation}
+
+% === 参考文献 ===
+\begin{thebibliography}{99}
+\bibitem{weiss_2005_dpd} Weiss A J, Amar A. Direct position determination of multiple radio signals[J]. EURASIP Journal on Advances in Signal Processing, 2005, 2005: 37.
+\bibitem{penna_2013_doa} Penna F, Cabric D. Cooperative DoA-only localization of primary users in cognitive radio networks[J]. EURASIP Journal on Wireless Communications and Networking, 2013, 2013: 107.
+\bibitem{bayram_2016_bearing} Bayram H, Vander Hook J, Isler V. Gathering bearing data for target localization[J]. IEEE Robotics and Automation Letters, 2016, 1(1): 369-374.
+\bibitem{russell_2020_doa} Russell J S, Ye M, Anderson B D O, et al. Cooperative localization of a GPS-denied UAV using direction-of-arrival measurements[J]. IEEE Transactions on Aerospace and Electronic Systems, 2020, 56(3): 1966-1978.
+\bibitem{zhao_2013_placement} Zhao S, Chen B M, Lee T H. Optimal sensor placement for target localisation and tracking in 2D and 3D[J]. International Journal of Control, 2013, 86(10): 1687-1704.
+\bibitem{moreno_2013_placement} Moreno-Salinas D, Pascoal A, Aranda J. Optimal sensor placement for multiple target positioning with range-only measurements in two-dimensional scenarios[J]. Sensors, 2013, 13(8): 10674-10710.
+\bibitem{galceran_2013_cpp} Galceran E, Carreras M. A survey on coverage path planning for robotics[J]. Robotics and Autonomous Systems, 2013, 61(12): 1258-1276.
+\bibitem{cabreira_2019_uavcpp} Cabreira T M, Brisolara L, Ferreira P R. Survey on coverage path planning with unmanned aerial vehicles[J]. Drones, 2019, 3(1): 4.
+\bibitem{vansteenwegen_2011_op} Vansteenwegen P, Souffriau W, Van Oudheusden D. The orienteering problem: A survey[J]. European Journal of Operational Research, 2011, 209(1): 1-10.
+\bibitem{gunawan_2016_op} Gunawan A, Lau H C, Vansteenwegen P. Orienteering problem: A survey of recent variants, solution approaches and applications[J]. European Journal of Operational Research, 2016, 255(2): 315-332.
+\bibitem{li_2020_crlb} Li Y Y, Wang C C, Qi G Q, Sheng A D. Closed-form formula of Cramer--Rao lower bound for 3D TOA target localisation[J]. Electronics Letters, 2020, 56(1): 43-45.
+\bibitem{li_2002_tracking} Li D, Wong K D, Hu Y H, Sayeed A M. Detection, classification, and tracking of targets[J]. IEEE Signal Processing Magazine, 2002, 19(2): 17-29.
+\end{thebibliography}
+
+% === 附录 ===
+\begin{appendices}
+\input{sections/A_code}
+\end{appendices}
+
+\end{document}

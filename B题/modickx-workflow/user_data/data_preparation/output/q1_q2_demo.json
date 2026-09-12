@@ -1,0 +1,62 @@
+{
+  "q1_equilateral": {
+    "status": "polygon",
+    "n_vertices": 3,
+    "diameter": 1.0000000000134766,
+    "mec_radius": 0.5773502691948129,
+    "diameter_circle_covers": false,
+    "vertices": [
+      [
+        -0.0,
+        -0.0
+      ],
+      [
+        1.0,
+        -0.0
+      ],
+      [
+        0.5,
+        0.8660254038
+      ]
+    ]
+  },
+  "q1_two_wedges": {
+    "status": "polygon",
+    "n_vertices": 4,
+    "diameter": 9.877085164818205,
+    "mec_radius": 4.938542582409102,
+    "mec_center": [
+      0.060954429899999996,
+      0.060954429899999996
+    ]
+  },
+  "q2": {
+    "s": [
+      0.0,
+      0.0
+    ],
+    "bearing_deg": 0.0,
+    "theoretical_sector_rho_m": 750.1142460329307,
+    "c1": [
+      750.2285094687359,
+      -0.0
+    ],
+    "rho1": 750.2285094687356,
+    "R_core": 249.77149053126436,
+    "q_star": [
+      719.0070731523278,
+      634.1607723730604
+    ],
+    "J_star": 43.0312146778083,
+    "travel_s": 191.74264590433432,
+    "n_candidates": 191,
+    "layers": {
+      "A": 65,
+      "C": 19,
+      "B": 31,
+      "s": 1,
+      "refine": 75
+    },
+    "claim": "candidate_set_recommendation"
+  }
+}

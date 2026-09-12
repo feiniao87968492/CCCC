@@ -1,0 +1,47 @@
+\contentsline {section}{\numberline {一、}问题重述}{5}{section.1}%
+\contentsline {section}{\numberline {二、}问题分析}{8}{section.2}%
+\contentsline {section}{\numberline {三、}模型假设}{11}{section.3}%
+\contentsline {section}{\numberline {四、}符号说明}{12}{section.4}%
+\contentsline {section}{\numberline {五、}问题1：交会定位区域的直径与覆盖性}{14}{section.5}%
+\contentsline {subsection}{\numberline {5\,.\,1}建模对象}{14}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5\,.\,2}可行性、无界性与顶点枚举}{15}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5\,.\,3}直径算法}{15}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5\,.\,4}直径圆一般不能覆盖定位区域}{16}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5\,.\,5}与后问的衔接}{18}{subsection.5.5}%
+\contentsline {section}{\numberline {六、}问题2：第二检测点的选择与候选区域}{19}{section.6}%
+\contentsline {subsection}{\numberline {6\,.\,1}任务与“较好”的含义}{19}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6\,.\,2}第一点后的可行外包}{20}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6\,.\,3}排序指标 $J(q)$}{21}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6\,.\,4}候选区域}{22}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6\,.\,5}小结}{23}{subsection.6.5}%
+\contentsline {section}{\numberline {七、}问题3：全向源的在线定位与清除}{24}{section.7}%
+\contentsline {subsection}{\numberline {7\,.\,1}目标、信息集与完备性}{24}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7\,.\,2}七点发现覆盖}{24}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7\,.\,3}局部定位与 GREEDY\_FAST}{26}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7\,.\,4}非正式演练对照}{27}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7\,.\,5}正式测试结果}{29}{subsection.7.5}%
+\contentsline {section}{\numberline {八、}问题4：全向与定向混合源的检测与清除}{30}{section.8}%
+\contentsline {subsection}{\numberline {8\,.\,1}问题3不能原样搬来的原因}{30}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8\,.\,2}SQUARE81 覆盖命题}{30}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8\,.\,3}HEX37 覆盖命题}{31}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8\,.\,4}在线求解器}{33}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8\,.\,5}旧版失败与修复}{35}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8\,.\,6}覆盖层对照与寻路}{36}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8\,.\,7}非正式演练}{38}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8\,.\,8}正式测试结果}{38}{subsection.8.8}%
+\contentsline {section}{\numberline {九、}模型检验与敏感性}{39}{section.9}%
+\contentsline {subsection}{\numberline {9\,.\,1}问题1的几何不变量}{39}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9\,.\,2}问题2开发集}{40}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9\,.\,3}问题3策略消融}{40}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9\,.\,4}问题4求解器修复与留出}{41}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9\,.\,5}覆盖层与寻路}{41}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9\,.\,6}检验边界}{42}{subsection.9.6}%
+\contentsline {section}{\numberline {十、}模型评价与推广}{42}{section.10}%
+\contentsline {subsection}{\numberline {10\,.\,1}优点}{42}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10\,.\,2}缺点与未完成项}{43}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10\,.\,3}推广}{43}{subsection.10.3}%
+\contentsline {section}{参考文献}{44}{section*.22}%
+\contentsline {section}{附录 \numberline {A}程序说明与核心代码}{45}{appendix.1.A}%
+\contentsline {subsection}{\numberline {1\,.\,1}理论扇半径}{46}{subsection.1.A.1}%
+\contentsline {subsection}{\numberline {1\,.\,2}HEX37 覆盖半径与冻结路径}{46}{subsection.1.A.2}%
+\contentsline {subsection}{\numberline {1\,.\,3}光学方格边长}{46}{subsection.1.A.3}%

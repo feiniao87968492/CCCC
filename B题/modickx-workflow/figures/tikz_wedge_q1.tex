@@ -1,0 +1,71 @@
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta}
+\begin{document}
+\adjustbox{max width=\textwidth}{%
+\begin{tikzpicture}[scale=2.6, >=Stealth]
+  \def\R{2.35}
+  % observers
+  \coordinate (P1) at (-1.55, -0.95);
+  \coordinate (P2) at ( 1.55, -0.95);
+  % true source (unknown, for illustration of geometry only)
+  \coordinate (G)  at (0.10, 1.55);
+  % wedge rays: P1 toward ~75 deg and 73 deg band -> approx 72 and 78
+  \coordinate (A1) at ($(P1)+(2.9, 3.35)$);
+  \coordinate (B1) at ($(P1)+(1.35, 3.55)$);
+  \coordinate (A2) at ($(P2)+(-2.9, 3.35)$);
+  \coordinate (B2) at ($(P2)+(-1.35, 3.55)$);
+  % intersection quadrilateral of two closed wedges (schematic)
+  \coordinate (Q1) at (-0.72, 0.22);
+  \coordinate (Q2) at ( 0.78, 0.18);
+  \coordinate (Q3) at ( 0.62, 1.72);
+  \coordinate (Q4) at (-0.58, 1.78);
+
+  % Omega (source region, light fill)
+  \fill[fill={rgb,255:red,237;green,241;blue,245}, draw={rgb,255:red,140;green,154;blue,168}, dashed, line width=0.6pt]
+    (0,0.55) circle (2.05);
+  % wedges
+  \fill[fill={rgb,255:red,218;green,232;blue,252}, fill opacity=0.62]
+    (P1) -- (B1) -- (A1) -- cycle;
+  \fill[fill={rgb,255:red,218;green,232;blue,252}, fill opacity=0.62]
+    (P2) -- (B2) -- (A2) -- cycle;
+  \draw[blue!70!black, line width=0.9pt] (P1) -- (A1);
+  \draw[blue!70!black, line width=0.9pt] (P1) -- (B1);
+  \draw[blue!70!black, line width=0.9pt] (P2) -- (A2);
+  \draw[blue!70!black, line width=0.9pt] (P2) -- (B2);
+
+  % intersection R
+  \fill[fill={rgb,255:red,180;green,205;blue,230}, fill opacity=0.70]
+    (Q1) -- (Q2) -- (Q3) -- (Q4) -- cycle;
+  \draw[blue!70!black, line width=1.15pt] (Q1) -- (Q2) -- (Q3) -- (Q4) -- cycle;
+
+  % diameter of R: Q1--Q3
+  \draw[black, line width=1.05pt] (Q1) -- (Q3);
+  \coordinate (M) at ($(Q1)!0.5!(Q3)$);
+  \draw[gray!55, dashed, line width=0.6pt] (M) circle (1.01);
+  % Jung-style covering circle (smaller, through three vertices of an inscribed equilateral idea)
+  \coordinate (JC) at (0.05, 0.98);
+  \draw[red!70!black, line width=0.95pt] (JC) circle (0.82);
+
+  \fill[black] (P1) circle (1.6pt);
+  \fill[black] (P2) circle (1.6pt);
+  \fill[red!70!black] (Q1) circle (1.5pt);
+  \fill[red!70!black] (Q3) circle (1.5pt);
+  \fill[black] (Q2) circle (1.2pt);
+  \fill[black] (Q4) circle (1.2pt);
+
+  \draw[gray!60, thin] (P1) -- ++(-0.55, -0.42) node[below left, font=\footnotesize, text=black] {$p_1$};
+  \draw[gray!60, thin] (P2) -- ++( 0.55, -0.42) node[below right, font=\footnotesize, text=black] {$p_2$};
+  \draw[gray!60, thin] (Q1) -- ++(-0.55, -0.15) node[left, font=\footnotesize, text=black] {$R$};
+  \node[font=\footnotesize, text=black] at ($(Q1)!0.5!(Q3)+(0.28,-0.12)$) {$\mathrm{diam}(R)$};
+  \draw[gray!60, thin] (M) -- ++(1.15, -0.55) node[right, font=\footnotesize, text=black] {直径圆};
+  \draw[gray!60, thin] (JC) -- ++(-1.25, 0.15) node[left, font=\footnotesize, text=black] {Jung 圆};
+
+  \draw[blue!70!black, line width=0.7pt] (P1) -- ++(0.55, 0.12);
+  \node[font=\scriptsize, text=black] at ($(P1)+(0.72,0.28)$) {$\hat\theta\pm 1^\circ$};
+\end{tikzpicture}
+}%
+\end{document}

@@ -1,0 +1,96 @@
+{
+  "id": "e0d18a6d6476",
+  "template": "comp_cumcm",
+  "title": "国赛 (CUMCM) B题 - 当前工作区注入（跳过至写作）",
+  "status": "completed",
+  "current_step": "comp-compile-zh",
+  "source_workspace": "C:\\Users\\zty\\AppData\\Roaming\\Modickx\\workspaces\\e0d18a6d6476",
+  "copied_at": "2026-09-11 21:00:28",
+  "params": {
+    "competition": "cumcm",
+    "language": "zh",
+    "problem_id": "B",
+    "tools": "python",
+    "max_pages": 30,
+    "output_format": "pdf",
+    "flowchart_engine": "drawio",
+    "rich_mode": true,
+    "skip_improvement_loop": true,
+    "min_figures": "auto",
+    "min_tables": "auto",
+    "min_models": "auto",
+    "figure_style": "nature",
+    "injected_from": "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题",
+    "skip_completed_stages": [
+      "comp-prob-analysis",
+      "comp-modeling",
+      "comp-code"
+    ],
+    "resume_from": "paper-figure",
+    "_sub_steps_pruned": true
+  },
+  "steps": [
+    {
+      "step_order": 0,
+      "skill_name": "comp-prob-analysis",
+      "display_name": "赛题分析",
+      "status": "completed",
+      "started_at": "2026-09-11 16:36:29",
+      "completed_at": "2026-09-11 16:36:29"
+    },
+    {
+      "step_order": 1,
+      "skill_name": "comp-modeling",
+      "display_name": "建模求解",
+      "status": "completed",
+      "started_at": "2026-09-11 16:36:29",
+      "completed_at": "2026-09-11 16:36:29"
+    },
+    {
+      "step_order": 2,
+      "skill_name": "comp-code",
+      "display_name": "编程实现",
+      "status": "completed",
+      "started_at": "2026-09-11 16:36:29",
+      "completed_at": "2026-09-11 16:36:29"
+    },
+    {
+      "step_order": 3,
+      "skill_name": "paper-figure",
+      "display_name": "图表生成",
+      "status": "completed",
+      "started_at": "2026-09-11 16:38:48",
+      "completed_at": "2026-09-11 17:00:06"
+    },
+    {
+      "step_order": 4,
+      "skill_name": "paper-figure-drawio",
+      "display_name": "流程与架构图绘制",
+      "status": "completed",
+      "started_at": "2026-09-11 17:00:06",
+      "completed_at": "2026-09-11 17:44:27"
+    },
+    {
+      "step_order": 5,
+      "skill_name": "comp-paper-zh",
+      "display_name": "竞赛论文撰写",
+      "status": "completed",
+      "started_at": "2026-09-11 17:44:27",
+      "completed_at": "2026-09-11 19:31:02"
+    },
+    {
+      "step_order": 6,
+      "skill_name": "comp-compile-zh",
+      "display_name": "编译与合规检查",
+      "status": "completed",
+      "started_at": "2026-09-11 19:41:02",
+      "completed_at": "2026-09-11 21:00:28"
+    }
+  ],
+  "copy_exclusions": [
+    "nested .git",
+    "_templates",
+    "CJK fonts ttf/ttc",
+    "user_data/papers/*.pdf"
+  ]
+}
