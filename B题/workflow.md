@@ -1,7 +1,7 @@
 # Workflow
 
 ## Current focus
-Q4 local exploratory ablation in `experiments/q4_local/`: 16 arms x 400 fresh paired settings, 6400/6400 complete; 5208 sources cleared per arm. Best new local mean is LPC 515.618001 s versus same-cohort frozen V4 537.376003 s; walking -5.343%, probes -3.231%, all five subgroup means improve with 92/400 paired losses. Prior JSO_compact_dopt reruns at 513.488873 s; the LPC-minus-prior interval crosses zero. New local arms retain the frozen global planning rule and radius1950. Prior supporting-material package contains the earlier Q3 254.05 / Q4 529.29 results, not this new cohort. Official-simulator T/K remains empty.
+Modeling docs synced to current solvers: Q3 practice default JSO; Q4 live/frozen TRI25+V4; exploratory rounds recorded in `docs/当前算法与消融状态.md`. Official-simulator T/K remains empty.
 
 ## Checklist
 - [x] Q4 V4 offline holdout artifacts exist (`experiments/q4_efficiency/release_holdout100.*`)
@@ -33,11 +33,9 @@ None for delivery of the requested exploratory experiments. Adoption was not req
 Q4 frozen baseline: `feasible_baseline` (offline bounded-error geometry). New local experiments: `exploratory_analysis`, no baseline adoption. Official-simulator T/K is blocked.
 
 ## Next safe action
-Completed requested local ablation delivery in `experiments/q4_local/README.md` and primary400 report/tables, with independent review. Preserve the frozen baseline; any new experimental round should lock tuning on development settings and use fresh paired scenarios. Existing `支撑材料/` and `handoff/` refer to the earlier result package. Baseline adoption remains separate; do not fill 表1 with offline values.
+Use `docs/当前算法与消融状态.md` as the algorithm index. Preserve the Q4 frozen baseline; do not fill 表1. Supporting-material zip remains the 254/529 snapshot.
 
 ## Memory check
-Updated `memory.md`: user's local-strategy preference, persistent per-stop probe budgets, negative-RF retry constraints, LPC subgroup/individual tradeoffs, P attribution, C15 alternative and negative F/M results.
+Updated `memory.md`: algorithm-status index is `docs/当前算法与消融状态.md`; historical SQUARE81/HEX37/GREEDY_FAST notes are not the live entry.
 
-Q3 exploratory ablation completed in `experiments/q3_ablation/`: 4,200 paired
-offline runs, 420/420 complete scenes per arm. Evidence ceiling is
-`exploratory_analysis`; GREEDY_FAST remains the official mainline.
+Q3 JSO is the practice default after the 420-scene ablation and 20 official-practice games. GREEDY_FAST remains a selectable fallback. Evidence ceiling for ablation numbers is `exploratory_analysis`.

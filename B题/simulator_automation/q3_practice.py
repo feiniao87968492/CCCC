@@ -85,7 +85,7 @@ def parse_n_from_ui(text: str) -> int | None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Q3 official PRACTICE runner; never starts formal.")
-    parser.add_argument("--strategy", default="SAFE", choices=("SAFE", "FAST", "HYBRID", "ROBUST", "GREEDY", "GREEDY_FAST", "GREEDY_ABORT", "JSO"))
+    parser.add_argument("--strategy", default="JSO", choices=("SAFE", "FAST", "HYBRID", "ROBUST", "GREEDY", "GREEDY_FAST", "GREEDY_ABORT", "JSO"))
     parser.add_argument("--source-budget-s", type=float, default=0,
                         help="GREEDY_FAST only: per-source virtual time cap; 0 retains full fallback")
     parser.add_argument("--team", default="202611102016")

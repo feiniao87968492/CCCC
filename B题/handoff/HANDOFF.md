@@ -1,8 +1,10 @@
 # CUMCM 2026 B 题转交说明（Q3 主线 + Q4 演练）
 
-日期：2026-09-11 晚。队号默认 `202611102016`。
+日期：2026-09-11 晚（本文是当时转交包）。队号默认 `202611102016`。
 
-本包转交 **Q1–Q2 离线代码、Q3 在线主线 GREEDY_FAST、Q4 $P_4$ 建模与演练 runner**。不含正式测试、不含模拟器安装包、不含加密 `.jlog`。
+**当前算法已更新：** Q3 演练默认 JSO；Q4 演练默认 TRI25+V4。总览 `docs/当前算法与消融状态.md`。下文保留 09-11 包内容。
+
+本包转交 **Q1–Q2 离线代码、当时 Q3 主线 GREEDY_FAST、Q4 $P_4$ 建模与演练 runner**。不含正式测试、不含模拟器安装包、不含加密 `.jlog`。
 
 ---
 
@@ -32,9 +34,15 @@ evidence/             近期明文 summary + requests.jsonl
 
 ---
 
-## 3. 问题3：主线 GREEDY_FAST
+## 3. 问题3：当时主线 GREEDY_FAST
 
-确认文档：`docs/Q3主线-GREEDY_FAST.md`。
+确认文档：`docs/Q3主线-GREEDY_FAST.md`（现已改为指向 JSO）。当前推荐：
+
+```powershell
+.\simulator_automation\run_q3_practice.ps1 -Strategy JSO
+```
+
+当时入口：
 
 ```powershell
 .\simulator_automation\run_q3_practice.ps1 -Strategy GREEDY_FAST

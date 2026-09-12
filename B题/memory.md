@@ -10,6 +10,7 @@
 
 ## Pitfalls
 
+- Q3/Q4 algorithm status lives in `docs/当前算法与消融状态.md`. Historical SQUARE81/HEX37/GREEDY_FAST notes are not the live entry.
 - Git HEAD is not a reproducibility anchor while TRI25/V4 files are uncommitted. Freeze working-tree SHA256 from `experiments/q4_efficiency/release_holdout100.meta.json`.
 - Practice entry defaults to TRI25 + ROUTE_ADAPTIVE_V4, but module env fallbacks remain `SQUARE81` / `OLD_HEX37`. Offline benches must pass `--cover` / `--route` explicitly.
 - Holdout mean T/K is an average: 3/100 paired scenes are slower (worst +48.26 s/source). Do not claim per-scene path optimality.
@@ -43,6 +44,7 @@
 
 ## User Preferences
 
+- 2026-09-12: user explicitly permits aggressive Q4 strategies and extreme-case cost regression, prioritizing general-case efficiency while requiring complete clearing. New experiments rank the declared general cohort, report stress separately, and never omit stress failures or replace the frozen baseline automatically.
 - 2026-09-12: user requested more Q4 ablations emphasizing local decisions and giving less weight to global-route optimization. Isolated local experiments are authorized; frozen-baseline adoption was not requested.
 - 2026-09-12: user requested additional Q4 algorithm families and tuning, learning from Q3 J+S+O; isolated q4_transfer experiments are authorized without baseline adoption.
 

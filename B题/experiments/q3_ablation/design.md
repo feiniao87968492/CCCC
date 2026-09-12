@@ -5,8 +5,10 @@
 The user requested at least three aggressive algorithms reducing travel time and
 measurement count, implemented and compared in a large ablation like the supplied
 table. This authorizes this isolated offline experiment. It does not promote a
-candidate to the official Q3 mainline. GREEDY_FAST with source_budget_s=0 remains
-the mainline. Q4 files and its frozen baseline are outside this experiment.
+candidate to the official Q3 mainline. At design freeze, GREEDY_FAST with
+source_budget_s=0 was the mainline. After this experiment, practice default
+became JSO (`docs/当前算法与消融状态.md`); this file does not rewrite that later
+entry change. Q4 files and its frozen baseline are outside this experiment.
 
 This is exploratory Q3 experimental work, not a formal v4 improvement round:
 there is no frozen Q3 per-question baseline or Stage 7 sensitivity report yet.

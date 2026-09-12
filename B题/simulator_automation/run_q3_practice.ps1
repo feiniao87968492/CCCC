@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('SAFE','FAST','HYBRID','ROBUST','GREEDY','GREEDY_FAST','GREEDY_ABORT','JSO')][string]$Strategy = 'SAFE',
+    [ValidateSet('SAFE','FAST','HYBRID','ROBUST','GREEDY','GREEDY_FAST','GREEDY_ABORT','JSO')][string]$Strategy = 'JSO',
     [string]$Team = '202611102016',
     [int]$Port = 2026,
     [ValidateRange(0,360000)][double]$SourceBudgetS = 0

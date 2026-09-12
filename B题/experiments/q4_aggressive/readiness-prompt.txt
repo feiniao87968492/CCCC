@@ -1,0 +1,41 @@
+Perform an independent skeptical implementation-readiness review of the new
+Q4 aggressive local experiment. Read-only work; do not implement, run tests or
+simulations, modify files, spawn agents or ask the user to reconfirm the task.
+The caller saves your final Markdown response as implementation-readiness.md.
+Review the current design including its post-critique clarifications.
+
+First read experiments/q4_aggressive/reviews/critique.md. If missing, stop.
+Then read experiments/q4_aggressive/design.md and acceptance.md;
+experiments/q4_local/reviews/primary-validation.md; memory.md;
+claims/baseline-q4.md; decisions/decision-improvement-round-1.md.
+Inspect only relevant integration hooks in experiments/q4_local/q4_local_policies.py,
+experiments/q4_transfer/q4_transfer_policies.py,
+experiments/q4_ablation/q4_ablation_policies.py,
+simulator_automation/q4_runner.py and src/q4_adaptive.py.
+Read C:/Users/zty/.agents/skills/math-modeling-v4/references/
+subagent-improvement-skepticism.md, protocol-subagent-delegation.md,
+stage-5-solution-implementation.md and protocol-readiness-gate.md;
+read ../schemas/reviewer-output-schema.md relative to that references directory.
+Only list required reads you actually opened; disclose any missing prior context.
+
+User explicitly authorized aggressive isolated algorithms prioritizing general
+case efficiency, with full clearing required and stress cost regression allowed.
+No baseline adoption, official score or higher claim is requested. Do not invent
+a permission blocker from this already-authorized scope; identify actual design
+or implementation acceptance blockers. Parent owns gate handling and decisions.
+
+Address every F-ID in the critique. Pay particular attention to complete optical
+execution, survival mass cost arithmetic, legal B viewpoints, G budget charging,
+safe endpoint callbacks, R bounded fallback, H/N retries and control configuration.
+Clarify whether issues are unresolved design blockers or future test/audit checks.
+Performance gains are hypotheses. General350 plus stress50 is the declared primary
+design; all400 must finish to rank, and both cohort metrics must be reported.
+
+Return ONLY a concise Markdown review, at most about200 lines, with title and
+these exact ## sections in order: Reviewed scope; Findings; Blocking risks;
+Non-blocking warnings; Required follow-up; Reviewer recommendation;
+Required reads referenced; Confidence; Forbidden-behavior self-check.
+Each finding has Type, Severity, Evidence reference, Recommended action.
+Any blocker also includes Target proposal, Failure mode, Required mitigation.
+Verdict: PASS_WITH_WARNINGS or BLOCKED. Confidence begins high/medium/low.
+Do not clear gates, confirm user decisions or mark work complete yourself.
