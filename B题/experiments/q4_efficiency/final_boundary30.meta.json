@@ -1,0 +1,29 @@
+{
+  "arguments": {
+    "output": "experiments\\q4_efficiency\\final_boundary30.csv",
+    "cases": "30",
+    "seed_start": "3000",
+    "cover": "TRI25",
+    "route": "ROUTE_ADAPTIVE_V4",
+    "snapshot": "False",
+    "error_mode": "endpoint",
+    "sources": "boundary"
+  },
+  "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+  "sha256": {
+    "src\\q4_localize.py": "bcd28501792bf4464d79e92baaf11d89f7b115e00a33bce7eaa023417d781546",
+    "src\\q4_state.py": "bd0393eed1dc9ea6fd609ec8b3c51fde042663fe804fb6c71ebfcf1af98b1f0a",
+    "src\\q4_policy.py": "f69d1803bbb1e3c88b2d59cf30c683bd90f984d4551839197cacd649c2b38b8c",
+    "src\\q4_adaptive.py": "161892b786ca74332c0152a9b7b809bdb4ae0adb8eed933891b276c41efbac8e",
+    "simulator_automation\\q4_runner.py": "ac9360c8971b8505020eed08c65c99bb84cb5806b5ea417623f76a6bb7571f30",
+    "experiments\\q4_efficiency\\bench.py": "b6e514841b815de94c3bc4b1840965b60dd25f67b7a4f47b458ad1a4e689cb16",
+    "src\\q4_cover.py": "de30f041252b1d98db367ebf3d13e2fae9e89ceb86366a12eed2b2b75a23616a",
+    "src\\q4_certificate.py": "421e25e385a9d5581f0b835e10e429827902d192221f1aba7194a317ec77c032",
+    "src\\geometry.py": "0262fc60dec3c71e89103a35a34631b553b2299f489bea6183998e867f155294",
+    "src\\params.py": "5969d4c943a8dabe763ed855cec0f15877ad24068ddadf81c6b8a1c83abad154",
+    "data_preparation\\parameters.csv": "aded0d7b20628700a2e3aae19290d870603b2fc5a4db316cf4b1c0cbd1cf2c96",
+    "tests\\test_q4_regressions.py": "821323d575ce4e1f0e551f5dc0d3f9fef0c8d96262fb5786a94eb1b59c42da4d",
+    "tests\\test_q4_geomsim.py": "f54193dbfb69633fff290216b1b22f9c5765b64dfda0d734bebce507b6c33f2b"
+  },
+  "source": "offline bounded-error geometry; not official practice"
+}

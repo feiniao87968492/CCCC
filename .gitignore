@@ -34,3 +34,7 @@ Jammers-simulator-full-win64.7z
 B题/papers/*.pdf
 B题/papers/_land_*.html
 B题/modickx_legacy/user_data/*.pdf
+
+# Offline experiment action traces; keep CSV/JSON summaries in git
+**/traces/
+**/events/

@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "status": "complete",
+  "claims": [
+    {
+      "claim_id": "c-assume-bounded-error",
+      "claim_kind": "assumption",
+      "claim": "示向度误差为有界闭区间正负1度，不引入未知概率分布。",
+      "evidence": [
+        "background:bg-bearing",
+        "data:parameters.csv#target_region_radius"
+      ]
+    },
+    {
+      "claim_id": "c-param-omega",
+      "claim_kind": "parameter",
+      "claim": "源位置约束圆半径为1800米。",
+      "evidence": [
+        "data:parameters.csv#target_region_radius",
+        "background:bg-omega"
+      ]
+    },
+    {
+      "claim_id": "c-model-wedge",
+      "claim_kind": "model",
+      "claim": "问题1定位区域由各检测点前向正负1度闭角域的交集构成。",
+      "evidence": [
+        "background:bg-bearing",
+        "equation:eq-wedge"
+      ]
+    },
+    {
+      "claim_id": "c-method-diameter",
+      "claim_kind": "method",
+      "claim": "多边形定位区域直径取顶点最远点对距离。",
+      "evidence": [
+        "data:q1_q2_demo.json#q1_equilateral.diameter_circle_covers",
+        "equation:eq-diam"
+      ]
+    },
+    {
+      "claim_id": "c-result-q1-cover",
+      "claim_kind": "result",
+      "claim": "以定位区域直径为直径的圆一般不能覆盖该区域；等边三角形反例中直径圆覆盖判定为否。",
+      "evidence": [
+        "data:q1_q2_demo.json#q1_equilateral.diameter_circle_covers",
+        "figure:fig-q1-diameter",
+        "table:tab-q1-demo"
+      ]
+    },
+    {
+      "claim_id": "c-model-q2",
+      "claim_kind": "model",
+      "claim": "问题2以最坏剩余覆盖半径J(q)评价第二检测点，搜索中心为第一点扇形可行域的最小覆盖圆而非固定极坐标网格。",
+      "evidence": [
+        "data:q1_q2_demo.json#q2.theoretical_sector_rho_m",
+        "equation:eq-sector-rho"
+      ]
+    },
+    {
+      "claim_id": "c-result-q2-rho",
+      "claim_kind": "result",
+      "claim": "理论扇形覆盖半径为1500/(2 cos 1°)≈750.114米。",
+      "evidence": [
+        "data:q1_q2_demo.json#q2.theoretical_sector_rho_m",
+        "equation:eq-sector-rho"
+      ]
+    },
+    {
+      "claim_id": "c-method-q3",
+      "claim_kind": "method",
+      "claim": "问题3主线策略为GREEDY_FAST：发现后优先确定清除，保留SAFE兜底，SourceBudgetS=0。",
+      "evidence": [
+        "run:q3-greedy-fast.md#mean_T_over_K"
+      ]
+    },
+    {
+      "claim_id": "c-result-q3-341",
+      "claim_kind": "result",
+      "claim": "问题3官方演练中GREEDY_FAST在10局全部清除，平均T/K为341秒，区间244至450秒。",
+      "evidence": [
+        "run:q3-greedy-fast.md#mean_T_over_K",
+        "figure:fig-q3-practice-tk",
+        "table:tab-q3-practice"
+      ]
+    },
+    {
+      "claim_id": "c-model-hex37",
+      "claim_kind": "model",
+      "claim": "问题4发现层采用边长800米的三角晶格HEX37，覆盖半径为800/√3，用于未知朝向下的射频可检测证书。",
+      "evidence": [
+        "data:q4-cover.md#HEX37",
+        "equation:eq-hex-delta"
+      ]
+    },
+    {
+      "claim_id": "c-result-q4-3030",
+      "claim_kind": "result",
+      "claim": "HEX37离线配对种子0至29共30组全部全清且完成无源证书，平均T/K为836.91秒，对照SQUARE81的1313.16秒。",
+      "evidence": [
+        "run:paired_summary.json#hex37_all_cleared",
+        "run:paired_summary.json#T_over_K.hex37_mean",
+        "figure:fig-q4-paired-tk",
+        "table:tab-q4-offline"
+      ]
+    },
+    {
+      "claim_id": "c-result-q4-practice",
+      "claim_kind": "result",
+      "claim": "问题4演练最新PREFIX_A局20260911-231856-q4-p4的T/K为822.38秒，K/N=11/11并完成证书。",
+      "evidence": [
+        "run:practice_results.md#20260911-231856-q4-p4.T_over_K",
+        "table:tab-q4-practice"
+      ]
+    },
+    {
+      "claim_id": "c-val-q1",
+      "claim_kind": "validation",
+      "claim": "问题1直径圆覆盖结论由等边三角形解析反例与离线几何演示共同检验。",
+      "evidence": [
+        "data:q1_q2_demo.json#q1_equilateral.diameter_circle_covers"
+      ]
+    },
+    {
+      "claim_id": "c-val-q3",
+      "claim_kind": "validation",
+      "claim": "问题3有效性用官方演练10局全清率与T/K检验，不是正式测试。",
+      "evidence": [
+        "run:q3-greedy-fast.md#mean_T_over_K"
+      ]
+    },
+    {
+      "claim_id": "c-val-q4",
+      "claim_kind": "validation",
+      "claim": "问题4有效性用离线30/30全清证书与演练全清证书检验。",
+      "evidence": [
+        "run:paired_summary.json#hex37_all_cleared",
+        "run:practice_results.md#20260911-231856-q4-p4.T_over_K"
+      ]
+    },
+    {
+      "claim_id": "c-stab-cover",
+      "claim_kind": "stability",
+      "claim": "将覆盖由SQUARE81改为HEX37后，30组配对仍保持30/30全清，平均T/K下降36.27%。",
+      "evidence": [
+        "run:paired_summary.json#T_over_K.hex37_mean",
+        "run:paired_summary.json#hex37_all_cleared"
+      ]
+    },
+    {
+      "claim_id": "c-lim-official",
+      "claim_kind": "limitation",
+      "claim": "问题3与问题4正式测试尚未授权执行，表1正式成绩缺失，演练T/K不得填入正式表。",
+      "evidence": [
+        "run:q3-greedy-fast.md#mean_T_over_K",
+        "table:tab-formal-missing"
+      ]
+    },
+    {
+      "claim_id": "c-conc",
+      "claim_kind": "conclusion",
+      "claim": "四问均给出可执行模型与算法；直径圆不能覆盖，GREEDY_FAST演练10/10且平均T/K为341秒，HEX37离线30/30。",
+      "evidence": [
+        "data:q1_q2_demo.json#q1_equilateral.diameter_circle_covers",
+        "run:q3-greedy-fast.md#mean_T_over_K",
+        "run:paired_summary.json#hex37_all_cleared"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "source": "synthetic offline Q3 only",
+  "command": [
+    "B\u9898/experiments/q3_ablation/run_ablation.py",
+    "--split",
+    "pilot",
+    "--workers",
+    "4"
+  ],
+  "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "variants": [
+    "ORIGINAL",
+    "COMPACT",
+    "J",
+    "S",
+    "O",
+    "JS",
+    "JO",
+    "SO",
+    "JSO",
+    "JSO_ALLSCAN"
+  ],
+  "scenes": 21,
+  "code_sha256": {
+    "experiments\\q3_ablation\\environment.py": "36b90a2217d7ec37d281cbdcf695ed1bcc4e0c8ce013228ba14a48f3e006aa52",
+    "experiments\\q3_ablation\\policies.py": "1dd839e1eed11fae6a8c77609434c8bf496c59e2f4de99dec839d24c9c6a3ed4",
+    "experiments\\q3_ablation\\run_ablation.py": "0abb1e63d86728310c7d308bb6f7ab52f7076318d7a450811daf85ba880baaff",
+    "data_preparation\\parameters.csv": "aded0d7b20628700a2e3aae19290d870603b2fc5a4db316cf4b1c0cbd1cf2c96",
+    "experiments\\q3_ablation\\design.md": "4f0e8d49ea7a2b005e0b3a0fa67786585cd4bddcb16654f9dfa4ec40242367af",
+    "simulator_automation\\q3_abort_safe.py": "303352bbff26411fd4bf48b21faeabbc7b0d4c8823f31dc9e94c860b2aab78f7",
+    "simulator_automation\\q3_fast_mode.py": "7be8c4bcc018ee7c64149d886ba15839aab15f9aaaedce201dd66da42571ab44",
+    "simulator_automation\\q3_greedy_policy.py": "efcfb231446e33202656cf617b08e92344cd6a55efc28075348ccc5fb6674b51",
+    "simulator_automation\\q3_practice.py": "da186a4999c2f3eef77abb06ac6773290395e6a036dae1e8be065c0e33db52e2",
+    "simulator_automation\\q3_runner.py": "785c6ab51992e6d110591259420435eb387a45d55b2a2c077d622e661e09f470",
+    "simulator_automation\\q3_safe.py": "da75eb1397b8660684e42f950c89d5124e49de15e9df58c8ba4c9f03bc66cdb7",
+    "simulator_automation\\q3_state.py": "136e8ab980aac65b04f431fca06ce4ae9107f81f3545b051c88f313b57307463",
+    "src\\geometry.py": "0262fc60dec3c71e89103a35a34631b553b2299f489bea6183998e867f155294",
+    "src\\localization.py": "81831621ea21f1f28a4e15272bdc19aba6e8fe8f2c43e032e73a41db6705a1e2",
+    "src\\active.py": "015093657ed32ed5e5160269a5e25b7ecc710484b8122a3a892418edc4a1baf9",
+    "src\\params.py": "5969d4c943a8dabe763ed855cec0f15877ad24068ddadf81c6b8a1c83abad154"
+  },
+  "scenes_sha256": "444a9789759fcb2b9f1a738d998c0d74b826be18e43073c5cede7cad281c05a9",
+  "elapsed_s": 70.40647099999478,
+  "changed_inputs": [],
+  "rows_sha256": "04e1ab67a1fae12c385e27fc623e3923ee3f635ea8ba43a42ea442976212db28"
+}

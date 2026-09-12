@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "status": "complete",
+  "background_ledger": [
+    {
+      "background_id": "bg-omega",
+      "claim": "干扰源分布在半径1800米的已知圆形目标区域内，机器狗定位清除须在该区域内完成精准定位阶段。",
+      "source_type": "problem_statement",
+      "status": "confirmed",
+      "scope": "problem_definition",
+      "locator": "B题.pdf 第1页",
+      "evidence": [],
+      "derivation": "",
+      "relevance": "确定搜索宇宙与源位置约束，而不是机器狗禁出区。",
+      "retrieval": {
+        "mode": "user_provided",
+        "query": "",
+        "accessed_at": "2026-09-10"
+      }
+    },
+    {
+      "background_id": "bg-task",
+      "claim": "任务是自动定位并清除全部干扰源，在全部清除前提下使虚拟任务时间尽可能短。",
+      "source_type": "problem_statement",
+      "status": "confirmed",
+      "scope": "problem_definition",
+      "locator": "B题.pdf 问题3",
+      "evidence": [],
+      "derivation": "",
+      "relevance": "规定先全清、再比时间的决策顺序。",
+      "retrieval": {
+        "mode": "user_provided",
+        "query": "",
+        "accessed_at": "2026-09-10"
+      }
+    },
+    {
+      "background_id": "bg-n",
+      "claim": "问题3与问题4中干扰源个数N属于10到16，在线未知；正式测试不返回N。",
+      "source_type": "problem_statement",
+      "status": "confirmed",
+      "scope": "problem_definition",
+      "locator": "B题.pdf 问题3-4、附件2",
+      "evidence": [],
+      "derivation": "",
+      "relevance": "禁止把清满10个当作结束条件。",
+      "retrieval": {
+        "mode": "user_provided",
+        "query": "",
+        "accessed_at": "2026-09-10"
+      }
+    },
+    {
+      "background_id": "bg-bearing",
+      "claim": "有信号时测向机返回示向度，误差界为闭区间正负1度，接口给出两位小数。",
+      "source_type": "problem_statement",
+      "status": "confirmed",
+      "scope": "problem_definition",
+      "locator": "B题.pdf 附录2、附件2 §2.3",
+      "evidence": [],
+      "derivation": "",
+      "relevance": "交会定位必须使用有界角域而不是精确射线。",
+      "retrieval": {
+        "mode": "user_provided",
+        "query": "",
+        "accessed_at": "2026-09-10"
+      }
+    },
+    {
+      "background_id": "bg-data-sessions",
+      "claim": "附件接口样例清洗后得到2个会话、12条有效动作记录，其中direction 2条、no_signal 4条，未发现结构性错误。",
+      "source_type": "supplied_data",
+      "status": "derived",
+      "scope": "background_context",
+      "locator": "data_preparation/output/audit_summary.json",
+      "evidence": [
+        "data:audit_summary.json#clean_rows"
+      ],
+      "derivation": "由 prepare.py 对附件1提取的请求记录做严格JSON解析与字段校验后汇总。",
+      "relevance": "说明官方接口观测形态，不能当作问题3/4成绩。",
+      "retrieval": {
+        "mode": "user_provided",
+        "query": "",
+        "accessed_at": "2026-09-10"
+      }
+    },
+    {
+      "background_id": "bg-radius",
+      "claim": "参数表冻结目标圆半径1800米、接收半径1000至1500米、示向误差1度、清除半径20米。",
+      "source_type": "supplied_data",
+      "status": "confirmed",
+      "scope": "background_context",
+      "locator": "data_preparation/parameters.csv",
+      "evidence": [
+        "data:parameters.csv#target_region_radius"
+      ],
+      "derivation": "直接读取冻结参数表28项，不另改数。",
+      "relevance": "全文几何与计时常数的唯一数值来源。",
+      "retrieval": {
+        "mode": "user_provided",
+        "query": "",
+        "accessed_at": "2026-09-10"
+      }
+    }
+  ],
+  "background_extension_not_applicable_reason": ""
+}

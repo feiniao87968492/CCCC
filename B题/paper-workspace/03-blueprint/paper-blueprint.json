@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "status": "complete",
+  "subproblem_mappings": [
+    {
+      "subproblem": "问题1：交会多边形直径与直径圆覆盖",
+      "data": [
+        "data:q1_q2_demo.json#q1_equilateral.diameter_circle_covers"
+      ],
+      "model_or_algorithm": "前向楔半平面交集与顶点最远点对直径",
+      "output": [
+        "table:tab-q1-demo",
+        "figure:fig-q1-diameter"
+      ],
+      "validation": "data:q1_q2_demo.json#q1_equilateral.diameter_circle_covers",
+      "section": "模型建立 / 算法与求解结果"
+    },
+    {
+      "subproblem": "问题2：第二检测点策略与候选区",
+      "data": [
+        "data:q1_q2_demo.json#q2.theoretical_sector_rho_m"
+      ],
+      "model_or_algorithm": "最坏剩余覆盖半径J(q)分层候选",
+      "output": [
+        "equation:eq-sector-rho"
+      ],
+      "validation": "data:q1_q2_demo.json#q2.theoretical_sector_rho_m",
+      "section": "模型建立 / 算法与求解结果"
+    },
+    {
+      "subproblem": "问题3：全向在线搜索定位清除",
+      "data": [
+        "run:q3-greedy-fast.md#mean_T_over_K"
+      ],
+      "model_or_algorithm": "GREEDY_FAST 发现后确定清除加SAFE兜底",
+      "output": [
+        "table:tab-q3-practice",
+        "figure:fig-q3-practice-tk"
+      ],
+      "validation": "run:q3-greedy-fast.md#mean_T_over_K",
+      "section": "算法与求解结果 / 验证与检验"
+    },
+    {
+      "subproblem": "问题4：全向定向混合覆盖清除",
+      "data": [
+        "run:paired_summary.json#hex37_all_cleared",
+        "run:practice_results.md#20260911-231856-q4-p4.T_over_K"
+      ],
+      "model_or_algorithm": "HEX37证书网格加累计楔形定位与光学兜底",
+      "output": [
+        "table:tab-q4-offline",
+        "figure:fig-q4-hex37",
+        "table:tab-formal-missing"
+      ],
+      "validation": "run:paired_summary.json#hex37_all_cleared",
+      "section": "算法与求解结果 / 验证与检验"
+    }
+  ]
+}

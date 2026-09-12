@@ -1,0 +1,58 @@
+{
+  "train30": {
+    "cases": 30,
+    "improved": 30,
+    "worst_delta_s": -14.433521861330064,
+    "drops_percent": {
+      "T_over_K": 26.065107953939524,
+      "T": 25.890899636448992,
+      "move_m": 28.46429672810854,
+      "refine_no_signal": 64.20118343195267,
+      "discovery_no_signal": 21.71912832929782
+    }
+  },
+  "holdout100": {
+    "cases": 100,
+    "improved": 97,
+    "worst_delta_s": 48.260035145791505,
+    "drops_percent": {
+      "T_over_K": 29.61450788762422,
+      "T": 29.36577630542512,
+      "move_m": 32.02966361290327,
+      "refine_no_signal": 66.79035250463822,
+      "discovery_no_signal": 22.54141047609448
+    }
+  },
+  "boundary30": {
+    "cases": 30,
+    "improved": 30,
+    "worst_delta_s": -101.86424375374366,
+    "drops_percent": {
+      "T_over_K": 26.075258409253177,
+      "T": 26.25710478587321,
+      "move_m": 25.294540589243542,
+      "refine_no_signal": 33.26315789473685,
+      "discovery_no_signal": 29.26496658939043
+    }
+  },
+  "tri25_certificate": {
+    "valid": true,
+    "n_points": 25,
+    "polygon_sides": 128,
+    "max_distance_m": 943.0121947375769,
+    "hull_margin_m": 17.74943008678929,
+    "triangles_checked": 36
+  },
+  "tri25_route": {
+    "mode": "TRI25",
+    "n_points": 25,
+    "total_length": 19032.38903596451,
+    "max_step": 986.661898748943,
+    "n_adj_step": 13,
+    "step": 920.0
+  },
+  "seven_task_route_median_s": {
+    "baseline": 0.059453150010085665,
+    "dp": 0.0007269000052474439
+  }
+}

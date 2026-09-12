@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "runs": 40,
+  "variants": 20,
+  "event_hash_matches": 40,
+  "scenario_hash_matches": 40,
+  "metric_mismatches": 0,
+  "replay_path": "../replay40",
+  "primary_results_sha256": "d4003821eb37157b0df093a55eb2d68db3d0485f59b77b9cd9e975ec02bd1321",
+  "replay_results_sha256": "d7e0a091a165586704de82245bbecaa0fa59e3f2068f55fd009901b3dc36e461"
+}

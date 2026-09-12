@@ -1,0 +1,6 @@
+cohort,cases,full_success,mean_T_over_K,mean_movement_s,mean_n_measure,source_stem
+mixed_endpoint_holdout,100,100,517.5842931731096,4948.471249650514,279.73,experiments/q4_efficiency/release_holdout100
+mixed_smooth_development,30,30,489.7928667317867,4967.4834140308,268.06666666666666,experiments/q4_efficiency/release30
+boundary_endpoint,30,30,583.8610228024756,5291.001173331535,387.8666666666667,experiments/q4_efficiency/release_boundary30
+directional_endpoint,30,30,550.4069560674575,5193.812831663433,299.5,experiments/q4_efficiency/release_directional30
+omni_endpoint,30,30,475.1409080301444,4603.272844601179,248.96666666666667,experiments/q4_efficiency/release_omni30

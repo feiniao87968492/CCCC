@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "workflow": "mcm-paper-writer",
+  "workflow_owner": "skill",
+  "mcp_required": false,
+  "mcp_role": "optional manuscript validation, bounded LaTeX export, and compilation",
+  "mode": "full-paper",
+  "workspace": "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\paper-workspace",
+  "source_root": "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题",
+  "allowed_output_roots": [
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\paper-workspace",
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\paper-output"
+  ],
+  "source_snapshot": {
+    "file_count": 1192,
+    "fingerprint": "3fb6385b67e9df50054026200cfebae4b3f5672262fb04d694397326f0ea1e41"
+  },
+  "competition": "CUMCM",
+  "year": "2026",
+  "problem": "B",
+  "profile": "cumcm-cn",
+  "created_at": "2026-09-11T15:43:10+00:00",
+  "updated_at": "2026-09-11T15:56:36+00:00",
+  "stages": {
+    "intake": {
+      "status": "complete",
+      "artifact": "00-intake/materials-index.json",
+      "supplementary_artifacts": [],
+      "note": "已完成只读材料扫描；分类仍需在写作前复核。",
+      "updated_at": "2026-09-11T15:43:10+00:00"
+    },
+    "background": {
+      "status": "complete",
+      "artifact": "01-background/background-ledger.json",
+      "supplementary_artifacts": [
+        "01-background/background-ledger.json"
+      ],
+      "note": "题面与附件清洗观察已写入 manuscript background_ledger",
+      "updated_at": "2026-09-11T15:56:34+00:00"
+    },
+    "calibration": {
+      "status": "skipped",
+      "artifact": "02-calibration/template-calibration-profile.json",
+      "supplementary_artifacts": [
+        "02-calibration/template-calibration-profile.json"
+      ],
+      "note": "计划禁止范本校准与 Darwin 优化",
+      "updated_at": "2026-09-11T15:56:34+00:00"
+    },
+    "blueprint": {
+      "status": "complete",
+      "artifact": "03-blueprint/paper-blueprint.json",
+      "supplementary_artifacts": [
+        "03-blueprint/paper-blueprint.json"
+      ],
+      "note": "Q1-Q4 子问题映射完成",
+      "updated_at": "2026-09-11T15:56:35+00:00"
+    },
+    "evidence": {
+      "status": "complete",
+      "artifact": "04-evidence/claim-evidence-matrix.json",
+      "supplementary_artifacts": [
+        "04-evidence/claim-evidence-matrix.json"
+      ],
+      "note": "主张绑定冻结 data/run SHA-256",
+      "updated_at": "2026-09-11T15:56:35+00:00"
+    },
+    "drafting": {
+      "status": "complete",
+      "artifact": "05-manuscript/manuscript.json",
+      "supplementary_artifacts": [
+        "05-manuscript/manuscript.json"
+      ],
+      "note": "manuscript.json validate status=ready",
+      "updated_at": "2026-09-11T15:56:36+00:00"
+    },
+    "review": {
+      "status": "complete",
+      "artifact": "06-review/quality-report.json",
+      "supplementary_artifacts": [
+        "06-review/quality-report.json"
+      ],
+      "note": "内容门通过；Q10 因无 xelatex 阻断 PDF",
+      "updated_at": "2026-09-11T15:56:36+00:00"
+    },
+    "delivery": {
+      "status": "blocked",
+      "artifact": "07-delivery/delivery-manifest.json",
+      "supplementary_artifacts": [
+        "07-delivery/delivery-manifest.json"
+      ],
+      "note": "已导出 LaTeX；XeLaTeX 不可用故无 PDF",
+      "updated_at": "2026-09-11T15:56:36+00:00"
+    }
+  },
+  "blocking_items": [],
+  "history": [
+    {
+      "at": "2026-09-11T15:43:10+00:00",
+      "event": "workspace_initialized",
+      "note": "能力工作区已创建，源文件夹保持只读。"
+    },
+    {
+      "at": "2026-09-11T15:56:34+00:00",
+      "event": "stage_marked",
+      "stage": "background",
+      "status": "complete",
+      "note": "题面与附件清洗观察已写入 manuscript background_ledger"
+    },
+    {
+      "at": "2026-09-11T15:56:34+00:00",
+      "event": "stage_marked",
+      "stage": "calibration",
+      "status": "skipped",
+      "note": "计划禁止范本校准与 Darwin 优化"
+    },
+    {
+      "at": "2026-09-11T15:56:35+00:00",
+      "event": "stage_marked",
+      "stage": "blueprint",
+      "status": "complete",
+      "note": "Q1-Q4 子问题映射完成"
+    },
+    {
+      "at": "2026-09-11T15:56:35+00:00",
+      "event": "stage_marked",
+      "stage": "evidence",
+      "status": "complete",
+      "note": "主张绑定冻结 data/run SHA-256"
+    },
+    {
+      "at": "2026-09-11T15:56:36+00:00",
+      "event": "stage_marked",
+      "stage": "drafting",
+      "status": "complete",
+      "note": "manuscript.json validate status=ready"
+    },
+    {
+      "at": "2026-09-11T15:56:36+00:00",
+      "event": "stage_marked",
+      "stage": "review",
+      "status": "complete",
+      "note": "内容门通过；Q10 因无 xelatex 阻断 PDF"
+    },
+    {
+      "at": "2026-09-11T15:56:36+00:00",
+      "event": "stage_marked",
+      "stage": "delivery",
+      "status": "blocked",
+      "note": "已导出 LaTeX；XeLaTeX 不可用故无 PDF"
+    }
+  ]
+}

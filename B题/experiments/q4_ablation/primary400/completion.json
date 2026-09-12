@@ -1,0 +1,14 @@
+{
+  "completed": 8000,
+  "expected": 8000,
+  "failures": 0,
+  "original_process_exit_code": 1,
+  "original_exit_reason": "after all rows emitted, final hash check failed on renamed module path",
+  "code_changed_during_run": [
+    "experiments\\q4_ablation\\policies.py",
+    "experiments\\q4_ablation\\run_ablation.py"
+  ],
+  "post_run_recovery": "all raw events and start-time source digests checked by audit_evidence.py",
+  "source_integrity_audit": "audit.json",
+  "algorithm_changes_during_run": false
+}

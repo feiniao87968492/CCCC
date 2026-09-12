@@ -1,0 +1,12 @@
+{
+  "completed": 40,
+  "expected": 40,
+  "failures": 0,
+  "original_process_exit_code": 0,
+  "original_exit_reason": "normal completion",
+  "code_changed_during_run": [],
+  "post_run_recovery": "all raw events and start-time source digests checked by audit_evidence.py",
+  "source_integrity_audit": "audit.json",
+  "algorithm_changes_during_run": false,
+  "elapsed_s": 9.512415700010024
+}

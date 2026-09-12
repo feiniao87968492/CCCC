@@ -1,0 +1,34 @@
+{
+  "status": "needs_revision",
+  "profile": "cumcm-cn",
+  "validation": {
+    "status": "ready",
+    "externally_verified": false
+  },
+  "external_verification": "partial",
+  "compile": {
+    "status": "unavailable",
+    "engine": "xelatex",
+    "passes": 0,
+    "shell_escape": false,
+    "warnings": ["未找到 xelatex"]
+  },
+  "visual_qa": {
+    "status": "not_run",
+    "pages_checked": [],
+    "findings": ["PDF 未生成，页面检查未执行"]
+  },
+  "official_rules": {
+    "status": "not_applicable",
+    "competition": "CUMCM",
+    "year": "2026",
+    "sources": [],
+    "known_differences": ["电子版第一页应为摘要；本工程无承诺书与参赛编号页。正式表1因无正式日志保持缺失。"]
+  },
+  "files": [
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\paper-output\\cumcm2026-b-v1\\main.tex",
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\paper-output\\cumcm2026-b-v1\\manuscript.json",
+    "D:\\Users\\zty\\数学建模\\国赛\\1\\CUMCM2026Problems\\B题\\paper-output\\cumcm2026-b-v1\\validation.json"
+  ],
+  "note": "XeLaTeX missing in this environment; manuscript validate status=ready; Table 1 not fabricated."
+}

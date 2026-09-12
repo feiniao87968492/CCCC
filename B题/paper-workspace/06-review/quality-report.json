@@ -1,0 +1,94 @@
+{
+  "status": "needs_revision",
+  "review_round": 1,
+  "gates": [
+    {
+      "gate_id": "Q1",
+      "title": "方案忠实度",
+      "status": "ready",
+      "findings": [],
+      "evidence": ["03-blueprint/paper-blueprint.json#subproblem_mappings"],
+      "action": "已核对照冻结 GREEDY_FAST / HEX37 / 离线几何，未改求解器。"
+    },
+    {
+      "gate_id": "Q2",
+      "title": "背景来源与用途",
+      "status": "ready",
+      "findings": [],
+      "evidence": ["01-background/background-ledger.json"],
+      "action": "题面事实与附件清洗观察已隔离；外部来源未进入结果链。"
+    },
+    {
+      "gate_id": "Q3",
+      "title": "子问题与模型覆盖",
+      "status": "ready",
+      "findings": [],
+      "evidence": ["03-blueprint/paper-blueprint.json"],
+      "action": "Q1-Q4 均有模型、输出与验证映射。"
+    },
+    {
+      "gate_id": "Q4",
+      "title": "主张与证据",
+      "status": "ready",
+      "findings": [],
+      "evidence": ["04-evidence/claim-evidence-matrix.json"],
+      "action": "数值主张绑定 data:/run: SHA-256。"
+    },
+    {
+      "gate_id": "Q5",
+      "title": "结果、验证与稳定性",
+      "status": "ready",
+      "findings": [],
+      "evidence": ["05-manuscript/manuscript.json"],
+      "action": "演练与离线配对已分开；正式成绩标记缺失。"
+    },
+    {
+      "gate_id": "Q6",
+      "title": "章节与摘要完整性",
+      "status": "ready",
+      "findings": [],
+      "evidence": ["05-manuscript/manuscript.json"],
+      "action": "摘要含模型、341、30/30、822.38 与检验用语。"
+    },
+    {
+      "gate_id": "Q7",
+      "title": "论证与语言",
+      "status": "ready",
+      "findings": [],
+      "evidence": ["05-manuscript/manuscript.json"],
+      "action": "正文无写作流程词；未编造正式成绩。"
+    },
+    {
+      "gate_id": "Q8",
+      "title": "图表、公式与符号",
+      "status": "ready",
+      "findings": [],
+      "evidence": ["paper-output/figures"],
+      "action": "四张图由冻结数值生成，斜线/网格编码系列。"
+    },
+    {
+      "gate_id": "Q9",
+      "title": "引用、规则与披露",
+      "status": "ready",
+      "findings": [],
+      "evidence": ["05-manuscript/manuscript.json#references"],
+      "action": "引用带 DOI 锚点；未使用未核验 OCR 范本。"
+    },
+    {
+      "gate_id": "Q10",
+      "title": "格式与交付",
+      "status": "blocked",
+      "findings": ["本机未找到 xelatex，PDF 未编译"],
+      "evidence": ["latex-compile/unavailable.log"],
+      "action": "已导出 LaTeX 工程；编译需安装 TeX Live/MiKTeX 后两遍 XeLaTeX。"
+    }
+  ],
+  "blocking_items": ["xelatex_unavailable"],
+  "revision_items": [],
+  "verified_artifacts": [
+    "05-manuscript/manuscript.json",
+    "paper-output/cumcm2026-b-v1/main.tex",
+    "paper-output/cumcm2026-b-v1/validation.json"
+  ],
+  "reviewed_at": "2026-09-11"
+}

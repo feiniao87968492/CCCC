@@ -1,0 +1,9 @@
+{
+  "target_question": "Q4",
+  "baseline": "claims/baseline-q4.md",
+  "manifest": "experiments/q4_efficiency/release_holdout100.meta.json",
+  "source": "existing completed offline bounded-error geometry experiments",
+  "analysis": "descriptive cohort stress sensitivity; not paired causal effects",
+  "claim_level": "feasible_baseline",
+  "frozen_manifest_current_tree_mismatches": 0
+}

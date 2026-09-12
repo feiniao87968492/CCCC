@@ -1,0 +1,17 @@
+{
+  "source": "summary.csv",
+  "source_sha256": "abf5711b2857e8c410b1f23d5f5a8082dfa4de625e3c66665b169952fa16b80a",
+  "script_sha256": "26972880d26d054ea7a87e4fbb81c530c516ac92993071adf4950b35ec8e6fa8",
+  "variants": [
+    "baseline",
+    "compact",
+    "center_route",
+    "proxy_compact",
+    "proxy_reuse_early_compact",
+    "reuse_early",
+    "nearest",
+    "probe_off",
+    "every_stop"
+  ],
+  "note": "Offline exploratory results; independent review pending"
+}

@@ -1,0 +1,58 @@
+{
+  "assurance": {
+    "background_provenance": "prompt locators, registry anchors, and reference anchors checked; source contents are verified by the Skill",
+    "background_scope": "registered background and claim mappings checked; semantic prose scope is reviewed by the Skill",
+    "external_artifacts": "registry_anchor_checked; artifact bytes are verified outside this tool",
+    "external_verification": "not_performed_by_this_tool",
+    "reference_identifiers": "anchor_format_checked; external lookup is performed by the Skill",
+    "scope": "schema_traceability_and_internal_consistency"
+  },
+  "background_counts": {
+    "claims": 6,
+    "external_source": 0,
+    "problem_statement": 4,
+    "resolved_claims": 6,
+    "supplied_data": 2
+  },
+  "coverage": {
+    "background_extension_not_applicable": false,
+    "background_extension_present": true,
+    "background_first": true,
+    "background_source_types_present": [
+      "problem_statement",
+      "supplied_data"
+    ],
+    "missing_required_roles": [],
+    "roles_present": [
+      "assumptions",
+      "background",
+      "conclusion",
+      "data",
+      "limitations",
+      "model",
+      "problem",
+      "sensitivity",
+      "solution",
+      "validation"
+    ],
+    "stability_route_present": true
+  },
+  "errors": [],
+  "evidence_counts": {
+    "claims": 18,
+    "equations": 4,
+    "figures": 4,
+    "numeric_mentions": 647,
+    "references": 5,
+    "registered_external_evidence": 19,
+    "resolved_claim_evidence": 18,
+    "tables": 6
+  },
+  "external_verification_required": true,
+  "externally_verified": false,
+  "profile": "cumcm-cn",
+  "readiness_scope": "internal_consistency_ready_for_layout",
+  "schema_version": "1.2",
+  "status": "ready",
+  "warnings": []
+}

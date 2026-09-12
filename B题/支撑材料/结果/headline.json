@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-12",
+  "source": "offline bounded-error geometry; not official simulator",
+  "official_tests": {
+    "q3": null,
+    "q4": null,
+    "note": "Formal tables stay empty. Do not copy these numbers into 表1."
+  },
+  "q3": {
+    "variant": "JSO",
+    "label": "joint route + selective sensing + optimistic clear; cover radius 1130 m",
+    "scenes": 420,
+    "full_clear": "420/420",
+    "mean_T_over_K": 254.05321048920862,
+    "pooled_T_over_K": 249.08011043054827,
+    "p95_T_over_K": 351.8142071302852,
+    "mean_T": 3238.0414355971234,
+    "mean_move_m": 12592.647654176095,
+    "mean_n_measure": 107.62380952380953,
+    "baseline_variant": "ORIGINAL",
+    "baseline_mean_T_over_K": 379.60199939018304,
+    "paired_delta_T_over_K": -125.54878890097437,
+    "paired_win_rate_T": 0.9952380952380953,
+    "paired_wins": 418,
+    "evidence": [
+      "结果/q3/summary.csv",
+      "结果/q3/paired_deltas.csv",
+      "experiments/q3_ablation/evaluation/"
+    ]
+  },
+  "q4": {
+    "variant": "proxy_reuse_early_compact",
+    "label": "center-route + station reuse + early-clear 160 m + outer radius 1900 m",
+    "config": {
+      "route": "center",
+      "reuse": true,
+      "clear_rho": 160,
+      "probe": "baseline",
+      "outer_radius": 1900,
+      "every_stop": false
+    },
+    "scenes": 400,
+    "full_clear": "400/400",
+    "mean_T_over_K": 529.2899300477935,
+    "pooled_T_over_K": 516.8213051652274,
+    "p95_T_over_K": 690.7510272625608,
+    "mean_T": 6632.10939853278,
+    "mean_move_m": 24084.1219926639,
+    "mean_n_measure": 292.49,
+    "baseline_variant": "TRI25 + ROUTE_ADAPTIVE_V4 on the same 400 scenes",
+    "baseline_mean_T_over_K": 543.5402015904275,
+    "paired_delta_T_over_K": -14.250271542633918,
+    "improvement_pct": 2.6217511604361476,
+    "paired_wins_losses_ties": [275, 125, 0],
+    "worst_delta_T_over_K": 113.37082469629934,
+    "worst_scene": "boundary_endpoint_10016",
+    "boundary_stratum_regression_pct": -3.9046370521327978,
+    "holdout100_frozen_v4_mean_T_over_K": 517.5842931731096,
+    "holdout100_note": "Different scene distribution from the 400-scene matrix. Do not average with 529.29.",
+    "evidence": [
+      "结果/q4/summary.csv",
+      "结果/q4/strata.csv",
+      "结果/q4/report.md",
+      "experiments/q4_ablation/primary400/"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "source": "summary.csv",
+  "source_sha256": "abf5711b2857e8c410b1f23d5f5a8082dfa4de625e3c66665b169952fa16b80a",
+  "script_sha256": "26972880d26d054ea7a87e4fbb81c530c516ac92993071adf4950b35ec8e6fa8",
+  "variants": [
+    "baseline",
+    "nearest",
+    "reuse",
+    "early160",
+    "nearest_reuse",
+    "nearest_early",
+    "reuse_early",
+    "full",
+    "probe_off",
+    "probe_strict",
+    "probe_loose",
+    "early120",
+    "early220",
+    "center_route",
+    "finish_source",
+    "compact",
+    "full_compact",
+    "every_stop",
+    "proxy_compact",
+    "proxy_reuse_early_compact"
+  ],
+  "note": "Offline exploratory results; independent review pending"
+}

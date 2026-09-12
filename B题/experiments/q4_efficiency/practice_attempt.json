@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-12",
+  "command": "python simulator_automation/q4_practice.py",
+  "cover": "TRI25",
+  "route": "ROUTE_ADAPTIVE_V4",
+  "started": false,
+  "robot_actions_sent": false,
+  "phase": "UI login before StartPractice/enter",
+  "observed_status": "server disconnected; team unavailable",
+  "failure": "Login timed out waiting for the expected team label; no solver session entered",
+  "official_results": null
+}
